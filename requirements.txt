@@ -1,0 +1,29 @@
+fastapi
+uvicorn
+requests
+newspaper3k
+feedparser
+apscheduler
+python-dotenv
+streamlit
+
+# Database & Auth
+sqlalchemy
+sqlmodel
+passlib[bcrypt]
+python-jose[cryptography]
+
+# Async & APIs
+aiohttp
+
+# NLP / Embeddings
+sentence-transformers
+faiss-cpu ; platform_system != "Windows"
+scikit-learn ; platform_system == "Windows"
+transformers
+torch
+
+# Utilities
+beautifulsoup4
+lxml
+pydantic

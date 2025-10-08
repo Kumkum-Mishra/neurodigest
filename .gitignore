@@ -1,0 +1,37 @@
+# ---- Python / FastAPI / Streamlit Project ----
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment & config
+.env
+*.sqlite3
+*.db
+*.log
+
+# Jupyter / Colab
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Models & data
+*.pth
+*.pt
+*.onnx
+*.ckpt
+data/
+datasets/
+cache/
+storage/archive/

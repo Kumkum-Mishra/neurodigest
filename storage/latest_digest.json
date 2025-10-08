@@ -1,0 +1,304 @@
+{
+  "generated_at": 1759507192,
+  "items": [
+    {
+      "title": "Liva AI (YC S25) Is Hiring",
+      "url": "https://www.ycombinator.com/companies/liva-ai/jobs/6xM8JYU-founding-operations-lead",
+      "bullets": [
+        "Here are 3-4 short, clear bullet points summarizing the job opportunity at Liva AI:",
+        "* Liva AI is hiring a full-time operator to manage complex projects and people, with a focus on building the world's richest library of human voice and video data for realistic AI",
+        "* The ideal candidate will be extremely organized, a good problem solver, and have experience managing people, with a strong interest in AI agents and the data space",
+        "* The role involves planning and executing data collection projects, improving internal workflows, and designing systems for seamless human-AI collaboration"
+      ],
+      "tags": [
+        "ai",
+        "career"
+      ],
+      "summary": "Here are 3-4 short, clear bullet points summarizing the job opportunity at Liva AI:. * Liva AI is hiring a full-time operator to manage complex projects and people, with a focus on building the world's richest library of human voice and video data for realistic AI. * The ideal candidate will be extremely organized, a good problem solver, and have experience managing people, with a strong interest in AI agents and the data space. * The role involves planning and executing data collection projects, improving internal workflows, and designing systems for seamless human-AI collaboration"
+    },
+    {
+      "title": "Bild AI (YC W25) Is Hiring",
+      "url": "https://www.ycombinator.com/companies/bild-ai/jobs/m2ilR5L-founding-engineer-applied-ai",
+      "bullets": [
+        "Here are 4 short, clear bullet points summarizing the news:",
+        "• Roop and Puneet founded Bild AI to simplify construction processes like blueprint reading, cost estimation, and permit applications",
+        "• The startup aims to make building more houses, hospitals, and schools more efficient using cutting-edge AI and computer vision techniques",
+        "• Bild AI has been featured on Business Insider and has received funding from top venture capital firms before even demo day"
+      ],
+      "tags": [
+        "ai",
+        "career"
+      ],
+      "summary": "Here are 4 short, clear bullet points summarizing the news:. • Roop and Puneet founded Bild AI to simplify construction processes like blueprint reading, cost estimation, and permit applications. • The startup aims to make building more houses, hospitals, and schools more efficient using cutting-edge AI and computer vision techniques. • Bild AI has been featured on Business Insider and has received funding from top venture capital firms before even demo day"
+    },
+    {
+      "title": "Daily Interview Prep Discussion",
+      "url": "https://www.reddit.com/r/leetcode/comments/1mq6eej/daily_interview_prep_discussion/",
+      "bullets": [
+        "Since this is the first post, let's start fresh",
+        "I'm here to help with any questions or concerns you may have about interviews, interviewing, and interview prep",
+        "What's on your mind? Do you have an upcoming interview and want some tips, or are you looking for general advice on how to prepare?"
+      ],
+      "tags": [
+        "interview",
+        "ai"
+      ],
+      "summary": "Since this is the first post, let's start fresh. I'm here to help with any questions or concerns you may have about interviews, interviewing, and interview prep. What's on your mind? Do you have an upcoming interview and want some tips, or are you looking for general advice on how to prepare?"
+    },
+    {
+      "title": "(From WSJ) - Companies Focusing Their Hiring on Unicorns with \"All-Star\" AI Talent and Experience",
+      "url": "https://www.reddit.com/r/cscareerquestions/comments/1nwmbad/from_wsj_companies_focusing_their_hiring_on/",
+      "bullets": [
+        "Here are 4 short, clear bullet points summarizing the article:",
+        "• Companies in the US are struggling to find skilled workers, especially those with advanced AI and ML experience",
+        "• They are looking for \"prodigies\" and \"10x engineers\" who have extensive experience, not just basic knowledge or certifications",
+        "• This is creating a shortage of jobs for many people, as companies are either hiring only the most skilled workers or leaving positions unfilled"
+      ],
+      "tags": [
+        "ai",
+        "career"
+      ],
+      "summary": "Here are 4 short, clear bullet points summarizing the article:. • Companies in the US are struggling to find skilled workers, especially those with advanced AI and ML experience. • They are looking for \"prodigies\" and \"10x engineers\" who have extensive experience, not just basic knowledge or certifications. • This is creating a shortage of jobs for many people, as companies are either hiring only the most skilled workers or leaving positions unfilled"
+    },
+    {
+      "title": "[R] New paper: LLMs don't have privileged self knowledge, which means we can efficiently train a General Correctness Model to predict the correctness of multiple models. Surprising or expected?",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1nwoxqz/r_new_paper_llms_dont_have_privileged_self/",
+      "bullets": [
+        "Here are 4 short, clear bullet points summarizing the news:",
+        "* Researchers found that Large Language Models (LLMs) don't have a special advantage when predicting their own correctness",
+        "* Instead, LLMs benefit from learning to predict the correctness of other models, which makes them more accurate",
+        "* This approach, called a Generalized Correctness Model (GCM), outperforms traditional methods and can even transfer to new, unseen models and datasets"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "Here are 4 short, clear bullet points summarizing the news:. * Researchers found that Large Language Models (LLMs) don't have a special advantage when predicting their own correctness. * Instead, LLMs benefit from learning to predict the correctness of other models, which makes them more accurate. * This approach, called a Generalized Correctness Model (GCM), outperforms traditional methods and can even transfer to new, unseen models and datasets"
+    },
+    {
+      "title": "[D] How much should researchers (especially in ML domain) rely on LLMs for their work?",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1nwaunk/d_how_much_should_researchers_especially_in_ml/",
+      "bullets": [
+        "Here are 4 key points about the use of LLMs in research:",
+        "* **Idea refinement and testing**: Many researchers are using LLMs like ChatGPT and Claude to refine and test minor ideas in their research. They input their own ideas and see how the LLM responds, which can help them identify potential flaws or areas for improvement",
+        "* **Big-picture questions and brainstorming**: Researchers are also using LLMs to ask big-picture questions about their overall plans and to brainstorm new ideas. This can help them identify potential research directions and areas for exploration",
+        "* **Supporting literature reviews and summarization**: Researchers are using LLMs to help with literature reviews, summarizing papers, and extracting key points. This can save time and help them stay on top of the latest research in their field"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "Here are 4 key points about the use of LLMs in research:. * **Idea refinement and testing**: Many researchers are using LLMs like ChatGPT and Claude to refine and test minor ideas in their research. They input their own ideas and see how the LLM responds, which can help them identify potential flaws or areas for improvement. * **Big-picture questions and brainstorming**: Researchers are also using LLMs to ask big-picture questions about their overall plans and to brainstorm new ideas. This can help them identify potential research directions and areas for exploration. * **Supporting literature reviews and summarization**: Researchers are using LLMs to help with literature reviews, summarizing papers, and extracting key points. This can save time and help them stay on top of the latest research in their field"
+    },
+    {
+      "title": "A new search engine raises $1.1M to let obsessive fans dive down internet rabbit holes",
+      "url": "https://techcrunch.com/2025/10/03/a-new-search-engine-raises-1-1m-to-let-obsessive-fans-dive-down-internet-rabbit-holes/",
+      "bullets": [
+        "Here are 4 short and clear bullet points summarizing the news:",
+        "- Zehra Naqvi, a 26-year-old entrepreneur, is launching a new company called Lore, a search platform for researching and discovering internet obsessions",
+        "- Naqvi, who gained a following of 250,000 on Tumblr and Twitter as a fan girl in the 2010s, wants to recreate the experience of exploring internet rabbit holes with Lore",
+        "- The platform aims to provide users with personalized graphs of their obsessions, fan theories, and cultural context, allowing them to connect their interests in new ways"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "Here are 4 short and clear bullet points summarizing the news:. - Zehra Naqvi, a 26-year-old entrepreneur, is launching a new company called Lore, a search platform for researching and discovering internet obsessions. - Naqvi, who gained a following of 250,000 on Tumblr and Twitter as a fan girl in the 2010s, wants to recreate the experience of exploring internet rabbit holes with Lore. - The platform aims to provide users with personalized graphs of their obsessions, fan theories, and cultural context, allowing them to connect their interests in new ways"
+    },
+    {
+      "title": "Why System Design is surging in the age of AI",
+      "url": "https://www.hackerrank.com/blog/why-system-design-is-surging-in-the-age-of-ai/",
+      "bullets": [
+        "Here are 3-4 short, clear bullet points summarizing the news:",
+        "* In 2024, the demand for System Design skills in hiring surged by 82% year-over-year, making it the 8th most tested skill on the HackerRank platform",
+        "* This growth is significant because System Design is a skill that AI systems struggle with, requiring human thinking and problem-solving abilities",
+        "* The timing of this growth is interesting, as it coincides with the widespread adoption of AI tools and the introduction of ChatGPT, which has led to a new dynamic in hiring that focuses on how humans think and approach complex problems"
+      ],
+      "tags": [
+        "interview",
+        "ai",
+        "career"
+      ],
+      "summary": "Here are 3-4 short, clear bullet points summarizing the news:. * In 2024, the demand for System Design skills in hiring surged by 82% year-over-year, making it the 8th most tested skill on the HackerRank platform. * This growth is significant because System Design is a skill that AI systems struggle with, requiring human thinking and problem-solving abilities. * The timing of this growth is interesting, as it coincides with the widespread adoption of AI tools and the introduction of ChatGPT, which has led to a new dynamic in hiring that focuses on how humans think and approach complex problems"
+    },
+    {
+      "title": "QuestDB (YC S20) Is Hiring a Core Database Engineer – C++ and Rust",
+      "url": "https://questdb.com/careers/core-database-engineer/",
+      "bullets": [
+        "Here are 3-4 short, clear bullet points summarizing the news about QuestDB:",
+        "* QuestDB is a specialized database that stores, processes, and analyzes time series data in real-time, with a focus on reliability, performance, and simplicity",
+        "* The company has gained popularity, with 16k stars on its open source repository and is considered the fastest growing database in the time-series category",
+        "* QuestDB has been adopted by leading companies across various industries, including Financial Services, Energy, and Space Exploration, and is looking to expand its team with a Core Database Engineer"
+      ],
+      "tags": [
+        "ai",
+        "career"
+      ],
+      "summary": "Here are 3-4 short, clear bullet points summarizing the news about QuestDB:. * QuestDB is a specialized database that stores, processes, and analyzes time series data in real-time, with a focus on reliability, performance, and simplicity. * The company has gained popularity, with 16k stars on its open source repository and is considered the fastest growing database in the time-series category. * QuestDB has been adopted by leading companies across various industries, including Financial Services, Energy, and Space Exploration, and is looking to expand its team with a Core Database Engineer"
+    },
+    {
+      "title": "Great Question (YC W21) Is Hiring Director of Product",
+      "url": "https://www.ycombinator.com/companies/great-question/jobs/9crdslU-director-of-product",
+      "bullets": [
+        "Here are 4 key points about the job role:",
+        "* **Lead Product Team**: The Director or Senior Director of Product will guide and coach Product Managers, personally own key product initiatives, and grow the team from 2 to 4+ PMs over the next year",
+        "* **Organizational Design**: The role involves defining the right product org structure to support autonomy and velocity, and collaborating with other teams to drive the product roadmap and deliver impactful features quickly",
+        "* **AI Innovation**: The ideal candidate will have experience building and shipping AI products, and be able to evaluate emerging AI tech critically to shape product experiences infused with AI"
+      ],
+      "tags": [
+        "ai",
+        "career"
+      ],
+      "summary": "Here are 4 key points about the job role:. * **Lead Product Team**: The Director or Senior Director of Product will guide and coach Product Managers, personally own key product initiatives, and grow the team from 2 to 4+ PMs over the next year. * **Organizational Design**: The role involves defining the right product org structure to support autonomy and velocity, and collaborating with other teams to drive the product roadmap and deliver impactful features quickly. * **AI Innovation**: The ideal candidate will have experience building and shipping AI products, and be able to evaluate emerging AI tech critically to shape product experiences infused with AI"
+    },
+    {
+      "title": "Trellis (YC W24) Is Hiring: Automate Healthcare Paperwork",
+      "url": "https://www.ycombinator.com/companies/trellis/jobs/C0VryYb-forward-deployed-engineers-intern-august-2025",
+      "bullets": [
+        "Here are 4 short, clear bullet points summarizing the news:",
+        "• Trellis is a healthcare technology company that automates document intake, prior authorizations, and appeals to help healthcare providers treat more patients faster",
+        "• Trellis is a spinout from Stanford AI lab and backed by leading investors, including YC and Google executives",
+        "• The company is hiring Forward Deployed Engineers (FDEs) to work with healthcare providers, pharmaceutical companies, and diagnostic labs to implement AI-powered solutions"
+      ],
+      "tags": [
+        "ai",
+        "career"
+      ],
+      "summary": "Here are 4 short, clear bullet points summarizing the news:. • Trellis is a healthcare technology company that automates document intake, prior authorizations, and appeals to help healthcare providers treat more patients faster. • Trellis is a spinout from Stanford AI lab and backed by leading investors, including YC and Google executives. • The company is hiring Forward Deployed Engineers (FDEs) to work with healthcare providers, pharmaceutical companies, and diagnostic labs to implement AI-powered solutions"
+    },
+    {
+      "title": "Snap Inc. System design round",
+      "url": "https://www.reddit.com/r/csinterviewproblems/comments/1jzim58/snap_inc_system_design_round/",
+      "bullets": [
+        "I'd be happy to help you prepare for your Snap Inc. system design interview. Here are some general tips and areas to focus on:",
+        "**Common Areas to Focus On:**",
+        "1. **System Design Principles**: Understand the trade-offs between different design choices, such as scalability, performance, and cost",
+        "2. **Data Storage and Retrieval**: Familiarize yourself with data modeling, indexing, caching, and query optimization"
+      ],
+      "tags": [
+        "interview",
+        "ai",
+        "career"
+      ],
+      "summary": "I'd be happy to help you prepare for your Snap Inc. system design interview. Here are some general tips and areas to focus on:. **Common Areas to Focus On:**. 1. **System Design Principles**: Understand the trade-offs between different design choices, such as scalability, performance, and cost. 2. **Data Storage and Retrieval**: Familiarize yourself with data modeling, indexing, caching, and query optimization"
+    },
+    {
+      "title": "SDE-1 interview with UiPath",
+      "url": "https://www.reddit.com/r/csinterviewproblems/comments/1jvmqwv/sde1_interview_with_uipath/",
+      "bullets": [
+        "I'm happy to help you with your UiPath SDE-1 interview preparation. Unfortunately, I'm a large language model, I don't have personal experiences or direct access to real-time information. However, I can provide you with general information and tips that may be helpful",
+        "**UiPath SDE-1 Interview Process:**",
+        "Based on online reviews and forums, here's a general idea of what you can expect:",
+        "* The interview process typically consists of 3-4 rounds, including a mix of technical and behavioral questions"
+      ],
+      "tags": [
+        "interview",
+        "ai"
+      ],
+      "summary": "I'm happy to help you with your UiPath SDE-1 interview preparation. Unfortunately, I'm a large language model, I don't have personal experiences or direct access to real-time information. However, I can provide you with general information and tips that may be helpful. **UiPath SDE-1 Interview Process:**. Based on online reviews and forums, here's a general idea of what you can expect:. * The interview process typically consists of 3-4 rounds, including a mix of technical and behavioral questions"
+    },
+    {
+      "title": "SDE-1 interview with UiPath",
+      "url": "https://www.reddit.com/r/csinterviewproblems/comments/1jvmqtf/sde1_interview_with_uipath/",
+      "bullets": [
+        "I can provide you with general information about UiPath's interview process and some tips to help you prepare. However, please note that the specific questions and rounds may vary depending on the location and the interviewer",
+        "**UiPath Interview Process:**",
+        "- UiPath's interview process typically consists of 3-4 rounds, including a phone screening, technical rounds, and a final round with the hiring manager",
+        "- The technical rounds usually include a mix of Data Structures and Algorithms (DSA), system design, and project-based questions"
+      ],
+      "tags": [
+        "interview",
+        "ai",
+        "career"
+      ],
+      "summary": "I can provide you with general information about UiPath's interview process and some tips to help you prepare. However, please note that the specific questions and rounds may vary depending on the location and the interviewer. **UiPath Interview Process:**. - UiPath's interview process typically consists of 3-4 rounds, including a phone screening, technical rounds, and a final round with the hiring manager. - The technical rounds usually include a mix of Data Structures and Algorithms (DSA), system design, and project-based questions"
+    },
+    {
+      "title": "Last-Minute Tips for Amazon SDE-1 Interview (Technical + Behavioral)",
+      "url": "https://www.reddit.com/r/csinterviewproblems/comments/1jpy6o0/lastminute_tips_for_amazon_sde1_interview/",
+      "bullets": [
+        "Based on Amazon's interview process and common feedback from past candidates, here are some last-minute tips and advice:",
+        "**Last-Minute Focus:**",
+        "* Review your resume and be prepared to talk about your projects and experiences in detail",
+        "* Practice whiteboarding with a friend or mentor to get comfortable with explaining your thought process"
+      ],
+      "tags": [
+        "interview",
+        "ai",
+        "career"
+      ],
+      "summary": "Based on Amazon's interview process and common feedback from past candidates, here are some last-minute tips and advice:. **Last-Minute Focus:**. * Review your resume and be prepared to talk about your projects and experiences in detail. * Practice whiteboarding with a friend or mentor to get comfortable with explaining your thought process"
+    },
+    {
+      "title": "Live Coding Interview Prep",
+      "url": "https://www.reddit.com/r/csinterviewproblems/comments/1jamiuc/live_coding_interview_prep/",
+      "bullets": [
+        "Given the focus on practical coding abilities, here's a suggested preparation plan:",
+        "* **Review common coding scenarios**: Think about real-world problems that require coding, such as:",
+        "+ Handling user input and validation",
+        "+ Working with APIs or web services"
+      ],
+      "tags": [
+        "interview",
+        "ai"
+      ],
+      "summary": "Given the focus on practical coding abilities, here's a suggested preparation plan:. * **Review common coding scenarios**: Think about real-world problems that require coding, such as:. + Handling user input and validation. + Working with APIs or web services"
+    },
+    {
+      "title": "Looking for study partner/group to master DSA (Targeting Top Tech)",
+      "url": "https://www.reddit.com/r/leetcode/comments/1nwxf8j/looking_for_study_partnergroup_to_master_dsa/",
+      "bullets": [
+        "Here are 3-4 short, clear bullet points summarizing your request:",
+        "* You're a 5-year experienced Software Engineer looking to improve your skills in algorithms and problem-solving",
+        "* You're available to dedicate 6 hours daily, apart from your full-time job, to focus on this goal",
+        "* You're looking for a study partner or group to stay consistent and motivated"
+      ],
+      "tags": [
+        "interview",
+        "ai"
+      ],
+      "summary": "Here are 3-4 short, clear bullet points summarizing your request:. * You're a 5-year experienced Software Engineer looking to improve your skills in algorithms and problem-solving. * You're available to dedicate 6 hours daily, apart from your full-time job, to focus on this goal. * You're looking for a study partner or group to stay consistent and motivated"
+    },
+    {
+      "title": "Google Wrong interview information",
+      "url": "https://www.reddit.com/r/leetcode/comments/1nwwqa3/google_wrong_interview_information/",
+      "bullets": [
+        "Here are 3-4 short, clear bullet points summarizing your situation:",
+        "* You were initially scheduled for an AIML Domain round but instead, you were asked to do a System Design round, specifically creating an APP for image classification",
+        "* You felt unprepared for the System Design round as you had focused on AIML Domain and didn't have enough knowledge in this area",
+        "* Despite this, you were able to answer some questions, but you're not sure how the interview went, estimating 70-80% success"
+      ],
+      "tags": [
+        "interview",
+        "ai"
+      ],
+      "summary": "Here are 3-4 short, clear bullet points summarizing your situation:. * You were initially scheduled for an AIML Domain round but instead, you were asked to do a System Design round, specifically creating an APP for image classification. * You felt unprepared for the System Design round as you had focused on AIML Domain and didn't have enough knowledge in this area. * Despite this, you were able to answer some questions, but you're not sure how the interview went, estimating 70-80% success"
+    },
+    {
+      "title": "Arpit's System Design Masterclass?",
+      "url": "https://www.reddit.com/r/leetcode/comments/1nwt2en/arpits_system_design_masterclass/",
+      "bullets": [
+        "Here are 3-4 bullet points summarizing the information:",
+        "* A senior engineer from FAANG is looking to improve system design skills to land a staff-level role and has experience with system design interviews",
+        "* They've used resources like ByteByte Go books and Neetcode course, but now want hands-on experience with a live system design course",
+        "* The engineer is considering Arpit's System Design Masterclass, but wants to know if anyone has taken the course and if it's worth the time commitment"
+      ],
+      "tags": [
+        "interview",
+        "ai"
+      ],
+      "summary": "Here are 3-4 bullet points summarizing the information:. * A senior engineer from FAANG is looking to improve system design skills to land a staff-level role and has experience with system design interviews. * They've used resources like ByteByte Go books and Neetcode course, but now want hands-on experience with a live system design course. * The engineer is considering Arpit's System Design Masterclass, but wants to know if anyone has taken the course and if it's worth the time commitment"
+    },
+    {
+      "title": "Donald Trump Posts Bizarre Grim Reaper-Themed AI Music Video",
+      "url": "https://www.thedailybeast.com/donald-trump-posts-bizarre-grim-reaper-themed-ai-music-video/",
+      "bullets": [
+        "Here are 4 short, clear bullet points summarizing the news:",
+        "* US President Donald Trump posted a bizarre AI-generated music video on social media, featuring former OMB director Russell Vought as the Grim Reaper",
+        "* The video, which is a cover of Blue Öyster Cult's song \"(Don't Fear) The Reaper,\" portrays Vought as a villain who will \"tie the hands\" of Democrats",
+        "* The video was created by a group called the Dilley Meme Team, a pseudonymous group founded by a failed Arizona congressional candidate and Trump supporter"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "Here are 4 short, clear bullet points summarizing the news:. * US President Donald Trump posted a bizarre AI-generated music video on social media, featuring former OMB director Russell Vought as the Grim Reaper. * The video, which is a cover of Blue Öyster Cult's song \"(Don't Fear) The Reaper,\" portrays Vought as a villain who will \"tie the hands\" of Democrats. * The video was created by a group called the Dilley Meme Team, a pseudonymous group founded by a failed Arizona congressional candidate and Trump supporter"
+    }
+  ]
+}
