@@ -63,24 +63,45 @@ if "user" not in st.session_state:
 
 API_BASE = "http://localhost:8000"
 
-def _fetch_digest(token: str | None):
+
+# Lightweight session_state GET cache for the landing page to avoid
+# triggering a full digest fetch immediately after login. Other pages
+# (e.g. Dashboard) have their own caching too.
+def _cached_get_simple(url: str, headers: dict | None, state_key: str, ttl: int = 60, force: bool = False):
+    import time
+    now = int(time.time())
+    ts_key = f"{state_key}_ts"
+    if not force and st.session_state.get(state_key) is not None and st.session_state.get(ts_key) is not None:
+        if now - int(st.session_state.get(ts_key, 0)) < ttl:
+            return st.session_state.get(state_key)
+
     try:
-        if token:
-            resp = requests.get(
-                f"{API_BASE}/api/digest/me",
-                headers={"Authorization": f"Bearer {token}"},
-                timeout=15,
-            )
+        if headers:
+            resp = requests.get(url, headers=headers, timeout=12)
         else:
-            resp = requests.get(f"{API_BASE}/api/digest", timeout=15)
+            resp = requests.get(url, timeout=12)
         if resp.status_code != 200:
-            return {"generated_at": None, "items": [], "_error": f"{resp.status_code} {resp.text}"}
-        raw = resp.json()
-        if isinstance(raw, dict) and "digest" in raw and isinstance(raw["digest"], dict):
-            return raw["digest"]
-        return raw
-    except Exception as e:
-        return {"generated_at": None, "items": [], "_error": str(e)}
+            return None
+        data = resp.json()
+        st.session_state[state_key] = data
+        st.session_state[ts_key] = now
+        return data
+    except Exception:
+        return st.session_state.get(state_key)
+
+
+# Cross-version safe rerun helper: some Streamlit versions use
+# `experimental_rerun`, others provide `rerun`. Fall back to a
+# session-state toggle if neither is available.
+def _safe_rerun():
+    try:
+        return st.experimental_rerun()
+    except Exception:
+        try:
+            return st.rerun()
+        except Exception:
+            st.session_state._reload = not st.session_state.get("_reload", False)
+            return None
 
 # If not logged in, show Login/Signup tabs right here
 if not st.session_state.token:
@@ -126,31 +147,55 @@ if not st.session_state.token:
                 except Exception as e:
                     st.error(f"Error: {str(e)}")
 else:
-    # Logged in: show dashboard feed inline
-    st.success(f"Logged in as {st.session_state.user.get('email')}")
+    # Logged in: ensure we have user details and show dashboard feed inline
+    # If we have a token but no user info, try to fetch it from the API.
+    if st.session_state.token and not st.session_state.user:
+        try:
+            me = requests.get(
+                f"{API_BASE}/auth/me",
+                headers={"Authorization": f"Bearer {st.session_state.token}"},
+                timeout=10,
+            )
+            if me.status_code == 200:
+                st.session_state.user = me.json()
+            else:
+                # Token invalid or expired: clear session and ask user to login again
+                st.warning("Session invalid or expired — please log in again.")
+                st.session_state.token = None
+                st.session_state.user = None
+                st.rerun()
+        except Exception as e:
+            # Non-fatal: leave user as None and show message
+            st.error(f"Error fetching user info: {str(e)}")
+
+    # Defensive access: user may still be None or not a dict
+    user_obj = st.session_state.get("user") or {}
+    email = None
+    if isinstance(user_obj, dict):
+        email = user_obj.get("email")
+    else:
+        # In case user is a Pydantic/SQLModel object
+        email = getattr(user_obj, "email", None)
+
+    if email:
+        st.success(f"Logged in as {email}")
+    else:
+        st.success("Logged in")
+
     if st.button("Logout"):
         st.session_state.token = None
         st.session_state.user = None
         st.rerun()
 
-    with st.spinner("Fetching digest…"):
-        data = _fetch_digest(st.session_state.token)
-
-    gen = data.get("generated_at")
-    if gen:
-        st.caption("Last generated: " + datetime.datetime.fromtimestamp(gen).strftime("%Y-%m-%d %H:%M:%S"))
-
-    items = data.get("items", [])
-    if not items:
-        st.warning("No items yet. Click Refresh in the dashboard page or try later.")
-    else:
-        for idx, it in enumerate(items):
-            st.subheader(it.get("title", f"Untitled {idx+1}"))
-            url = it.get("url")
-            if url:
-                st.markdown(f"[Read original]({url})")
-            bullets = it.get("bullets", [])
-            for b in bullets[:4]:
-                st.markdown(f"- {b}")
-            st.markdown("---")
+    # Do not fetch the full digest on the landing/login page — that can be
+    # expensive and causes duplicate fetches when users immediately
+    # navigate. Offer a clear CTA to go to the Dashboard where digest is
+    # loaded and cached.
+    st.info("Your personalized digest is available on the Dashboard page.")
+    if st.button("Open Dashboard"):
+        # In Streamlit, redirecting to another page is done by instructing
+        # the user to click the page sidebar; as a convenience we set a flag
+        # so the Dashboard can check and immediately show cached data.
+        st.session_state._open_dashboard = True
+        _safe_rerun()
 

@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 import datetime
 import hashlib
+import re
 
 
 st.set_page_config(page_title="Dashboard • Campus Placement Digest", layout="wide")
@@ -36,36 +37,93 @@ def _fetch_digest(token: str | None):
     except Exception as e:
         return {"generated_at": None, "items": [], "_error": str(e)}
 
+
+# Use a simple session_state-backed cache to avoid refetching the digest on
+# every navigation/rerun. This mirrors the helper used in the landing/Tutor UI.
+def _cached_get_digest(token: str | None, state_key: str = "_dashboard_digest", ttl: int = 120, force: bool = False):
+    import time
+    now = int(time.time())
+    ts_key = f"{state_key}_ts"
+    if not force and st.session_state.get(state_key) is not None and st.session_state.get(ts_key) is not None:
+        if now - int(st.session_state.get(ts_key, 0)) < ttl:
+            return st.session_state.get(state_key)
+
+    # perform a fresh fetch
+    try:
+        if token:
+            resp = requests.get(
+                f"{API_BASE}/api/digest/me",
+                headers={"Authorization": f"Bearer {token}"},
+                timeout=15,
+            )
+        else:
+            resp = requests.get(f"{API_BASE}/api/digest", timeout=15)
+        if resp.status_code != 200:
+            return {"generated_at": None, "items": [], "_error": f"{resp.status_code} {resp.text}"}
+        raw = resp.json()
+        if isinstance(raw, dict) and "digest" in raw and isinstance(raw["digest"], dict):
+            payload = raw["digest"]
+        else:
+            payload = raw
+        st.session_state[state_key] = payload
+        st.session_state[ts_key] = now
+        return payload
+    except Exception as e:
+        # fall back to cached value if available
+        return st.session_state.get(state_key, {"generated_at": None, "items": [], "_error": str(e)})
+
 col_main, col_actions = st.columns([3, 1])
 
 with col_actions:
     if st.button("🔄 Refresh now", key="refresh_btn"):
+        # Perform a synchronous refresh but store in the cache so subsequent
+        # navigations read the cached value instead of re-fetching.
         try:
-            requests.post(f"{API_BASE}/api/trigger", timeout=5)
+            with st.spinner("Refreshing digest... this may take up to 60s"):
+                resp = requests.get(f"{API_BASE}/api/digest?refresh=1", timeout=120)
+                if resp.status_code == 200:
+                    payload = resp.json()
+                    if isinstance(payload, dict) and "digest" in payload and isinstance(payload["digest"], dict):
+                        st.session_state["_dashboard_digest"] = payload["digest"]
+                    else:
+                        st.session_state["_dashboard_digest"] = payload
+                    st.session_state["_dashboard_digest_ts"] = int(time.time())
+                    st.success("Digest refreshed")
+                    st.experimental_rerun()
+                else:
+                    st.error(f"Failed to refresh digest: {resp.status_code} {resp.text}")
         except Exception as e:
-            st.error("Failed to trigger: " + str(e))
-        else:
-            baseline = _fetch_digest(st.session_state.token).get("generated_at")
-            with st.spinner("Refreshing digest... this may take up to 45s"):
-                import time as _time
-                start_ts = _time.time()
-                while _time.time() - start_ts < 45:
-                    updated = _fetch_digest(st.session_state.token)
-                    new_gen = updated.get("generated_at")
-                    if new_gen and new_gen != baseline:
-                        st.session_state["_latest_digest"] = updated
-                        st.experimental_rerun()
-                    _time.sleep(3)
-                st.warning("No new digest detected yet. Please try again in a moment.")
+            st.error("Failed to refresh: " + str(e))
 
 with st.spinner("Fetching digest..."):
-    data = st.session_state.pop("_latest_digest", None) or _fetch_digest(st.session_state.token)
+    # prefer any manual-refresh result placed in session_state, otherwise use cached getter
+    data = st.session_state.pop("_latest_digest", None) or _cached_get_digest(st.session_state.token)
 
 gen = data.get("generated_at")
 if gen:
     st.caption("Last generated: " + datetime.datetime.fromtimestamp(gen).strftime("%Y-%m-%d %H:%M:%S"))
 
 items = data.get("items", [])
+error_msg = data.get("_error")
+if error_msg:
+    st.error(f"Failed to fetch digest: {error_msg}")
+    # Offer an inline retry that uses the same refresh endpoint
+    if st.button("Retry fetching digest"):
+        try:
+            with st.spinner("Refreshing digest... this may take up to 60s"):
+                resp = requests.get(f"{API_BASE}/api/digest?refresh=1", timeout=120)
+                if resp.status_code == 200:
+                    payload = resp.json()
+                    if isinstance(payload, dict) and "digest" in payload and isinstance(payload["digest"], dict):
+                        st.session_state["_latest_digest"] = payload["digest"]
+                    else:
+                        st.session_state["_latest_digest"] = payload
+                    st.success("Digest refreshed — reloading")
+                    _ = st.experimental_rerun()
+                else:
+                    st.error(f"Failed to refresh digest: {resp.status_code} {resp.text}")
+        except Exception as e:
+            st.error(f"Failed to refresh: {e}")
 
 # Fetch user's bookmarks to enable save/remove and filtering
 saved_url_to_id: dict[str, int] = {}
@@ -115,6 +173,40 @@ def _categorize(it: dict) -> str:
     if any(k in text for k in ["hiring", "internship", "placement", "career", "resume", "offer"]):
         return "Career"
     return "For You"
+
+
+def strip_ai_intro(text: str) -> str:
+    """Remove common AI-generated intro lines like
+    'Here are 4 short, clear bullet points to help you ace an internship interview:'
+    so the frontend doesn't display obvious AI-prefacing lines.
+    """
+    if not text:
+        return text
+
+    s = text.lstrip()
+    # Simple, robust approach: if the string starts with "Here are" (case-insensitive)
+    # and contains a ':' later, check whether the prefix mentions "bullet point" or
+    # "to help you"; if so, strip the prefix up to the colon.
+    low = s.lower()
+    if low.startswith("here are"):
+        colon_idx = s.find(":")
+        if colon_idx != -1:
+            prefix = s[:colon_idx+1].lower()
+            if "bullet point" in prefix or "to help you" in prefix:
+                return s[colon_idx+1:].lstrip()
+
+    # fallback: also handle cases where the phrase appears at the start without a colon
+    # e.g. "Here are 4 short clear bullet points to help you ace..."
+    if low.startswith("here are") and ("bullet point" in low or "to help you" in low):
+        # try to remove the leading clause up to the first full sentence end or first dash
+        for sep in [". ", "\n", " - "]:
+            idx = s.find(sep)
+            if idx != -1 and idx < 140:
+                return s[idx+len(sep):].lstrip()
+        # if nothing found, remove the first 120 chars as a last resort
+        return s[120:].lstrip() if len(s) > 120 else ""
+
+    return text
 
 # Sidebar filters
 domains = sorted({_domain_from_url(it.get("url", "")) for it in items if it.get("url")})
@@ -189,12 +281,15 @@ else:
         title = it.get("title") or "Untitled"
         url = it.get("url")
         dom = _domain_from_url(url or "")
-        bullets = it.get("bullets", [])
+        # Normalize bullets and strip any AI-intro prefixes
+        bullets = [strip_ai_intro(b) for b in (it.get("bullets") or [])]
         if not bullets:
             # Fallback to summary sentence split if bullets missing
             summary_text = (it.get("summary", "") or "").replace("\r", " ").replace("\n", " ")
             if summary_text:
-                bullets = [s.strip().rstrip(" .") for s in summary_text.split(". ") if s.strip()][:4]
+                bullets = [strip_ai_intro(s.strip().rstrip(" .")) for s in summary_text.split(". ") if s.strip()]
+        # keep at most 4 non-empty bullets
+        bullets = [b for b in bullets if b][:4]
         if not bullets:
             bullets = ["Summary not available. Click the link to read more."]
         # extra meta chips
@@ -205,6 +300,13 @@ else:
             chips.append(f"<span class='badge'>💼 {it['role']}</span>")
         if it.get("salary_hint"):
             chips.append(f"<span class='badge'>💰 {it['salary_hint']}</span>")
+        
+        # MSNRR Score badge
+        msnrr_score = it.get("msnrr_score")
+        if msnrr_score is not None:
+            score_percent = int(msnrr_score * 100)
+            score_color = "#10b981" if msnrr_score > 0.7 else "#f59e0b" if msnrr_score > 0.4 else "#ef4444"
+            chips.append(f"<span class='badge' style='background: {score_color}'>⭐ MSNRR: {score_percent}%</span>")
 
         bullet_html = "".join([f"<li>{b}</li>" for b in bullets])
         link_html = f"<a href='{url}' target='_blank'>Read original</a>" if url else ""
@@ -224,7 +326,7 @@ else:
         )
 
         # Bookmark actions area (always visible with appropriate message)
-        act_col1, act_col2, act_col3 = st.columns([0.18, 0.18, 0.64])
+        act_col1, act_col2, act_col3, act_col4 = st.columns([0.15, 0.15, 0.15, 0.55])
         base_key = hashlib.md5((url or title or "").encode("utf-8", errors="ignore")).hexdigest()
         safe_key = f"{key_prefix}_{base_key}"
         if not st.session_state.token:
@@ -268,6 +370,22 @@ else:
                                 st.rerun()
                     except Exception as e:
                         st.error(f"Failed to remove: {e}")
+            
+            # Track click button
+            with act_col3:
+                if url and st.session_state.token:
+                    if st.button("📊 Track", key=f"track_{safe_key}", help="Track this article for learning recommendations"):
+                        try:
+                            resp = requests.post(
+                                f"{API_BASE}/api/tutor/track-click",
+                                params={"article_url": url, "article_title": title},
+                                headers={"Authorization": f"Bearer {st.session_state.token}"},
+                                timeout=10,
+                            )
+                            if resp.status_code in (200, 201):
+                                st.success("Tracked!")
+                        except Exception as e:
+                            st.error(f"Failed to track: {e}")
 
     for tab, name in zip(tabs, order):
         with tab:

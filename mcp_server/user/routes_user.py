@@ -7,7 +7,7 @@ from storage.db import get_session
 from storage.models import UserPreference, User, Bookmark
 from mcp_server.auth.auth_utils import get_current_user
 
-router = APIRouter(prefix="/user", tags=["User"])
+router = APIRouter(tags=["User"])
 
 class PrefPayload(BaseModel):
     keywords: str | None = ""   # comma-separated

@@ -1,304 +1,472 @@
 {
-  "generated_at": 1759507192,
+  "generated_at": 1763919246,
   "items": [
     {
-      "title": "Liva AI (YC S25) Is Hiring",
-      "url": "https://www.ycombinator.com/companies/liva-ai/jobs/6xM8JYU-founding-operations-lead",
-      "bullets": [
-        "Here are 3-4 short, clear bullet points summarizing the job opportunity at Liva AI:",
-        "* Liva AI is hiring a full-time operator to manage complex projects and people, with a focus on building the world's richest library of human voice and video data for realistic AI",
-        "* The ideal candidate will be extremely organized, a good problem solver, and have experience managing people, with a strong interest in AI agents and the data space",
-        "* The role involves planning and executing data collection projects, improving internal workflows, and designing systems for seamless human-AI collaboration"
-      ],
-      "tags": [
-        "ai",
-        "career"
-      ],
-      "summary": "Here are 3-4 short, clear bullet points summarizing the job opportunity at Liva AI:. * Liva AI is hiring a full-time operator to manage complex projects and people, with a focus on building the world's richest library of human voice and video data for realistic AI. * The ideal candidate will be extremely organized, a good problem solver, and have experience managing people, with a strong interest in AI agents and the data space. * The role involves planning and executing data collection projects, improving internal workflows, and designing systems for seamless human-AI collaboration"
-    },
-    {
-      "title": "Bild AI (YC W25) Is Hiring",
-      "url": "https://www.ycombinator.com/companies/bild-ai/jobs/m2ilR5L-founding-engineer-applied-ai",
-      "bullets": [
-        "Here are 4 short, clear bullet points summarizing the news:",
-        "• Roop and Puneet founded Bild AI to simplify construction processes like blueprint reading, cost estimation, and permit applications",
-        "• The startup aims to make building more houses, hospitals, and schools more efficient using cutting-edge AI and computer vision techniques",
-        "• Bild AI has been featured on Business Insider and has received funding from top venture capital firms before even demo day"
-      ],
-      "tags": [
-        "ai",
-        "career"
-      ],
-      "summary": "Here are 4 short, clear bullet points summarizing the news:. • Roop and Puneet founded Bild AI to simplify construction processes like blueprint reading, cost estimation, and permit applications. • The startup aims to make building more houses, hospitals, and schools more efficient using cutting-edge AI and computer vision techniques. • Bild AI has been featured on Business Insider and has received funding from top venture capital firms before even demo day"
-    },
-    {
-      "title": "Daily Interview Prep Discussion",
-      "url": "https://www.reddit.com/r/leetcode/comments/1mq6eej/daily_interview_prep_discussion/",
-      "bullets": [
-        "Since this is the first post, let's start fresh",
-        "I'm here to help with any questions or concerns you may have about interviews, interviewing, and interview prep",
-        "What's on your mind? Do you have an upcoming interview and want some tips, or are you looking for general advice on how to prepare?"
-      ],
-      "tags": [
-        "interview",
-        "ai"
-      ],
-      "summary": "Since this is the first post, let's start fresh. I'm here to help with any questions or concerns you may have about interviews, interviewing, and interview prep. What's on your mind? Do you have an upcoming interview and want some tips, or are you looking for general advice on how to prepare?"
-    },
-    {
-      "title": "(From WSJ) - Companies Focusing Their Hiring on Unicorns with \"All-Star\" AI Talent and Experience",
-      "url": "https://www.reddit.com/r/cscareerquestions/comments/1nwmbad/from_wsj_companies_focusing_their_hiring_on/",
-      "bullets": [
-        "Here are 4 short, clear bullet points summarizing the article:",
-        "• Companies in the US are struggling to find skilled workers, especially those with advanced AI and ML experience",
-        "• They are looking for \"prodigies\" and \"10x engineers\" who have extensive experience, not just basic knowledge or certifications",
-        "• This is creating a shortage of jobs for many people, as companies are either hiring only the most skilled workers or leaving positions unfilled"
-      ],
-      "tags": [
-        "ai",
-        "career"
-      ],
-      "summary": "Here are 4 short, clear bullet points summarizing the article:. • Companies in the US are struggling to find skilled workers, especially those with advanced AI and ML experience. • They are looking for \"prodigies\" and \"10x engineers\" who have extensive experience, not just basic knowledge or certifications. • This is creating a shortage of jobs for many people, as companies are either hiring only the most skilled workers or leaving positions unfilled"
-    },
-    {
-      "title": "[R] New paper: LLMs don't have privileged self knowledge, which means we can efficiently train a General Correctness Model to predict the correctness of multiple models. Surprising or expected?",
-      "url": "https://www.reddit.com/r/MachineLearning/comments/1nwoxqz/r_new_paper_llms_dont_have_privileged_self/",
-      "bullets": [
-        "Here are 4 short, clear bullet points summarizing the news:",
-        "* Researchers found that Large Language Models (LLMs) don't have a special advantage when predicting their own correctness",
-        "* Instead, LLMs benefit from learning to predict the correctness of other models, which makes them more accurate",
-        "* This approach, called a Generalized Correctness Model (GCM), outperforms traditional methods and can even transfer to new, unseen models and datasets"
-      ],
-      "tags": [
-        "ai"
-      ],
-      "summary": "Here are 4 short, clear bullet points summarizing the news:. * Researchers found that Large Language Models (LLMs) don't have a special advantage when predicting their own correctness. * Instead, LLMs benefit from learning to predict the correctness of other models, which makes them more accurate. * This approach, called a Generalized Correctness Model (GCM), outperforms traditional methods and can even transfer to new, unseen models and datasets"
-    },
-    {
-      "title": "[D] How much should researchers (especially in ML domain) rely on LLMs for their work?",
-      "url": "https://www.reddit.com/r/MachineLearning/comments/1nwaunk/d_how_much_should_researchers_especially_in_ml/",
-      "bullets": [
-        "Here are 4 key points about the use of LLMs in research:",
-        "* **Idea refinement and testing**: Many researchers are using LLMs like ChatGPT and Claude to refine and test minor ideas in their research. They input their own ideas and see how the LLM responds, which can help them identify potential flaws or areas for improvement",
-        "* **Big-picture questions and brainstorming**: Researchers are also using LLMs to ask big-picture questions about their overall plans and to brainstorm new ideas. This can help them identify potential research directions and areas for exploration",
-        "* **Supporting literature reviews and summarization**: Researchers are using LLMs to help with literature reviews, summarizing papers, and extracting key points. This can save time and help them stay on top of the latest research in their field"
-      ],
-      "tags": [
-        "ai"
-      ],
-      "summary": "Here are 4 key points about the use of LLMs in research:. * **Idea refinement and testing**: Many researchers are using LLMs like ChatGPT and Claude to refine and test minor ideas in their research. They input their own ideas and see how the LLM responds, which can help them identify potential flaws or areas for improvement. * **Big-picture questions and brainstorming**: Researchers are also using LLMs to ask big-picture questions about their overall plans and to brainstorm new ideas. This can help them identify potential research directions and areas for exploration. * **Supporting literature reviews and summarization**: Researchers are using LLMs to help with literature reviews, summarizing papers, and extracting key points. This can save time and help them stay on top of the latest research in their field"
-    },
-    {
-      "title": "A new search engine raises $1.1M to let obsessive fans dive down internet rabbit holes",
-      "url": "https://techcrunch.com/2025/10/03/a-new-search-engine-raises-1-1m-to-let-obsessive-fans-dive-down-internet-rabbit-holes/",
-      "bullets": [
-        "Here are 4 short and clear bullet points summarizing the news:",
-        "- Zehra Naqvi, a 26-year-old entrepreneur, is launching a new company called Lore, a search platform for researching and discovering internet obsessions",
-        "- Naqvi, who gained a following of 250,000 on Tumblr and Twitter as a fan girl in the 2010s, wants to recreate the experience of exploring internet rabbit holes with Lore",
-        "- The platform aims to provide users with personalized graphs of their obsessions, fan theories, and cultural context, allowing them to connect their interests in new ways"
-      ],
-      "tags": [
-        "ai"
-      ],
-      "summary": "Here are 4 short and clear bullet points summarizing the news:. - Zehra Naqvi, a 26-year-old entrepreneur, is launching a new company called Lore, a search platform for researching and discovering internet obsessions. - Naqvi, who gained a following of 250,000 on Tumblr and Twitter as a fan girl in the 2010s, wants to recreate the experience of exploring internet rabbit holes with Lore. - The platform aims to provide users with personalized graphs of their obsessions, fan theories, and cultural context, allowing them to connect their interests in new ways"
-    },
-    {
-      "title": "Why System Design is surging in the age of AI",
-      "url": "https://www.hackerrank.com/blog/why-system-design-is-surging-in-the-age-of-ai/",
+      "title": "HumanLayer (YC F24) Is Hiring Founding Engineers",
+      "url": "https://www.ycombinator.com/companies/humanlayer/jobs/oBCZzc7-founding-product-engineer",
       "bullets": [
         "Here are 3-4 short, clear bullet points summarizing the news:",
-        "* In 2024, the demand for System Design skills in hiring surged by 82% year-over-year, making it the 8th most tested skill on the HackerRank platform",
-        "* This growth is significant because System Design is a skill that AI systems struggle with, requiring human thinking and problem-solving abilities",
-        "* The timing of this growth is interesting, as it coincides with the widespread adoption of AI tools and the introduction of ChatGPT, which has led to a new dynamic in hiring that focuses on how humans think and approach complex problems"
+        "- HumanLayer is working to revolutionize software development with AI, aiming to make 99% of code written by AI in engineering teams",
+        "- A recent study from Stanford University suggested AI struggles with complex codebases, but HumanLayer claims to be proving this wrong with advanced techniques",
+        "- The company is hiring a founding engineer to help drive the transition to AI-written code and improve developer productivity"
+      ],
+      "tags": [
+        "ai",
+        "career"
+      ],
+      "summary": "Here are 3-4 short, clear bullet points summarizing the news:. - HumanLayer is working to revolutionize software development with AI, aiming to make 99% of code written by AI in engineering teams. - A recent study from Stanford University suggested AI struggles with complex codebases, but HumanLayer claims to be proving this wrong with advanced techniques. - The company is hiring a founding engineer to help drive the transition to AI-written code and improve developer productivity",
+      "company": "Ycombinator",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.5481
+    },
+    {
+      "title": "I’m the smartest person on the earth",
+      "url": "https://www.reddit.com/r/leetcode/comments/1p4nxl9/im_the_smartest_person_on_the_earth/",
+      "bullets": [
+        "Here are 3-4 key points based on the statement:",
+        "* Interviewers prioritize problem-solving skills over memorizing exact syntax",
+        "* It's okay to not remember every syntax detail, as tools can provide this information",
+        "* Many interviewers understand that syntax is easily accessible through tools"
+      ],
+      "tags": [
+        "interview",
+        "ai"
+      ],
+      "summary": "Here are 3-4 key points based on the statement:. * Interviewers prioritize problem-solving skills over memorizing exact syntax. * It's okay to not remember every syntax detail, as tools can provide this information. * Many interviewers understand that syntax is easily accessible through tools",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.5173
+    },
+    {
+      "title": "Is it normal right now in the tech world for someone to look for an entry level job for 28 months with no bites?",
+      "url": "https://www.reddit.com/r/cscareerquestions/comments/1p4ppsb/is_it_normal_right_now_in_the_tech_world_for/",
+      "bullets": [
+        "Based on the information provided, here are 3-4 short, clear bullet points summarizing the situation:",
+        "• **Job market competition**: The job market for cybersecurity and UX Design is highly competitive, with many qualified candidates vying for a limited number of positions",
+        "• **Lack of recent experience**: Although your husband has freelance UX Design experience from several years ago, it may not be as relevant or impressive to potential employers as more recent experience or a strong portfolio",
+        "• **Education and certification**: Having a CIS master's program and a UX certification are positive factors, but may not be enough to stand out in a crowded job market"
+      ],
+      "tags": [
+        "interview"
+      ],
+      "summary": "Based on the information provided, here are 3-4 short, clear bullet points summarizing the situation:. • **Job market competition**: The job market for cybersecurity and UX Design is highly competitive, with many qualified candidates vying for a limited number of positions. • **Lack of recent experience**: Although your husband has freelance UX Design experience from several years ago, it may not be as relevant or impressive to potential employers as more recent experience or a strong portfolio. • **Education and certification**: Having a CIS master's program and a UX certification are positive factors, but may not be enough to stand out in a crowded job market",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.5076
+    },
+    {
+      "title": "I built a developer-focused AI mentor to help structure and guide projects — would love feedback from fellow devs",
+      "url": "https://www.piye.dev/",
+      "bullets": [
+        "It seems like you're referring to the benefits of using AI in coding. Here are 3-4 short, clear bullet points summarizing this concept:",
+        "* You write the code, and AI helps by providing context and suggestions to improve it",
+        "* AI can assist with tasks such as code completion, debugging, and optimizing your code",
+        "* This collaboration between you and AI can make coding more efficient and productive"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "It seems like you're referring to the benefits of using AI in coding. Here are 3-4 short, clear bullet points summarizing this concept:. * You write the code, and AI helps by providing context and suggestions to improve it. * AI can assist with tasks such as code completion, debugging, and optimizing your code. * This collaboration between you and AI can make coding more efficient and productive",
+      "company": "Piye",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.5019
+    },
+    {
+      "title": "What’s the actual purpose of the “Projects” feature on ChatGPT?",
+      "url": "https://www.reddit.com/r/OpenAI/comments/1p4jxm5/whats_the_actual_purpose_of_the_projects_feature/",
+      "bullets": [
+        "Here are 4 bullet points to help clarify how to use the Projects feature:",
+        "* **Organize long-term work**: Projects are meant to be a centralized space for ongoing tasks, files, and context related to a specific project or goal. Think of it as a digital binder or folder that keeps everything related to a project in one place",
+        "* **Replace long chat threads**: Yes, Projects can help reduce the clutter of long chat threads by providing a dedicated space for discussion, files, and progress tracking. This keeps conversations focused and makes it easier to reference previous discussions",
+        "* **Improve memory and continuity**: Projects can help you remember where you left off and what you need to do next. By storing context, files, and tasks in one place, you can easily pick up where you left off and make progress on your project"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "Here are 4 bullet points to help clarify how to use the Projects feature:. * **Organize long-term work**: Projects are meant to be a centralized space for ongoing tasks, files, and context related to a specific project or goal. Think of it as a digital binder or folder that keeps everything related to a project in one place. * **Replace long chat threads**: Yes, Projects can help reduce the clutter of long chat threads by providing a dedicated space for discussion, files, and progress tracking. This keeps conversations focused and makes it easier to reference previous discussions. * **Improve memory and continuity**: Projects can help you remember where you left off and what you need to do next. By storing context, files, and tasks in one place, you can easily pick up where you left off and make progress on your project",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.4994
+    },
+    {
+      "title": "Dark Mode Sucks",
+      "url": "https://www.tomechangosubanana.com/2025/dark-mode-sucks/",
+      "bullets": [
+        "Here are 4 short, clear bullet points summarizing the article:",
+        "• Many people on the internet are strongly advocating for \"dark mode\" due to its supposed benefits for eye health",
+        "• However, critics argue that those who prefer dark mode are often using it as an excuse to avoid adjusting their ambient lighting",
+        "• Poor lighting can actually cause eye strain and harm vision, rather than dark mode"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "Here are 4 short, clear bullet points summarizing the article:. • Many people on the internet are strongly advocating for \"dark mode\" due to its supposed benefits for eye health. • However, critics argue that those who prefer dark mode are often using it as an excuse to avoid adjusting their ambient lighting. • Poor lighting can actually cause eye strain and harm vision, rather than dark mode",
+      "company": "Tomechangosubanana",
+      "role": "intern",
+      "salary_hint": null,
+      "msnrr_score": 0.4992
+    },
+    {
+      "title": "Hiring: Female Content Creator at Talencee",
+      "url": "https://www.reddit.com/r/internships/comments/1p4o1mr/hiring_female_content_creator_at_talencee/",
+      "bullets": [
+        "Here are 3-4 short, clear bullet points summarizing the job opportunity:",
+        "- Talencee is hiring a Female Content Creator for a full-time position at their Gurgaon (Sector 32) office",
+        "- The ideal candidate should have strong communication skills and a visually appealing portfolio",
+        "- Responsibilities will include creating engaging content (photos, videos, and written content)"
+      ],
+      "tags": [
+        "career"
+      ],
+      "summary": "Here are 3-4 short, clear bullet points summarizing the job opportunity:. - Talencee is hiring a Female Content Creator for a full-time position at their Gurgaon (Sector 32) office. - The ideal candidate should have strong communication skills and a visually appealing portfolio. - Responsibilities will include creating engaging content (photos, videos, and written content)",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.4973
+    },
+    {
+      "title": "A bug caused by a door in a game you may have heard of called \"Half Life 2\" (spoiler: fp precision)",
+      "url": "https://mastodon.gamedev.place/@TomF/115589875974658415",
+      "bullets": [
+        "It seems you're trying to access Mastodon but are having trouble due to JavaScript being disabled. Here are some alternatives:",
+        "* Enable JavaScript in your browser to access Mastodon through the web application",
+        "* Download and install a native app for Mastodon on your device (available for various platforms)",
+        "* Consider using a different browser or device where JavaScript is enabled"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "It seems you're trying to access Mastodon but are having trouble due to JavaScript being disabled. Here are some alternatives:. * Enable JavaScript in your browser to access Mastodon through the web application. * Download and install a native app for Mastodon on your device (available for various platforms). * Consider using a different browser or device where JavaScript is enabled",
+      "company": "Mastodon",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.4972
+    },
+    {
+      "title": "How I cracked FAANG+ with just 30 minutes of studying per day.",
+      "url": "https://www.reddit.com/r/leetcode/comments/1kmt5le/how_i_cracked_faang_with_just_30_minutes_of/",
+      "bullets": [
+        "Here are 3-4 short, clear bullet points summarizing the article:",
+        "* A job candidate cracked a high-paying offer from a well-respected tech company by studying just 30 minutes a day for 6 months",
+        "* The candidate alternated between practicing coding problems on LeetCode and learning about system design, treating both tracks with equal importance",
+        "* The key to their success was consistency and focused learning, rather than trying to cram a lot of information in a short amount of time"
       ],
       "tags": [
         "interview",
         "ai",
         "career"
       ],
-      "summary": "Here are 3-4 short, clear bullet points summarizing the news:. * In 2024, the demand for System Design skills in hiring surged by 82% year-over-year, making it the 8th most tested skill on the HackerRank platform. * This growth is significant because System Design is a skill that AI systems struggle with, requiring human thinking and problem-solving abilities. * The timing of this growth is interesting, as it coincides with the widespread adoption of AI tools and the introduction of ChatGPT, which has led to a new dynamic in hiring that focuses on how humans think and approach complex problems"
+      "summary": "Here are 3-4 short, clear bullet points summarizing the article:. * A job candidate cracked a high-paying offer from a well-respected tech company by studying just 30 minutes a day for 6 months. * The candidate alternated between practicing coding problems on LeetCode and learning about system design, treating both tracks with equal importance. * The key to their success was consistency and focused learning, rather than trying to cram a lot of information in a short amount of time",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.4935
     },
     {
-      "title": "QuestDB (YC S20) Is Hiring a Core Database Engineer – C++ and Rust",
-      "url": "https://questdb.com/careers/core-database-engineer/",
+      "title": "[D] What are the best Machine Learning PhD thesis you have read?",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1p4qdf3/d_what_are_the_best_machine_learning_phd_thesis/",
       "bullets": [
-        "Here are 3-4 short, clear bullet points summarizing the news about QuestDB:",
-        "* QuestDB is a specialized database that stores, processes, and analyzes time series data in real-time, with a focus on reliability, performance, and simplicity",
-        "* The company has gained popularity, with 16k stars on its open source repository and is considered the fastest growing database in the time-series category",
-        "* QuestDB has been adopted by leading companies across various industries, including Financial Services, Energy, and Space Exploration, and is looking to expand its team with a Core Database Engineer"
+        "Congratulations on starting your PhD thesis! Reading inspiring theses can indeed help you structure your own work. Here are a few examples of PhD theses in machine learning that are highly regarded:",
+        "1. **\"Probabilistic Reasoning in Intelligent Systems: A Hierarchical Connectionist Approach\" by David J. Fleet** (1994): This thesis, which led to Fleet's PhD from the University of Toronto, explores the application of probabilistic reasoning in computer vision. It's a great example of how to integrate theoretical and methodological research in a coherent narrative",
+        "2. **\"Learning from Data\" by Yann LeCun** (1987): Although not exclusively focused on probabilistic machine learning, LeCun's thesis, which he completed at the Université Pierre et Marie Curie, is a foundational work in deep learning. It showcases how to present complex technical ideas in a clear and engaging manner",
+        "3. **\"Probabilistic Models for Inference in Graphical Models\" by Zoubin Ghahramani** (1998): Ghahramani's thesis, completed at the University of Toronto, is a seminal work in probabilistic graphical models. It demonstrates how to develop a coherent narrative around a set of related research questions and technical contributions"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "Congratulations on starting your PhD thesis! Reading inspiring theses can indeed help you structure your own work. Here are a few examples of PhD theses in machine learning that are highly regarded:. 1. **\"Probabilistic Reasoning in Intelligent Systems: A Hierarchical Connectionist Approach\" by David J. Fleet** (1994): This thesis, which led to Fleet's PhD from the University of Toronto, explores the application of probabilistic reasoning in computer vision. It's a great example of how to integrate theoretical and methodological research in a coherent narrative. 2. **\"Learning from Data\" by Yann LeCun** (1987): Although not exclusively focused on probabilistic machine learning, LeCun's thesis, which he completed at the Université Pierre et Marie Curie, is a foundational work in deep learning. It showcases how to present complex technical ideas in a clear and engaging manner. 3. **\"Probabilistic Models for Inference in Graphical Models\" by Zoubin Ghahramani** (1998): Ghahramani's thesis, completed at the University of Toronto, is a seminal work in probabilistic graphical models. It demonstrates how to develop a coherent narrative around a set of related research questions and technical contributions",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.4888
+    },
+    {
+      "title": "Do you think scaleups like Airwallex, Zip, Wisetech promote top performers aggressively?",
+      "url": "https://www.reddit.com/r/cscareerquestions/comments/1p4lki7/do_you_think_scaleups_like_airwallex_zip_wisetech/",
+      "bullets": [
+        "Here are 3-4 short, clear bullet points summarizing the information:",
+        "* The r/cscareerquestions community is for people in the computer science field",
+        "* The goal of the community is to share and help navigate the challenges of the industry",
+        "* Members can share strategies for success in the field"
       ],
       "tags": [
         "ai",
         "career"
       ],
-      "summary": "Here are 3-4 short, clear bullet points summarizing the news about QuestDB:. * QuestDB is a specialized database that stores, processes, and analyzes time series data in real-time, with a focus on reliability, performance, and simplicity. * The company has gained popularity, with 16k stars on its open source repository and is considered the fastest growing database in the time-series category. * QuestDB has been adopted by leading companies across various industries, including Financial Services, Energy, and Space Exploration, and is looking to expand its team with a Core Database Engineer"
+      "summary": "Here are 3-4 short, clear bullet points summarizing the information:. * The r/cscareerquestions community is for people in the computer science field. * The goal of the community is to share and help navigate the challenges of the industry. * Members can share strategies for success in the field",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.488
     },
     {
-      "title": "Great Question (YC W21) Is Hiring Director of Product",
-      "url": "https://www.ycombinator.com/companies/great-question/jobs/9crdslU-director-of-product",
+      "title": "I wrote about getting hired at startups",
+      "url": "https://www.reddit.com/r/cscareerquestions/comments/1p4nuki/i_wrote_about_getting_hired_at_startups/",
       "bullets": [
-        "Here are 4 key points about the job role:",
-        "* **Lead Product Team**: The Director or Senior Director of Product will guide and coach Product Managers, personally own key product initiatives, and grow the team from 2 to 4+ PMs over the next year",
-        "* **Organizational Design**: The role involves defining the right product org structure to support autonomy and velocity, and collaborating with other teams to drive the product roadmap and deliver impactful features quickly",
-        "* **AI Innovation**: The ideal candidate will have experience building and shipping AI products, and be able to evaluate emerging AI tech critically to shape product experiences infused with AI"
+        "Here are 4 key points from the article on how to stand out in a startup job application:",
+        "• **Show, don't tell**: Instead of just stating your skills and qualifications, provide specific examples of how you've applied them in the past. This will help you stand out from other applicants",
+        "• **Demonstrate passion and research**: Show that you've done your homework on the company and the role. Mention specific projects, products, or initiatives that excite you, and explain how your skills align with the company's goals",
+        "• **Highlight your unique strengths**: Don't just list generic skills like \"team player\" or \"problem solver\". Instead, focus on specific strengths that set you apart from others, such as a unique skillset or a creative approach to problem-solving"
       ],
       "tags": [
         "ai",
         "career"
       ],
-      "summary": "Here are 4 key points about the job role:. * **Lead Product Team**: The Director or Senior Director of Product will guide and coach Product Managers, personally own key product initiatives, and grow the team from 2 to 4+ PMs over the next year. * **Organizational Design**: The role involves defining the right product org structure to support autonomy and velocity, and collaborating with other teams to drive the product roadmap and deliver impactful features quickly. * **AI Innovation**: The ideal candidate will have experience building and shipping AI products, and be able to evaluate emerging AI tech critically to shape product experiences infused with AI"
+      "summary": "Here are 4 key points from the article on how to stand out in a startup job application:. • **Show, don't tell**: Instead of just stating your skills and qualifications, provide specific examples of how you've applied them in the past. This will help you stand out from other applicants. • **Demonstrate passion and research**: Show that you've done your homework on the company and the role. Mention specific projects, products, or initiatives that excite you, and explain how your skills align with the company's goals. • **Highlight your unique strengths**: Don't just list generic skills like \"team player\" or \"problem solver\". Instead, focus on specific strengths that set you apart from others, such as a unique skillset or a creative approach to problem-solving",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.4872
     },
     {
-      "title": "Trellis (YC W24) Is Hiring: Automate Healthcare Paperwork",
-      "url": "https://www.ycombinator.com/companies/trellis/jobs/C0VryYb-forward-deployed-engineers-intern-august-2025",
+      "title": "A monopoly ISP refuses to fix upstream infrastructure",
+      "url": "https://sacbear.com/xfinity-wont-fix-internet/",
+      "bullets": [
+        "Here are 3-4 short, clear bullet points summarizing the situation:",
+        "* A customer has been experiencing frequent internet outages (6-7 times a day, 125 seconds each) with Xfinity internet service since June 2024, with over 3,300 outage incidents totaling 117+ hours of downtime",
+        "* The outages are consistent and predictable, occurring at the same times of day (peak at noon, secondary clusters at early morning and late night), suggesting an automated schedule",
+        "* The customer's neighbor, with a different house and line, is experiencing the same issue, indicating a broader problem with Xfinity's infrastructure"
+      ],
+      "tags": [
+        "general"
+      ],
+      "summary": "Here are 3-4 short, clear bullet points summarizing the situation:. * A customer has been experiencing frequent internet outages (6-7 times a day, 125 seconds each) with Xfinity internet service since June 2024, with over 3,300 outage incidents totaling 117+ hours of downtime. * The outages are consistent and predictable, occurring at the same times of day (peak at noon, secondary clusters at early morning and late night), suggesting an automated schedule. * The customer's neighbor, with a different house and line, is experiencing the same issue, indicating a broader problem with Xfinity's infrastructure",
+      "company": "Sacbear",
+      "role": "intern",
+      "salary_hint": null,
+      "msnrr_score": 0.4869
+    },
+    {
+      "title": "Best resources to keep up with modern frontend trends in 2025?",
+      "url": "https://www.reddit.com/r/OpenAI/comments/1p4nmji/best_resources_to_keep_up_with_modern_frontend/",
+      "bullets": [
+        "Here are 4 short, clear bullet points to help you get started with AI in frontend development:",
+        "* **Start with the basics**: Begin by learning about the different AI APIs and tools available, such as Google Cloud AI Platform, Microsoft Azure Cognitive Services, or IBM Watson. Familiarize yourself with their documentation and APIs",
+        "* **Explore frontend AI libraries**: Look into libraries like TensorFlow.js, Brain.js, or Synaptic.js, which allow you to integrate machine learning models directly into your React applications. These libraries provide a more accessible entry point for frontend developers",
+        "* **Beginner-friendly projects**: Consider building projects like:"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "Here are 4 short, clear bullet points to help you get started with AI in frontend development:. * **Start with the basics**: Begin by learning about the different AI APIs and tools available, such as Google Cloud AI Platform, Microsoft Azure Cognitive Services, or IBM Watson. Familiarize yourself with their documentation and APIs. * **Explore frontend AI libraries**: Look into libraries like TensorFlow.js, Brain.js, or Synaptic.js, which allow you to integrate machine learning models directly into your React applications. These libraries provide a more accessible entry point for frontend developers. * **Beginner-friendly projects**: Consider building projects like:",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.4863
+    },
+    {
+      "title": "Does anyone is looking for internship?",
+      "url": "https://www.reddit.com/r/internships/comments/1p4jw0i/does_anyone_is_looking_for_internship/",
+      "bullets": [
+        "Here are 3-4 short, clear bullet points summarizing the internship opportunities:",
+        "* We're offering internships in various roles, including HR, video creation, graphic design, software development, content creation, and business development",
+        "* These internships provide a chance to gain real-time experience and exposure to a start-up environment",
+        "* Interns will have the opportunity to work with a dynamic team and contribute to the growth of the company"
+      ],
+      "tags": [
+        "ai",
+        "career"
+      ],
+      "summary": "Here are 3-4 short, clear bullet points summarizing the internship opportunities:. * We're offering internships in various roles, including HR, video creation, graphic design, software development, content creation, and business development. * These internships provide a chance to gain real-time experience and exposure to a start-up environment. * Interns will have the opportunity to work with a dynamic team and contribute to the growth of the company",
+      "company": "Reddit",
+      "role": "intern",
+      "salary_hint": null,
+      "msnrr_score": 0.4837
+    },
+    {
+      "title": "GPT-5.1 re-answering questions it already answered",
+      "url": "https://www.reddit.com/r/OpenAI/comments/1p4ha2u/gpt51_reanswering_questions_it_already_answered/",
+      "bullets": [
+        "Here are 4 short, clear bullet points summarizing the issue:",
+        "* You're experiencing a problem with ChatGPT-5.1, where it repeats answers to previous questions when you ask new ones",
+        "* This happens when the model starts \"thinking\" or processing complex information, and it seems to forget that it's already answered the question",
+        "* You've tried to isolate the issue by turning off memory, but the problem persists"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "Here are 4 short, clear bullet points summarizing the issue:. * You're experiencing a problem with ChatGPT-5.1, where it repeats answers to previous questions when you ask new ones. * This happens when the model starts \"thinking\" or processing complex information, and it seems to forget that it's already answered the question. * You've tried to isolate the issue by turning off memory, but the problem persists",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.4777
+    },
+    {
+      "title": "[D] VAST AI GPUs for Development and Deployment",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1p4jzgp/d_vast_ai_gpus_for_development_and_deployment/",
+      "bullets": [
+        "I don't have personal experiences, but I can provide general information about Vast AI and their services",
+        "**About Vast AI:**",
+        "- Vast AI is a cloud-based platform that provides on-demand access to high-performance computing resources, including GPUs",
+        "- Their platform is designed for AI and data science workloads, offering a range of GPU options, including the RTX 5090"
+      ],
+      "tags": [
+        "ai",
+        "career"
+      ],
+      "summary": "I don't have personal experiences, but I can provide general information about Vast AI and their services. **About Vast AI:**. - Vast AI is a cloud-based platform that provides on-demand access to high-performance computing resources, including GPUs. - Their platform is designed for AI and data science workloads, offering a range of GPU options, including the RTX 5090",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.4756
+    },
+    {
+      "title": "How did coding get invented",
+      "url": "https://www.reddit.com/r/computerscience/comments/1p41nqu/how_did_coding_get_invented/",
+      "bullets": [
+        "You're right, coding can seem obscure and complex, but it's actually a fascinating story. Here are 4 key points about the history of coding and how it was developed:",
+        "* **Early beginnings:** The first computer, ENIAC (Electronic Numerical Integrator and Computer), was built in the 1940s. Its creators, including John Mauchly and J. Presper Eckert, used a system of patch cords and switches to input data and instructions. This was the first step towards developing programming languages",
+        "* **First programming languages:** In the 1950s, the first programming languages were developed, such as Assembly Language and Fortran. These languages were designed to be more user-friendly and allowed programmers to write instructions using symbols and keywords, rather than just patch cords and switches",
+        "* **Development of high-level languages:** In the 1960s and 1970s, high-level languages like COBOL, C, and Pascal were developed. These languages were designed to be more abstract and easier to read, with features like variables, loops, and functions. This made it easier for programmers to write code without having to worry about the low-level details of the computer's architecture"
+      ],
+      "tags": [
+        "ai",
+        "career"
+      ],
+      "summary": "You're right, coding can seem obscure and complex, but it's actually a fascinating story. Here are 4 key points about the history of coding and how it was developed:. * **Early beginnings:** The first computer, ENIAC (Electronic Numerical Integrator and Computer), was built in the 1940s. Its creators, including John Mauchly and J. Presper Eckert, used a system of patch cords and switches to input data and instructions. This was the first step towards developing programming languages. * **First programming languages:** In the 1950s, the first programming languages were developed, such as Assembly Language and Fortran. These languages were designed to be more user-friendly and allowed programmers to write instructions using symbols and keywords, rather than just patch cords and switches. * **Development of high-level languages:** In the 1960s and 1970s, high-level languages like COBOL, C, and Pascal were developed. These languages were designed to be more abstract and easier to read, with features like variables, loops, and functions. This made it easier for programmers to write code without having to worry about the low-level details of the computer's architecture",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.4745
+    },
+    {
+      "title": "Raycast for Windows Is Here",
+      "url": "https://www.raycast.com/blog/raycast-for-windows",
       "bullets": [
         "Here are 4 short, clear bullet points summarizing the news:",
-        "• Trellis is a healthcare technology company that automates document intake, prior authorizations, and appeals to help healthcare providers treat more patients faster",
-        "• Trellis is a spinout from Stanford AI lab and backed by leading investors, including YC and Google executives",
-        "• The company is hiring Forward Deployed Engineers (FDEs) to work with healthcare providers, pharmaceutical companies, and diagnostic labs to implement AI-powered solutions"
+        "• Raycast, a productivity tool, is now available in public beta for Windows, offering a faster and more efficient way to search and access files, apps, and tools",
+        "• The Windows version of Raycast has a custom indexer for file search, familiar keyboard shortcuts, and a design that fits in with the Windows interface",
+        "• Raycast comes with an extension platform, allowing users to integrate their favorite tools and apps, and developers can build their own extensions using React and TypeScript"
       ],
       "tags": [
         "ai",
         "career"
       ],
-      "summary": "Here are 4 short, clear bullet points summarizing the news:. • Trellis is a healthcare technology company that automates document intake, prior authorizations, and appeals to help healthcare providers treat more patients faster. • Trellis is a spinout from Stanford AI lab and backed by leading investors, including YC and Google executives. • The company is hiring Forward Deployed Engineers (FDEs) to work with healthcare providers, pharmaceutical companies, and diagnostic labs to implement AI-powered solutions"
+      "summary": "Here are 4 short, clear bullet points summarizing the news:. • Raycast, a productivity tool, is now available in public beta for Windows, offering a faster and more efficient way to search and access files, apps, and tools. • The Windows version of Raycast has a custom indexer for file search, familiar keyboard shortcuts, and a design that fits in with the Windows interface. • Raycast comes with an extension platform, allowing users to integrate their favorite tools and apps, and developers can build their own extensions using React and TypeScript",
+      "company": "Raycast",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.4739
     },
     {
-      "title": "Snap Inc. System design round",
-      "url": "https://www.reddit.com/r/csinterviewproblems/comments/1jzim58/snap_inc_system_design_round/",
+      "title": "Laid off. In early 30s and no real skills to show for it.",
+      "url": "https://www.reddit.com/r/cscareerquestions/comments/1p448bb/laid_off_in_early_30s_and_no_real_skills_to_show/",
       "bullets": [
-        "I'd be happy to help you prepare for your Snap Inc. system design interview. Here are some general tips and areas to focus on:",
-        "**Common Areas to Focus On:**",
-        "1. **System Design Principles**: Understand the trade-offs between different design choices, such as scalability, performance, and cost",
-        "2. **Data Storage and Retrieval**: Familiarize yourself with data modeling, indexing, caching, and query optimization"
-      ],
-      "tags": [
-        "interview",
-        "ai",
-        "career"
-      ],
-      "summary": "I'd be happy to help you prepare for your Snap Inc. system design interview. Here are some general tips and areas to focus on:. **Common Areas to Focus On:**. 1. **System Design Principles**: Understand the trade-offs between different design choices, such as scalability, performance, and cost. 2. **Data Storage and Retrieval**: Familiarize yourself with data modeling, indexing, caching, and query optimization"
-    },
-    {
-      "title": "SDE-1 interview with UiPath",
-      "url": "https://www.reddit.com/r/csinterviewproblems/comments/1jvmqwv/sde1_interview_with_uipath/",
-      "bullets": [
-        "I'm happy to help you with your UiPath SDE-1 interview preparation. Unfortunately, I'm a large language model, I don't have personal experiences or direct access to real-time information. However, I can provide you with general information and tips that may be helpful",
-        "**UiPath SDE-1 Interview Process:**",
-        "Based on online reviews and forums, here's a general idea of what you can expect:",
-        "* The interview process typically consists of 3-4 rounds, including a mix of technical and behavioral questions"
-      ],
-      "tags": [
-        "interview",
-        "ai"
-      ],
-      "summary": "I'm happy to help you with your UiPath SDE-1 interview preparation. Unfortunately, I'm a large language model, I don't have personal experiences or direct access to real-time information. However, I can provide you with general information and tips that may be helpful. **UiPath SDE-1 Interview Process:**. Based on online reviews and forums, here's a general idea of what you can expect:. * The interview process typically consists of 3-4 rounds, including a mix of technical and behavioral questions"
-    },
-    {
-      "title": "SDE-1 interview with UiPath",
-      "url": "https://www.reddit.com/r/csinterviewproblems/comments/1jvmqtf/sde1_interview_with_uipath/",
-      "bullets": [
-        "I can provide you with general information about UiPath's interview process and some tips to help you prepare. However, please note that the specific questions and rounds may vary depending on the location and the interviewer",
-        "**UiPath Interview Process:**",
-        "- UiPath's interview process typically consists of 3-4 rounds, including a phone screening, technical rounds, and a final round with the hiring manager",
-        "- The technical rounds usually include a mix of Data Structures and Algorithms (DSA), system design, and project-based questions"
+        "I understand your situation, and it's great that you're taking the first step by seeking advice. Here are some suggestions to consider:",
+        "* **Re-evaluate your goals**: Given your health issues and communication challenges, it might be wise to focus on roles that don't require intense competition or high-pressure interviews. Consider jobs that value experience and stability over recent degrees or technical skills",
+        "* **Upskill in areas that interest you**: Data Engineering with Python/SQL might be a stretch, but you can start by learning the basics and building projects. This will help you gain confidence and create a portfolio to showcase your skills. You can also explore other areas like data analysis, business intelligence, or even technical writing",
+        "* **Highlight transferable skills**: As a CS graduate, you have a solid foundation in problem-solving, critical thinking, and analytical skills. Emphasize these skills when applying for jobs, and be prepared to explain how they can be applied to different roles"
       ],
       "tags": [
         "interview",
         "ai",
         "career"
       ],
-      "summary": "I can provide you with general information about UiPath's interview process and some tips to help you prepare. However, please note that the specific questions and rounds may vary depending on the location and the interviewer. **UiPath Interview Process:**. - UiPath's interview process typically consists of 3-4 rounds, including a phone screening, technical rounds, and a final round with the hiring manager. - The technical rounds usually include a mix of Data Structures and Algorithms (DSA), system design, and project-based questions"
+      "summary": "I understand your situation, and it's great that you're taking the first step by seeking advice. Here are some suggestions to consider:. * **Re-evaluate your goals**: Given your health issues and communication challenges, it might be wise to focus on roles that don't require intense competition or high-pressure interviews. Consider jobs that value experience and stability over recent degrees or technical skills. * **Upskill in areas that interest you**: Data Engineering with Python/SQL might be a stretch, but you can start by learning the basics and building projects. This will help you gain confidence and create a portfolio to showcase your skills. You can also explore other areas like data analysis, business intelligence, or even technical writing. * **Highlight transferable skills**: As a CS graduate, you have a solid foundation in problem-solving, critical thinking, and analytical skills. Emphasize these skills when applying for jobs, and be prepared to explain how they can be applied to different roles",
+      "company": "Reddit",
+      "role": "data engineer",
+      "salary_hint": null,
+      "msnrr_score": 0.4728
     },
     {
-      "title": "Last-Minute Tips for Amazon SDE-1 Interview (Technical + Behavioral)",
-      "url": "https://www.reddit.com/r/csinterviewproblems/comments/1jpy6o0/lastminute_tips_for_amazon_sde1_interview/",
+      "title": "How many have noticed that almost all of the top rankers of leetcode contests are using LLMs one way or other?",
+      "url": "https://www.reddit.com/r/leetcode/comments/1p4incu/how_many_have_noticed_that_almost_all_of_the_top/",
       "bullets": [
-        "Based on Amazon's interview process and common feedback from past candidates, here are some last-minute tips and advice:",
-        "**Last-Minute Focus:**",
-        "* Review your resume and be prepared to talk about your projects and experiences in detail",
-        "* Practice whiteboarding with a friend or mentor to get comfortable with explaining your thought process"
+        "Here are 3-4 bullet points summarizing the situation:",
+        "* **External help in contests:** LeetCode contests allow participants to use external resources, but copying code from others, including LLMs, is against the spirit of the competition",
+        "* **LLMs and cheating:** While LLMs can be helpful for learning and understanding concepts, using them to directly copy code is considered cheating and undermines the purpose of the contest",
+        "* **Seriousness of participants:** It's difficult to estimate how many LeetCode participants take the contests seriously and code without external help. However, it's likely that a significant number of participants use external resources, including LLMs"
       ],
       "tags": [
         "interview",
+        "ai"
+      ],
+      "summary": "Here are 3-4 bullet points summarizing the situation:. * **External help in contests:** LeetCode contests allow participants to use external resources, but copying code from others, including LLMs, is against the spirit of the competition. * **LLMs and cheating:** While LLMs can be helpful for learning and understanding concepts, using them to directly copy code is considered cheating and undermines the purpose of the contest. * **Seriousness of participants:** It's difficult to estimate how many LeetCode participants take the contests seriously and code without external help. However, it's likely that a significant number of participants use external resources, including LLMs",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.472
+    },
+    {
+      "title": "Can I do internships during summer between undergrad and ms/phd",
+      "url": "https://www.reddit.com/r/internships/comments/1p4kh92/can_i_do_internships_during_summer_between/",
+      "bullets": [
+        "As an F1 student, you can work in the US under certain conditions. Here are some key points to consider:",
+        "* **Optional Practical Training (OPT):** You can apply for OPT after completing your degree (BS or MS). This allows you to work in the US for up to 12-36 months (depending on your degree level). You can apply for OPT before or after graduation",
+        "* **Curricular Practical Training (CPT):** You can also work on-campus or off-campus as part of your F1 student program through CPT. This requires approval from your university and must be related to your field of study",
+        "* **Internships during studies:** You can participate in internships during your studies, but they must be related to your field of study and approved by your university. You can work on-campus or off-campus, but you must maintain a valid F1 student status"
+      ],
+      "tags": [
         "ai",
         "career"
       ],
-      "summary": "Based on Amazon's interview process and common feedback from past candidates, here are some last-minute tips and advice:. **Last-Minute Focus:**. * Review your resume and be prepared to talk about your projects and experiences in detail. * Practice whiteboarding with a friend or mentor to get comfortable with explaining your thought process"
+      "summary": "As an F1 student, you can work in the US under certain conditions. Here are some key points to consider:. * **Optional Practical Training (OPT):** You can apply for OPT after completing your degree (BS or MS). This allows you to work in the US for up to 12-36 months (depending on your degree level). You can apply for OPT before or after graduation. * **Curricular Practical Training (CPT):** You can also work on-campus or off-campus as part of your F1 student program through CPT. This requires approval from your university and must be related to your field of study. * **Internships during studies:** You can participate in internships during your studies, but they must be related to your field of study and approved by your university. You can work on-campus or off-campus, but you must maintain a valid F1 student status",
+      "company": "Reddit",
+      "role": "intern",
+      "salary_hint": null,
+      "msnrr_score": 0.4719
     },
     {
-      "title": "Live Coding Interview Prep",
-      "url": "https://www.reddit.com/r/csinterviewproblems/comments/1jamiuc/live_coding_interview_prep/",
+      "title": "CS/IT internships",
+      "url": "https://www.reddit.com/r/internships/comments/1p4m6jx/csit_internships/",
       "bullets": [
-        "Given the focus on practical coding abilities, here's a suggested preparation plan:",
-        "* **Review common coding scenarios**: Think about real-world problems that require coding, such as:",
-        "+ Handling user input and validation",
-        "+ Working with APIs or web services"
+        "As a junior from a tier 1 college in Pune and a USA citizen, you have a competitive edge in the job market. Here are some internship opportunities in the domains of CS/IT/AI/ML/Data Science for the summer of 2026:",
+        "* **Google Summer of Code**: Google offers a 3-month internship program for students to work on open-source projects. You can apply through the official website and choose a project that aligns with your interests. (Remote)",
+        "* **Microsoft Internships**: Microsoft offers various internship opportunities in AI, ML, and Data Science. You can apply through the official website and choose a location (Pune or remote) that suits you. (In-person or Remote)",
+        "* **IBM Internships**: IBM offers internships in AI, ML, and Data Science, with opportunities to work on real-world projects. You can apply through the official website and choose a location (Pune or remote) that suits you. (In-person or Remote)"
       ],
       "tags": [
-        "interview",
-        "ai"
+        "ai",
+        "career"
       ],
-      "summary": "Given the focus on practical coding abilities, here's a suggested preparation plan:. * **Review common coding scenarios**: Think about real-world problems that require coding, such as:. + Handling user input and validation. + Working with APIs or web services"
+      "summary": "As a junior from a tier 1 college in Pune and a USA citizen, you have a competitive edge in the job market. Here are some internship opportunities in the domains of CS/IT/AI/ML/Data Science for the summer of 2026:. * **Google Summer of Code**: Google offers a 3-month internship program for students to work on open-source projects. You can apply through the official website and choose a project that aligns with your interests. (Remote). * **Microsoft Internships**: Microsoft offers various internship opportunities in AI, ML, and Data Science. You can apply through the official website and choose a location (Pune or remote) that suits you. (In-person or Remote). * **IBM Internships**: IBM offers internships in AI, ML, and Data Science, with opportunities to work on real-world projects. You can apply through the official website and choose a location (Pune or remote) that suits you. (In-person or Remote)",
+      "company": "Reddit",
+      "role": "intern",
+      "salary_hint": null,
+      "msnrr_score": 0.4689
     },
     {
-      "title": "Looking for study partner/group to master DSA (Targeting Top Tech)",
-      "url": "https://www.reddit.com/r/leetcode/comments/1nwxf8j/looking_for_study_partnergroup_to_master_dsa/",
+      "title": "Insurers retreat from AI cover as risk of multibillion-dollar claims mounts",
+      "url": "https://www.ft.com/content/abfe9741-f438-4ed6-a673-075ec177dc62",
       "bullets": [
-        "Here are 3-4 short, clear bullet points summarizing your request:",
-        "* You're a 5-year experienced Software Engineer looking to improve your skills in algorithms and problem-solving",
-        "* You're available to dedicate 6 hours daily, apart from your full-time job, to focus on this goal",
-        "* You're looking for a study partner or group to stay consistent and motivated"
+        "Here are 3-4 short, clear bullet points summarizing the offer:",
+        "* Get unlimited access to The Financial Times (FT) for 4 weeks for just Rs100",
+        "* After the trial, the subscription will cost Rs4335 per month",
+        "* You can access FT content on any device"
       ],
       "tags": [
-        "interview",
-        "ai"
+        "ai",
+        "career"
       ],
-      "summary": "Here are 3-4 short, clear bullet points summarizing your request:. * You're a 5-year experienced Software Engineer looking to improve your skills in algorithms and problem-solving. * You're available to dedicate 6 hours daily, apart from your full-time job, to focus on this goal. * You're looking for a study partner or group to stay consistent and motivated"
+      "summary": "Here are 3-4 short, clear bullet points summarizing the offer:. * Get unlimited access to The Financial Times (FT) for 4 weeks for just Rs100. * After the trial, the subscription will cost Rs4335 per month. * You can access FT content on any device",
+      "company": "Ft",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.4686
     },
     {
-      "title": "Google Wrong interview information",
-      "url": "https://www.reddit.com/r/leetcode/comments/1nwwqa3/google_wrong_interview_information/",
+      "title": "Laid off from 129k big tech job thinking about a 65k public sector role bad idea ?",
+      "url": "https://www.reddit.com/r/cscareerquestions/comments/1p3xa15/laid_off_from_129k_big_tech_job_thinking_about_a/",
       "bullets": [
-        "Here are 3-4 short, clear bullet points summarizing your situation:",
-        "* You were initially scheduled for an AIML Domain round but instead, you were asked to do a System Design round, specifically creating an APP for image classification",
-        "* You felt unprepared for the System Design round as you had focused on AIML Domain and didn't have enough knowledge in this area",
-        "* Despite this, you were able to answer some questions, but you're not sure how the interview went, estimating 70-80% success"
+        "Here are 3-4 short, clear bullet points summarizing your concerns:",
+        "* You're considering a 50% pay cut from $129k to $65k for a public sector IT job with better stability, hours, and benefits, but a slower pace and less cutting-edge work",
+        "* You're worried about long-term career implications, including whether you'll be able to return to higher-paying private roles and if your skills will continue to grow",
+        "* You're concerned about potentially \"shooting yourself in the foot\" by taking a pay cut, which could impact your future earning potential"
       ],
       "tags": [
-        "interview",
-        "ai"
+        "ai",
+        "career"
       ],
-      "summary": "Here are 3-4 short, clear bullet points summarizing your situation:. * You were initially scheduled for an AIML Domain round but instead, you were asked to do a System Design round, specifically creating an APP for image classification. * You felt unprepared for the System Design round as you had focused on AIML Domain and didn't have enough knowledge in this area. * Despite this, you were able to answer some questions, but you're not sure how the interview went, estimating 70-80% success"
-    },
-    {
-      "title": "Arpit's System Design Masterclass?",
-      "url": "https://www.reddit.com/r/leetcode/comments/1nwt2en/arpits_system_design_masterclass/",
-      "bullets": [
-        "Here are 3-4 bullet points summarizing the information:",
-        "* A senior engineer from FAANG is looking to improve system design skills to land a staff-level role and has experience with system design interviews",
-        "* They've used resources like ByteByte Go books and Neetcode course, but now want hands-on experience with a live system design course",
-        "* The engineer is considering Arpit's System Design Masterclass, but wants to know if anyone has taken the course and if it's worth the time commitment"
-      ],
-      "tags": [
-        "interview",
-        "ai"
-      ],
-      "summary": "Here are 3-4 bullet points summarizing the information:. * A senior engineer from FAANG is looking to improve system design skills to land a staff-level role and has experience with system design interviews. * They've used resources like ByteByte Go books and Neetcode course, but now want hands-on experience with a live system design course. * The engineer is considering Arpit's System Design Masterclass, but wants to know if anyone has taken the course and if it's worth the time commitment"
-    },
-    {
-      "title": "Donald Trump Posts Bizarre Grim Reaper-Themed AI Music Video",
-      "url": "https://www.thedailybeast.com/donald-trump-posts-bizarre-grim-reaper-themed-ai-music-video/",
-      "bullets": [
-        "Here are 4 short, clear bullet points summarizing the news:",
-        "* US President Donald Trump posted a bizarre AI-generated music video on social media, featuring former OMB director Russell Vought as the Grim Reaper",
-        "* The video, which is a cover of Blue Öyster Cult's song \"(Don't Fear) The Reaper,\" portrays Vought as a villain who will \"tie the hands\" of Democrats",
-        "* The video was created by a group called the Dilley Meme Team, a pseudonymous group founded by a failed Arizona congressional candidate and Trump supporter"
-      ],
-      "tags": [
-        "ai"
-      ],
-      "summary": "Here are 4 short, clear bullet points summarizing the news:. * US President Donald Trump posted a bizarre AI-generated music video on social media, featuring former OMB director Russell Vought as the Grim Reaper. * The video, which is a cover of Blue Öyster Cult's song \"(Don't Fear) The Reaper,\" portrays Vought as a villain who will \"tie the hands\" of Democrats. * The video was created by a group called the Dilley Meme Team, a pseudonymous group founded by a failed Arizona congressional candidate and Trump supporter"
+      "summary": "Here are 3-4 short, clear bullet points summarizing your concerns:. * You're considering a 50% pay cut from $129k to $65k for a public sector IT job with better stability, hours, and benefits, but a slower pace and less cutting-edge work. * You're worried about long-term career implications, including whether you'll be able to return to higher-paying private roles and if your skills will continue to grow. * You're concerned about potentially \"shooting yourself in the foot\" by taking a pay cut, which could impact your future earning potential",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": "129k",
+      "msnrr_score": 0.4676
     }
   ]
 }

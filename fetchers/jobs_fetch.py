@@ -1,91 +1,96 @@
 import requests
+from urllib.parse import urlparse
 
+def get_domain(url): 
+    try: return urlparse(url).netloc.replace("www.", "") 
+    except: return ""
 
-GREENHOUSE_COMPANIES = [
-    # FAANG/Big Tech via Greenhouse (some may redirect or be partial)
-    "openai", "stripe", "databricks", "snowflake", "airbnb", "uber",
-]
+GREENHOUSE_COMPANIES = ["openai", "stripe", "databricks"]
+LEVER_COMPANIES = ["anthropic", "cohere", "runwayml"]
 
-LEVER_COMPANIES = [
-    # Startups/research orgs on Lever
-    "anthropic", "cohere", "runwayml", "perplexity", "stabilityai",
-]
-
-
-def fetch_greenhouse_jobs(companies: list[str] = None, limit: int = 30) -> list[dict]:
+def fetch_greenhouse_jobs(companies=None, limit=30):
     companies = companies or GREENHOUSE_COMPANIES
-    articles: list[dict] = []
+    out = []
+
     for comp in companies:
         try:
-            resp = requests.get(f"https://boards-api.greenhouse.io/v1/boards/{comp}/jobs", timeout=20)
+            url = f"https://boards-api.greenhouse.io/v1/boards/{comp}/jobs"
+            resp = requests.get(url, timeout=10)
             if resp.status_code != 200:
                 continue
-            data = resp.json()
-            jobs = data.get("jobs", [])
-            for j in jobs:
-                title = j.get("title", "")
-                absolute_url = j.get("absolute_url")
-                if not absolute_url:
+
+            for j in resp.json().get("jobs", []):
+                link = j.get("absolute_url")
+                if not link:
                     continue
-                # Prefer internship/entry-level signals
-                t_low = title.lower()
-                if any(k in t_low for k in ["intern", "internship", "graduate", "new grad", "entry"]):
-                    articles.append({"title": f"{title} — {comp.capitalize()} (Greenhouse)", "url": absolute_url})
-                elif len(articles) < limit:
-                    articles.append({"title": f"{title} — {comp.capitalize()} (Greenhouse)", "url": absolute_url})
-                if len(articles) >= limit:
+
+                title = j.get("title", "Job")
+                out.append({
+                    "title": f"{title} — {comp}",
+                    "url": link,
+                    "domain": get_domain(link),
+                    "source": comp,
+                    "summary": "",
+                    "published": None
+                })
+
+                if len(out) >= limit:
                     break
-        except Exception:
-            continue
-    return articles[:limit]
+        except:
+            pass
+
+    return out[:limit]
 
 
-def fetch_lever_jobs(companies: list[str] = None, limit: int = 30) -> list[dict]:
+def fetch_lever_jobs(companies=None, limit=30):
     companies = companies or LEVER_COMPANIES
-    articles: list[dict] = []
+    out = []
+
     for comp in companies:
         try:
-            resp = requests.get(f"https://api.lever.co/v0/postings/{comp}?mode=json", timeout=20)
+            url = f"https://api.lever.co/v0/postings/{comp}?mode=json"
+            resp = requests.get(url, timeout=10)
             if resp.status_code != 200:
                 continue
-            postings = resp.json() or []
-            for p in postings:
-                title = p.get("text") or p.get("title") or "Job"
-                hosted_url = p.get("hostedUrl") or p.get("applyUrl")
-                if not hosted_url:
+
+            for p in resp.json():
+                link = p.get("hostedUrl") or p.get("applyUrl")
+                if not link:
                     continue
-                t_low = title.lower()
-                if any(k in t_low for k in ["intern", "internship", "new grad", "graduate", "entry"]):
-                    articles.append({"title": f"{title} — {comp.capitalize()} (Lever)", "url": hosted_url})
-                elif len(articles) < limit:
-                    articles.append({"title": f"{title} — {comp.capitalize()} (Lever)", "url": hosted_url})
-                if len(articles) >= limit:
+
+                title = p.get("text") or p.get("title") or "Job"
+                out.append({
+                    "title": f"{title} — {comp}",
+                    "url": link,
+                    "domain": get_domain(link),
+                    "source": comp,
+                    "summary": "",
+                    "published": None
+                })
+
+                if len(out) >= limit:
                     break
-        except Exception:
-            continue
-    return articles[:limit]
+        except:
+            pass
+
+    return out[:limit]
 
 
-def fetch_jobs_articles(limit_per_source: int = 30) -> list[dict]:
-    articles: list[dict] = []
-    try:
-        articles.extend(fetch_greenhouse_jobs(limit=limit_per_source))
-    except Exception:
-        pass
-    try:
-        articles.extend(fetch_lever_jobs(limit=limit_per_source))
-    except Exception:
-        pass
+def fetch_jobs_articles(limit_per_source=30):
+    all_jobs = []
 
-    # Dedupe by url
+    try: all_jobs += fetch_greenhouse_jobs(limit=limit_per_source)
+    except: pass
+
+    try: all_jobs += fetch_lever_jobs(limit=limit_per_source)
+    except: pass
+
+    # dedupe
     seen = set()
     unique = []
-    for a in articles:
-        url = a.get("url")
-        if not url or url in seen:
-            continue
-        seen.add(url)
-        unique.append(a)
+    for a in all_jobs:
+        if a["url"] not in seen:
+            unique.append(a)
+            seen.add(a["url"])
+
     return unique
-
-

@@ -1,84 +1,102 @@
 import requests
+from urllib.parse import urlparse
 
+TIMEOUT = 8
+
+
+def get_domain(url):
+    try:
+        return urlparse(url).netloc.replace("www.", "")
+    except:
+        return ""
+
+
+# -------------------------------------------------------------
+# Hacker News: Top / New / Best stories
+# -------------------------------------------------------------
 def fetch_hn_articles(limit=10):
-    sources = ["topstories", "newstories", "beststories"]  # More variety
+    sources = ["topstories", "newstories", "beststories"]
+    out = []
     seen = set()
-    articles = []
 
-    for source in sources:
-        ids = requests.get(f"https://hacker-news.firebaseio.com/v0/{source}.json").json()
-        for story_id in ids:
-            if story_id in seen:
-                continue
-            seen.add(story_id)
-            data = requests.get(f"https://hacker-news.firebaseio.com/v0/item/{story_id}.json").json()
-            if data and 'url' in data:
-                articles.append({'title': data['title'], 'url': data['url']})
-            if len(articles) >= limit:
-                break
-        if len(articles) >= limit:
-            break
+    for src in sources:
+        try:
+            ids = requests.get(
+                f"https://hacker-news.firebaseio.com/v0/{src}.json",
+                timeout=TIMEOUT
+            ).json()
 
-    return articles
+            for story_id in ids:
+                if story_id in seen:
+                    continue
+                seen.add(story_id)
+
+                data = requests.get(
+                    f"https://hacker-news.firebaseio.com/v0/item/{story_id}.json",
+                    timeout=TIMEOUT
+                ).json()
+
+                if data and "url" in data:
+                    url = data["url"]
+                    out.append({
+                        "title": data.get("title", "HN Story"),
+                        "url": url,
+                        "domain": get_domain(url),
+                        "source": "Hacker News",
+                        "summary": "",
+                        "published": data.get("time"),  # Unix timestamp
+                        "score": data.get("score", 0),  # Upvotes
+                        "num_comments": data.get("descendants", 0),  # HN uses "descendants"
+                        "upvotes": data.get("score", 0),
+                        "comments": data.get("descendants", 0),
+                    })
+
+                if len(out) >= limit:
+                    return out
+
+        except Exception:
+            continue
+
+    return out
 
 
+# -------------------------------------------------------------
+# Hacker News Job Posts
+# -------------------------------------------------------------
 def fetch_hn_jobs(limit=10):
-    ids = requests.get("https://hacker-news.firebaseio.com/v0/jobstories.json").json()
-    articles = []
+    """Fetch job listings from HN jobstories (internships, full-time posts)."""
+    try:
+        ids = requests.get(
+            "https://hacker-news.firebaseio.com/v0/jobstories.json",
+            timeout=TIMEOUT
+        ).json()
+    except Exception:
+        return []
+
+    out = []
     for story_id in ids[:limit]:
-        data = requests.get(f"https://hacker-news.firebaseio.com/v0/item/{story_id}.json").json()
-        if data and 'url' in data:
-            articles.append({'title': data['title'], 'url': data['url']})
-    return articles
+        try:
+            data = requests.get(
+                f"https://hacker-news.firebaseio.com/v0/item/{story_id}.json",
+                timeout=TIMEOUT
+            ).json()
 
+            if data and "url" in data:
+                url = data["url"]
+                out.append({
+                    "title": data.get("title", "HN Job"),
+                    "url": url,
+                    "domain": get_domain(url),
+                    "source": "Hacker News Jobs",
+                    "summary": "",
+                    "published": data.get("time"),  # Unix timestamp
+                    "score": 0,  # Jobs typically don't have scores
+                    "num_comments": 0,
+                    "upvotes": 0,
+                    "comments": 0,
+                })
 
-"""import feedparser
+        except Exception:
+            continue
 
-def fetch_top_ai_articles(limit=8):
-    rss_feeds = [
-        # Google News: AI
-        "https://news.google.com/rss/search?q=artificial+intelligence&hl=en-US&gl=US&ceid=US:en",
-
-        # VentureBeat AI section
-        "https://venturebeat.com/category/ai/feed/",
-
-        # MIT Technology Review AI section
-        "https://www.technologyreview.com/feed/category/artificial-intelligence/"
-    ]
-
-    keywords = ["AI", "artificial intelligence", "machine learning", "ChatGPT", "OpenAI", "DeepMind", "Anthropic", "Neuralink"]
-
-    articles = []
-
-    for feed_url in rss_feeds:
-        feed = feedparser.parse(feed_url)
-
-        for entry in feed.entries:
-            title = entry.title
-            link = entry.link
-
-            if any(keyword.lower() in title.lower() for keyword in keywords):
-                articles.append({'title': title, 'url': link})
-
-            if len(articles) >= limit:
-                return articles  # Early return when limit is reached
-
-    return articles"""
-
-
-
-
-
-"""import requests
-
-def fetch_top_hn_articles(limit=5):
-    top_ids = requests.get("https://hacker-news.firebaseio.com/v0/topstories.json").json()
-    articles = []
-
-    for story_id in top_ids[:limit]:
-        url = f"https://hacker-news.firebaseio.com/v0/item/{story_id}.json"
-        data = requests.get(url).json()
-        if data and 'url' in data:
-            articles.append({'title': data['title'], 'url': data['url']})
-
-    return articles"""
+    return out
