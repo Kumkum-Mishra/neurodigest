@@ -19,7 +19,7 @@ aiohttp
 
 # Utilities
 beautifulsoup4
-lxml
+lxml[html_clean]
 pydantic
 
 # Note: torch, transformers, sentence-transformers, streamlit excluded for Vercel

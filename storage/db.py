@@ -70,8 +70,8 @@ elif DATABASE_URL.startswith("postgresql") or DATABASE_URL.startswith("postgres"
 else:
     connect_args = {}
 
-# Create engine with error handling
-# Don't fail at module level - create engine lazily
+# Create engine lazily - don't fail at module import time
+# This allows the app to start even if DATABASE_URL is invalid
 engine = None
 _db_url_error = None
 
@@ -86,22 +86,21 @@ def get_engine():
         raise _db_url_error
     
     try:
+        # Try to create engine
         engine = create_engine(DATABASE_URL, echo=False, connect_args=connect_args)
+        print("Database engine created successfully")
         return engine
     except Exception as e:
         error_msg = f"Could not create database engine: {e}"
         print(f"Database engine error: {error_msg}")
-        print(f"DATABASE_URL (first 30 chars): {DATABASE_URL[:30]}...")
+        # Don't print full URL for security, just first few chars
+        url_preview = DATABASE_URL[:20] + "..." if len(DATABASE_URL) > 20 else DATABASE_URL
+        print(f"DATABASE_URL preview: {url_preview}")
         _db_url_error = ValueError(error_msg)
         raise _db_url_error
 
-# Try to create engine at module level, but don't fail if it doesn't work
-try:
-    engine = create_engine(DATABASE_URL, echo=False, connect_args=connect_args)
-except Exception as e:
-    print(f"Warning: Could not create database engine at module level: {e}")
-    print("Engine will be created lazily on first use")
-    engine = None
+# Don't create engine at module level - wait for first use
+# This prevents import-time failures
 
 
 def init_db():

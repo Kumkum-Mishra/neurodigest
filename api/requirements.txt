@@ -13,5 +13,5 @@ passlib[bcrypt]
 python-jose[cryptography]
 aiohttp
 beautifulsoup4
-lxml
+lxml[html_clean]
 pydantic
