@@ -3,6 +3,7 @@
 fastapi
 uvicorn
 mangum
+python-multipart
 requests
 newspaper3k
 feedparser
