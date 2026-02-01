@@ -7,7 +7,18 @@ from contextlib import contextmanager
 load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./neurodigest.db")
-connect_args = {"check_same_thread": False} if DATABASE_URL.startswith("sqlite") else {}
+
+# Connection arguments setup
+if DATABASE_URL.startswith("sqlite"):
+    connect_args = {"check_same_thread": False}
+elif DATABASE_URL.startswith("postgresql"):
+    # For Neon/Postgres: ensure SSL is handled properly
+    # If connection string doesn't have sslmode, add it
+    if "sslmode" not in DATABASE_URL and "?" not in DATABASE_URL:
+        DATABASE_URL = f"{DATABASE_URL}?sslmode=require"
+    connect_args = {}
+else:
+    connect_args = {}
 
 engine = create_engine(DATABASE_URL, echo=False, connect_args=connect_args)
 
