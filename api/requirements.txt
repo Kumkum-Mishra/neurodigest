@@ -1,0 +1,17 @@
+# This file ensures Vercel uses lightweight requirements
+# Vercel will check api/requirements.txt first, then root requirements.txt
+fastapi
+uvicorn
+mangum
+requests
+newspaper3k
+feedparser
+python-dotenv
+sqlalchemy
+sqlmodel
+passlib[bcrypt]
+python-jose[cryptography]
+aiohttp
+beautifulsoup4
+lxml
+pydantic

@@ -1,12 +1,12 @@
+# Vercel-optimized requirements (excludes large ML dependencies)
+# For local development with full features, use: pip install -r requirements-full.txt
 fastapi
 uvicorn
 mangum
 requests
 newspaper3k
 feedparser
-apscheduler
 python-dotenv
-streamlit
 
 # Database & Auth
 sqlalchemy
@@ -17,14 +17,12 @@ python-jose[cryptography]
 # Async & APIs
 aiohttp
 
-# NLP / Embeddings
-sentence-transformers
-faiss-cpu ; platform_system != "Windows"
-scikit-learn ; platform_system == "Windows"
-transformers
-torch
-
 # Utilities
 beautifulsoup4
 lxml
 pydantic
+
+# Note: torch, transformers, sentence-transformers, streamlit excluded for Vercel
+# These are too large for serverless functions (torch alone is 2GB+)
+# Embeddings functionality will use fallback keyword matching on Vercel
+# For local dev with full features: pip install -r requirements-full.txt

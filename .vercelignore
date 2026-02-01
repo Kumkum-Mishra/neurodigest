@@ -40,5 +40,5 @@ storage/archive/
 # Test files
 scripts/test_*.py
 
-# Streamlit (not needed for Vercel deployment)
-ui/app_disabled.py
+# Streamlit (not needed for Vercel deployment - entire ui folder excluded)
+ui/

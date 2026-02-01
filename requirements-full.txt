@@ -1,0 +1,31 @@
+# Full requirements for local development (includes ML dependencies)
+fastapi
+uvicorn
+mangum
+requests
+newspaper3k
+feedparser
+apscheduler
+python-dotenv
+streamlit
+
+# Database & Auth
+sqlalchemy
+sqlmodel
+passlib[bcrypt]
+python-jose[cryptography]
+
+# Async & APIs
+aiohttp
+
+# NLP / Embeddings (Large - only for local dev)
+sentence-transformers
+faiss-cpu ; platform_system != "Windows"
+scikit-learn ; platform_system == "Windows"
+transformers
+torch
+
+# Utilities
+beautifulsoup4
+lxml
+pydantic
