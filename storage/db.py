@@ -36,11 +36,24 @@ def init_db():
 
 
 # FastAPI dependency (use as Depends(get_session) in routes)
+# Track if DB is initialized
+_db_initialized = False
+
 def get_session():
     """
     Use as a FastAPI dependency: `session: Session = Depends(get_session)`
     This generator yields a session and FastAPI ensures cleanup.
+    Also ensures DB is initialized on first use.
     """
+    global _db_initialized
+    if not _db_initialized:
+        try:
+            init_db()
+            _db_initialized = True
+        except Exception as e:
+            print(f"DB init in get_session: {e}")
+            # Continue anyway - might work if tables already exist
+    
     session = Session(engine)
     try:
         yield session
