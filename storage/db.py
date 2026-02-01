@@ -71,12 +71,37 @@ else:
     connect_args = {}
 
 # Create engine with error handling
+# Don't fail at module level - create engine lazily
+engine = None
+_db_url_error = None
+
+def get_engine():
+    """Lazy engine creation with better error handling."""
+    global engine, _db_url_error
+    
+    if engine is not None:
+        return engine
+    
+    if _db_url_error is not None:
+        raise _db_url_error
+    
+    try:
+        engine = create_engine(DATABASE_URL, echo=False, connect_args=connect_args)
+        return engine
+    except Exception as e:
+        error_msg = f"Could not create database engine: {e}"
+        print(f"Database engine error: {error_msg}")
+        print(f"DATABASE_URL (first 30 chars): {DATABASE_URL[:30]}...")
+        _db_url_error = ValueError(error_msg)
+        raise _db_url_error
+
+# Try to create engine at module level, but don't fail if it doesn't work
 try:
     engine = create_engine(DATABASE_URL, echo=False, connect_args=connect_args)
 except Exception as e:
-    print(f"Error creating database engine: {e}")
-    print(f"DATABASE_URL format: {DATABASE_URL[:50]}...")  # Print first 50 chars for debugging
-    raise ValueError(f"Could not create database engine: {e}. Check DATABASE_URL format.")
+    print(f"Warning: Could not create database engine at module level: {e}")
+    print("Engine will be created lazily on first use")
+    engine = None
 
 
 def init_db():
@@ -102,6 +127,10 @@ def get_session():
     Also ensures DB is initialized on first use.
     """
     global _db_initialized
+    
+    # Get engine (lazy creation if needed)
+    db_engine = get_engine()
+    
     if not _db_initialized:
         try:
             init_db()
@@ -110,7 +139,7 @@ def get_session():
             print(f"DB init in get_session: {e}")
             # Continue anyway - might work if tables already exist
     
-    session = Session(engine)
+    session = Session(db_engine)
     try:
         yield session
     finally:
