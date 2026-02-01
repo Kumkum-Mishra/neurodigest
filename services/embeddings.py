@@ -81,3 +81,4 @@ def user_preference_match_score(article_text: str, article_url: str,
     
     return float(np.mean(scores))
 
+

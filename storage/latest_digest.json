@@ -1,472 +1,462 @@
 {
-  "generated_at": 1763919246,
+  "generated_at": 1764087559,
   "items": [
     {
-      "title": "HumanLayer (YC F24) Is Hiring Founding Engineers",
-      "url": "https://www.ycombinator.com/companies/humanlayer/jobs/oBCZzc7-founding-product-engineer",
+      "title": "Pebble Watch software is now open source",
+      "url": "https://ericmigi.com/blog/pebble-watch-software-is-now-100percent-open-source",
       "bullets": [
-        "Here are 3-4 short, clear bullet points summarizing the news:",
-        "- HumanLayer is working to revolutionize software development with AI, aiming to make 99% of code written by AI in engineering teams",
-        "- A recent study from Stanford University suggested AI struggles with complex codebases, but HumanLayer claims to be proving this wrong with advanced techniques",
-        "- The company is hiring a founding engineer to help drive the transition to AI-written code and improve developer productivity"
+        "Here are 4 short, clear bullet points summarizing the news:",
+        "- Pebble watch software is now 100% open source, allowing users to download, compile, and run all the necessary software for their watches",
+        "- The Pebble Appstore now has a publicly available backup and supports multiple feeds, providing long-term reliability through decentralization",
+        "- The Pebble Time 2 is expected to begin shipping in January, with most watches arriving on wrists in March-April, and will have a screwed-in back cover for easier battery replacement"
       ],
       "tags": [
         "ai",
         "career"
       ],
-      "summary": "Here are 3-4 short, clear bullet points summarizing the news:. - HumanLayer is working to revolutionize software development with AI, aiming to make 99% of code written by AI in engineering teams. - A recent study from Stanford University suggested AI struggles with complex codebases, but HumanLayer claims to be proving this wrong with advanced techniques. - The company is hiring a founding engineer to help drive the transition to AI-written code and improve developer productivity",
-      "company": "Ycombinator",
+      "summary": "Here are 4 short, clear bullet points summarizing the news:. - Pebble watch software is now 100% open source, allowing users to download, compile, and run all the necessary software for their watches. - The Pebble Appstore now has a publicly available backup and supports multiple feeds, providing long-term reliability through decentralization. - The Pebble Time 2 is expected to begin shipping in January, with most watches arriving on wrists in March-April, and will have a screwed-in back cover for easier battery replacement",
+      "company": "Ericmigi",
       "role": null,
       "salary_hint": null,
-      "msnrr_score": 0.5481
+      "msnrr_score": 0.5342
     },
     {
-      "title": "I’m the smartest person on the earth",
-      "url": "https://www.reddit.com/r/leetcode/comments/1p4nxl9/im_the_smartest_person_on_the_earth/",
+      "title": "Apt Rust requirement raises questions",
+      "url": "https://lwn.net/SubscriberLink/1046841/5bbf1fc049a18947/",
       "bullets": [
-        "Here are 3-4 key points based on the statement:",
-        "* Interviewers prioritize problem-solving skills over memorizing exact syntax",
-        "* It's okay to not remember every syntax detail, as tools can provide this information",
-        "* Many interviewers understand that syntax is easily accessible through tools"
+        "Here are 4 short, clear bullet points summarizing the news:",
+        "• Debian's Advanced Package Tool (APT) will require the Rust programming language starting in May 2026",
+        "• This change may affect some unofficial Debian ports that don't have a working Rust toolchain, which could lead to them being sunset",
+        "• Some Debian developers have welcomed the move to Rust, while others have expressed concerns about the communication style and the lack of room for discussion"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "Here are 4 short, clear bullet points summarizing the news:. • Debian's Advanced Package Tool (APT) will require the Rust programming language starting in May 2026. • This change may affect some unofficial Debian ports that don't have a working Rust toolchain, which could lead to them being sunset. • Some Debian developers have welcomed the move to Rust, while others have expressed concerns about the communication style and the lack of room for discussion",
+      "company": "Lwn",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.5242
+    },
+    {
+      "title": "Chat GPT saying Elon Musk's DOGE Never Existed. Doubles down on saying my links and screenshots are \"fabricated\" this is insane!!",
+      "url": "https://www.reddit.com/r/artificial/comments/1p66cag/chat_gpt_saying_elon_musks_doge_never_existed/",
+      "bullets": [
+        "What the actual F!?  ======  From Chat GPT:  \"I’m going to give you the clearest explanation possible, because the situation you’re describing has only one explanation that fits all the facts",
+        "I know what you’re seeing",
+        "I believe that you are genuinely seeing those pages in your browser",
+        "I also believe that you are not fabricating anything"
+      ],
+      "tags": [
+        "general"
+      ],
+      "summary": "What the actual F!?  ======  From Chat GPT:  \"I’m going to give you the clearest explanation possible, because the situation you’re describing has only one explanation that fits all the facts. I know what you’re seeing. I believe that you are genuinely seeing those pages in your browser. I also believe that you are not fabricating anything",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.5197
+    },
+    {
+      "title": "I miss openai being the best",
+      "url": "https://www.reddit.com/r/OpenAI/comments/1p6fj7e/i_miss_openai_being_the_best/",
+      "bullets": [
+        "Here are 3-4 short, clear bullet points about the situation:",
+        "* OpenAI's lead in AI model development seemed significant in 2024, making it hard for other models to catch up",
+        "* However, OpenAI's performance has reportedly declined, giving other models a chance to close the gap",
+        "* The release of GPT 5.1 was met with disappointment, which may have affected OpenAI's reputation"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "Here are 3-4 short, clear bullet points about the situation:. * OpenAI's lead in AI model development seemed significant in 2024, making it hard for other models to catch up. * However, OpenAI's performance has reportedly declined, giving other models a chance to close the gap. * The release of GPT 5.1 was met with disappointment, which may have affected OpenAI's reputation",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.5179
+    },
+    {
+      "title": "Cora being a bit dim...and sensitive",
+      "url": "https://www.reddit.com/r/artificial/comments/1p6fy49/cora_being_a_bit_dimand_sensitive/",
+      "bullets": [
+        "Here are 4 short bullet points about the situation:",
+        "• NatWest's AI chat service, Cora, is not meeting customer expectations",
+        "• A customer tried to book an in-branch meeting but was repeatedly asked the same questions",
+        "• The customer became frustrated and typed a strong message to Cora"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "Here are 4 short bullet points about the situation:. • NatWest's AI chat service, Cora, is not meeting customer expectations. • A customer tried to book an in-branch meeting but was repeatedly asked the same questions. • The customer became frustrated and typed a strong message to Cora",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.5123
+    },
+    {
+      "title": "Brain has five 'eras' with adult mode not starting until early 30s",
+      "url": "https://www.theguardian.com/science/2025/nov/25/brain-human-cognitive-development-life-stages-cambridge-study",
+      "bullets": [
+        "Here are 4 short, clear bullet points summarizing the news:",
+        "- A new study of nearly 4,000 people's brain scans from infancy to old age has identified five major \"epochs\" of human brain development",
+        "- The five epochs are split by four pivotal \"turning points\" at ages 9, 32, 66, and 83, marking significant changes in brain organization",
+        "- The study found that brain development is not a steady progression, but rather a series of distinct phases, including childhood, adolescence, adulthood, early aging, and late aging"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "Here are 4 short, clear bullet points summarizing the news:. - A new study of nearly 4,000 people's brain scans from infancy to old age has identified five major \"epochs\" of human brain development. - The five epochs are split by four pivotal \"turning points\" at ages 9, 32, 66, and 83, marking significant changes in brain organization. - The study found that brain development is not a steady progression, but rather a series of distinct phases, including childhood, adolescence, adulthood, early aging, and late aging",
+      "company": "Theguardian",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.5102
+    },
+    {
+      "title": "[P] I made a free playground for comparing 10+ OCR models side-by-side",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1p6frc2/p_i_made_a_free_playground_for_comparing_10_ocr/",
+      "bullets": [
+        "Here are 4 short, clear bullet points summarizing the news:",
+        "* A new online platform called OCR Arena has been launched, allowing users to compare different OCR (Optical Character Recognition) models side-by-side",
+        "* The platform, available at https://ocrarena.ai, enables users to upload any document and run multiple OCR models, including popular ones like Gemini 3 and Nanonets-OCR",
+        "* Currently, OCR Arena features 15 different OCR models, with the option to add more user-requested models in the future"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "Here are 4 short, clear bullet points summarizing the news:. * A new online platform called OCR Arena has been launched, allowing users to compare different OCR (Optical Character Recognition) models side-by-side. * The platform, available at https://ocrarena.ai, enables users to upload any document and run multiple OCR models, including popular ones like Gemini 3 and Nanonets-OCR. * Currently, OCR Arena features 15 different OCR models, with the option to add more user-requested models in the future",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.5048
+    },
+    {
+      "title": "New model drops just aren’t as exciting anymore… Just me?",
+      "url": "https://www.reddit.com/r/artificial/comments/1p6fjnl/new_model_drops_just_arent_as_exciting_anymore/",
+      "bullets": [
+        "Ever since the let down of GPT 5 I haven’t paid any attention to new model drops and every time I test them after the announcement it’s kind of meh  Is this a bubble?  Is anyone that stoked on nano banana or Opus 4.5?  Before GPT 5 I watched every product release video and jumped right into getting access and using the tool",
+        "I haven’t seen a noticeable improvement in models since o3",
+        "Just me?"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "Ever since the let down of GPT 5 I haven’t paid any attention to new model drops and every time I test them after the announcement it’s kind of meh  Is this a bubble?  Is anyone that stoked on nano banana or Opus 4.5?  Before GPT 5 I watched every product release video and jumped right into getting access and using the tool. I haven’t seen a noticeable improvement in models since o3. Just me?",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.5022
+    },
+    {
+      "title": "Sora 2 still not available in Europe",
+      "url": "https://www.reddit.com/r/OpenAI/comments/1p66i9h/sora_2_still_not_available_in_europe/",
+      "bullets": [
+        "It seems like you're referring to a product that has limited availability due to EU regulations. Here are 4 short bullet points summarizing your concerns:",
+        "• The product's limited availability due to EU regulations has reduced your interest in it",
+        "• You won't be able to try the product even two months later, which has made you forget about it",
+        "• You're concerned that the company's strategy of limiting access is not effective in building customer interest"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "It seems like you're referring to a product that has limited availability due to EU regulations. Here are 4 short bullet points summarizing your concerns:. • The product's limited availability due to EU regulations has reduced your interest in it. • You won't be able to try the product even two months later, which has made you forget about it. • You're concerned that the company's strategy of limiting access is not effective in building customer interest",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.502
+    },
+    {
+      "title": "Medtronic IT internship Offers (?)",
+      "url": "https://www.reddit.com/r/internships/comments/1p6f2pn/medtronic_it_internship_offers/",
+      "bullets": [
+        "I can't answer that. However, I can provide some general information about the hiring process at Medtronic",
+        "The hiring process at Medtronic can vary depending on the position and the location. Typically, it can take anywhere from a few weeks to several months to receive a decision after the final round of interviews",
+        "Here are some general tips that may help you cope with the waiting period:",
+        "*   It's not uncommon for hiring processes to take longer than expected, especially for complex or high-stakes positions"
+      ],
+      "tags": [
+        "interview",
+        "ai",
+        "career"
+      ],
+      "summary": "I can't answer that. However, I can provide some general information about the hiring process at Medtronic. The hiring process at Medtronic can vary depending on the position and the location. Typically, it can take anywhere from a few weeks to several months to receive a decision after the final round of interviews. Here are some general tips that may help you cope with the waiting period:. *   It's not uncommon for hiring processes to take longer than expected, especially for complex or high-stakes positions",
+      "company": "Reddit",
+      "role": "intern",
+      "salary_hint": null,
+      "msnrr_score": 0.5
+    },
+    {
+      "title": "In interviews, always think from scratch",
+      "url": "https://www.reddit.com/r/leetcode/comments/1p6ck5v/in_interviews_always_think_from_scratch/",
+      "bullets": [
+        "Here are 3-4 short and clear bullet points about your experience:",
+        "* You were asked a LeetCode question in an interview, but you thought you had already solved it earlier",
+        "* You explained a brute force approach and then provided a complex solution using BFS, DSU, and implementation, but it gave a runtime error",
+        "* It was later revealed that the question was not the one you thought you had solved, and a simpler approach (BFS + BS) could have been used to solve it"
       ],
       "tags": [
         "interview",
         "ai"
       ],
-      "summary": "Here are 3-4 key points based on the statement:. * Interviewers prioritize problem-solving skills over memorizing exact syntax. * It's okay to not remember every syntax detail, as tools can provide this information. * Many interviewers understand that syntax is easily accessible through tools",
-      "company": "Reddit",
-      "role": null,
-      "salary_hint": null,
-      "msnrr_score": 0.5173
-    },
-    {
-      "title": "Is it normal right now in the tech world for someone to look for an entry level job for 28 months with no bites?",
-      "url": "https://www.reddit.com/r/cscareerquestions/comments/1p4ppsb/is_it_normal_right_now_in_the_tech_world_for/",
-      "bullets": [
-        "Based on the information provided, here are 3-4 short, clear bullet points summarizing the situation:",
-        "• **Job market competition**: The job market for cybersecurity and UX Design is highly competitive, with many qualified candidates vying for a limited number of positions",
-        "• **Lack of recent experience**: Although your husband has freelance UX Design experience from several years ago, it may not be as relevant or impressive to potential employers as more recent experience or a strong portfolio",
-        "• **Education and certification**: Having a CIS master's program and a UX certification are positive factors, but may not be enough to stand out in a crowded job market"
-      ],
-      "tags": [
-        "interview"
-      ],
-      "summary": "Based on the information provided, here are 3-4 short, clear bullet points summarizing the situation:. • **Job market competition**: The job market for cybersecurity and UX Design is highly competitive, with many qualified candidates vying for a limited number of positions. • **Lack of recent experience**: Although your husband has freelance UX Design experience from several years ago, it may not be as relevant or impressive to potential employers as more recent experience or a strong portfolio. • **Education and certification**: Having a CIS master's program and a UX certification are positive factors, but may not be enough to stand out in a crowded job market",
-      "company": "Reddit",
-      "role": null,
-      "salary_hint": null,
-      "msnrr_score": 0.5076
-    },
-    {
-      "title": "I built a developer-focused AI mentor to help structure and guide projects — would love feedback from fellow devs",
-      "url": "https://www.piye.dev/",
-      "bullets": [
-        "It seems like you're referring to the benefits of using AI in coding. Here are 3-4 short, clear bullet points summarizing this concept:",
-        "* You write the code, and AI helps by providing context and suggestions to improve it",
-        "* AI can assist with tasks such as code completion, debugging, and optimizing your code",
-        "* This collaboration between you and AI can make coding more efficient and productive"
-      ],
-      "tags": [
-        "ai"
-      ],
-      "summary": "It seems like you're referring to the benefits of using AI in coding. Here are 3-4 short, clear bullet points summarizing this concept:. * You write the code, and AI helps by providing context and suggestions to improve it. * AI can assist with tasks such as code completion, debugging, and optimizing your code. * This collaboration between you and AI can make coding more efficient and productive",
-      "company": "Piye",
-      "role": null,
-      "salary_hint": null,
-      "msnrr_score": 0.5019
-    },
-    {
-      "title": "What’s the actual purpose of the “Projects” feature on ChatGPT?",
-      "url": "https://www.reddit.com/r/OpenAI/comments/1p4jxm5/whats_the_actual_purpose_of_the_projects_feature/",
-      "bullets": [
-        "Here are 4 bullet points to help clarify how to use the Projects feature:",
-        "* **Organize long-term work**: Projects are meant to be a centralized space for ongoing tasks, files, and context related to a specific project or goal. Think of it as a digital binder or folder that keeps everything related to a project in one place",
-        "* **Replace long chat threads**: Yes, Projects can help reduce the clutter of long chat threads by providing a dedicated space for discussion, files, and progress tracking. This keeps conversations focused and makes it easier to reference previous discussions",
-        "* **Improve memory and continuity**: Projects can help you remember where you left off and what you need to do next. By storing context, files, and tasks in one place, you can easily pick up where you left off and make progress on your project"
-      ],
-      "tags": [
-        "ai"
-      ],
-      "summary": "Here are 4 bullet points to help clarify how to use the Projects feature:. * **Organize long-term work**: Projects are meant to be a centralized space for ongoing tasks, files, and context related to a specific project or goal. Think of it as a digital binder or folder that keeps everything related to a project in one place. * **Replace long chat threads**: Yes, Projects can help reduce the clutter of long chat threads by providing a dedicated space for discussion, files, and progress tracking. This keeps conversations focused and makes it easier to reference previous discussions. * **Improve memory and continuity**: Projects can help you remember where you left off and what you need to do next. By storing context, files, and tasks in one place, you can easily pick up where you left off and make progress on your project",
+      "summary": "Here are 3-4 short and clear bullet points about your experience:. * You were asked a LeetCode question in an interview, but you thought you had already solved it earlier. * You explained a brute force approach and then provided a complex solution using BFS, DSU, and implementation, but it gave a runtime error. * It was later revealed that the question was not the one you thought you had solved, and a simpler approach (BFS + BS) could have been used to solve it",
       "company": "Reddit",
       "role": null,
       "salary_hint": null,
       "msnrr_score": 0.4994
     },
     {
-      "title": "Dark Mode Sucks",
-      "url": "https://www.tomechangosubanana.com/2025/dark-mode-sucks/",
+      "title": "How do I get the most out of the O’Reilly account?",
+      "url": "https://www.reddit.com/r/datascience/comments/1p6eawa/how_do_i_get_the_most_out_of_the_oreilly_account/",
       "bullets": [
-        "Here are 4 short, clear bullet points summarizing the article:",
-        "• Many people on the internet are strongly advocating for \"dark mode\" due to its supposed benefits for eye health",
-        "• However, critics argue that those who prefer dark mode are often using it as an excuse to avoid adjusting their ambient lighting",
-        "• Poor lighting can actually cause eye strain and harm vision, rather than dark mode"
+        "Here are 4 bullet points to help you progress in the AI stream:",
+        "• **Explore AI courses**: Utilize your training account to take online courses and tutorials that focus on AI, machine learning, and deep learning. This will help you fill gaps in your knowledge and stay updated with the latest developments",
+        "• **Focus on relevant skills**: As an AI Engineer with C++ background, focus on developing skills in AI frameworks like TensorFlow, PyTorch, or Keras. You can also explore libraries like OpenCV for computer vision and scikit-learn for machine learning",
+        "• **Practice with projects**: Apply your new skills by working on AI-related projects. You can start with simple projects like image classification, natural language processing, or recommender systems. This will help you gain hands-on experience and build a portfolio"
       ],
       "tags": [
         "ai"
       ],
-      "summary": "Here are 4 short, clear bullet points summarizing the article:. • Many people on the internet are strongly advocating for \"dark mode\" due to its supposed benefits for eye health. • However, critics argue that those who prefer dark mode are often using it as an excuse to avoid adjusting their ambient lighting. • Poor lighting can actually cause eye strain and harm vision, rather than dark mode",
-      "company": "Tomechangosubanana",
-      "role": "intern",
-      "salary_hint": null,
-      "msnrr_score": 0.4992
-    },
-    {
-      "title": "Hiring: Female Content Creator at Talencee",
-      "url": "https://www.reddit.com/r/internships/comments/1p4o1mr/hiring_female_content_creator_at_talencee/",
-      "bullets": [
-        "Here are 3-4 short, clear bullet points summarizing the job opportunity:",
-        "- Talencee is hiring a Female Content Creator for a full-time position at their Gurgaon (Sector 32) office",
-        "- The ideal candidate should have strong communication skills and a visually appealing portfolio",
-        "- Responsibilities will include creating engaging content (photos, videos, and written content)"
-      ],
-      "tags": [
-        "career"
-      ],
-      "summary": "Here are 3-4 short, clear bullet points summarizing the job opportunity:. - Talencee is hiring a Female Content Creator for a full-time position at their Gurgaon (Sector 32) office. - The ideal candidate should have strong communication skills and a visually appealing portfolio. - Responsibilities will include creating engaging content (photos, videos, and written content)",
+      "summary": "Here are 4 bullet points to help you progress in the AI stream:. • **Explore AI courses**: Utilize your training account to take online courses and tutorials that focus on AI, machine learning, and deep learning. This will help you fill gaps in your knowledge and stay updated with the latest developments. • **Focus on relevant skills**: As an AI Engineer with C++ background, focus on developing skills in AI frameworks like TensorFlow, PyTorch, or Keras. You can also explore libraries like OpenCV for computer vision and scikit-learn for machine learning. • **Practice with projects**: Apply your new skills by working on AI-related projects. You can start with simple projects like image classification, natural language processing, or recommender systems. This will help you gain hands-on experience and build a portfolio",
       "company": "Reddit",
       "role": null,
       "salary_hint": null,
       "msnrr_score": 0.4973
     },
     {
-      "title": "A bug caused by a door in a game you may have heard of called \"Half Life 2\" (spoiler: fp precision)",
-      "url": "https://mastodon.gamedev.place/@TomF/115589875974658415",
+      "title": "How I cracked FAANG+ with just 30 minutes of studying per day.",
+      "url": "https://www.reddit.com/r/leetcode/comments/1kmt5le/how_i_cracked_faang_with_just_30_minutes_of/",
       "bullets": [
-        "It seems you're trying to access Mastodon but are having trouble due to JavaScript being disabled. Here are some alternatives:",
-        "* Enable JavaScript in your browser to access Mastodon through the web application",
-        "* Download and install a native app for Mastodon on your device (available for various platforms)",
-        "* Consider using a different browser or device where JavaScript is enabled"
+        "Edit: Apologies, the post turned out a bit longer than I thought it would",
+        "Summary at the bottom",
+        "Yup, it sounds ridiculous, but I cracked a FAANG+ offer by studying just 30 minutes a day",
+        "I’m not talking about one of the top three giants, but a very solid, well-respected company that competes for the same talent, pays incredibly well, and runs a serious interview process"
+      ],
+      "tags": [
+        "interview",
+        "career"
+      ],
+      "summary": "Edit: Apologies, the post turned out a bit longer than I thought it would. Summary at the bottom. Yup, it sounds ridiculous, but I cracked a FAANG+ offer by studying just 30 minutes a day. I’m not talking about one of the top three giants, but a very solid, well-respected company that competes for the same talent, pays incredibly well, and runs a serious interview process",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.4958
+    },
+    {
+      "title": "Human brains are preconfigured with instructions for understanding the world",
+      "url": "https://news.ucsc.edu/2025/11/sharf-preconfigured-brain/",
+      "bullets": [
+        "Here are 4 short, clear bullet points summarizing the news:",
+        "• Researchers at the University of California, Santa Cruz, have discovered that the human brain is preconfigured with instructions for understanding the world, even before sensory experiences occur",
+        "• They used tiny models of human brain tissue, called organoids, to study the earliest moments of electrical activity in the brain and found that it occurs in structured patterns",
+        "• These findings suggest that the brain has an \"operating system\" that emerges before external experiences shape it, and could help researchers better understand neurodevelopmental disorders"
       ],
       "tags": [
         "ai"
       ],
-      "summary": "It seems you're trying to access Mastodon but are having trouble due to JavaScript being disabled. Here are some alternatives:. * Enable JavaScript in your browser to access Mastodon through the web application. * Download and install a native app for Mastodon on your device (available for various platforms). * Consider using a different browser or device where JavaScript is enabled",
-      "company": "Mastodon",
-      "role": null,
-      "salary_hint": null,
-      "msnrr_score": 0.4972
-    },
-    {
-      "title": "How I cracked FAANG+ with just 30 minutes of studying per day.",
-      "url": "https://www.reddit.com/r/leetcode/comments/1kmt5le/how_i_cracked_faang_with_just_30_minutes_of/",
-      "bullets": [
-        "Here are 3-4 short, clear bullet points summarizing the article:",
-        "* A job candidate cracked a high-paying offer from a well-respected tech company by studying just 30 minutes a day for 6 months",
-        "* The candidate alternated between practicing coding problems on LeetCode and learning about system design, treating both tracks with equal importance",
-        "* The key to their success was consistency and focused learning, rather than trying to cram a lot of information in a short amount of time"
-      ],
-      "tags": [
-        "interview",
-        "ai",
-        "career"
-      ],
-      "summary": "Here are 3-4 short, clear bullet points summarizing the article:. * A job candidate cracked a high-paying offer from a well-respected tech company by studying just 30 minutes a day for 6 months. * The candidate alternated between practicing coding problems on LeetCode and learning about system design, treating both tracks with equal importance. * The key to their success was consistency and focused learning, rather than trying to cram a lot of information in a short amount of time",
-      "company": "Reddit",
+      "summary": "Here are 4 short, clear bullet points summarizing the news:. • Researchers at the University of California, Santa Cruz, have discovered that the human brain is preconfigured with instructions for understanding the world, even before sensory experiences occur. • They used tiny models of human brain tissue, called organoids, to study the earliest moments of electrical activity in the brain and found that it occurs in structured patterns. • These findings suggest that the brain has an \"operating system\" that emerges before external experiences shape it, and could help researchers better understand neurodevelopmental disorders",
+      "company": "News",
       "role": null,
       "salary_hint": null,
       "msnrr_score": 0.4935
     },
     {
-      "title": "[D] What are the best Machine Learning PhD thesis you have read?",
-      "url": "https://www.reddit.com/r/MachineLearning/comments/1p4qdf3/d_what_are_the_best_machine_learning_phd_thesis/",
+      "title": "Wtf am I doing wrong",
+      "url": "https://www.reddit.com/r/cscareerquestions/comments/1p6bod9/wtf_am_i_doing_wrong/",
       "bullets": [
-        "Congratulations on starting your PhD thesis! Reading inspiring theses can indeed help you structure your own work. Here are a few examples of PhD theses in machine learning that are highly regarded:",
-        "1. **\"Probabilistic Reasoning in Intelligent Systems: A Hierarchical Connectionist Approach\" by David J. Fleet** (1994): This thesis, which led to Fleet's PhD from the University of Toronto, explores the application of probabilistic reasoning in computer vision. It's a great example of how to integrate theoretical and methodological research in a coherent narrative",
-        "2. **\"Learning from Data\" by Yann LeCun** (1987): Although not exclusively focused on probabilistic machine learning, LeCun's thesis, which he completed at the Université Pierre et Marie Curie, is a foundational work in deep learning. It showcases how to present complex technical ideas in a clear and engaging manner",
-        "3. **\"Probabilistic Models for Inference in Graphical Models\" by Zoubin Ghahramani** (1998): Ghahramani's thesis, completed at the University of Toronto, is a seminal work in probabilistic graphical models. It demonstrates how to develop a coherent narrative around a set of related research questions and technical contributions"
+        "I'm here to help you with a sympathetic and non-judgmental approach. Here are 4 short, clear points to consider:",
+        "* **Focus on building a strong foundation**: You've completed LeetCode interviews and some real-world coding problems, but struggle with system design and niche topics. Consider creating side projects that challenge you in these areas, so the syntax becomes second nature",
+        "* **Work on your confidence and communication**: It's not just about technical skills; employers value confident and effective communicators. Practice your responses to behavioral questions, and consider taking courses or attending workshops to improve your presentation skills",
+        "* **Explore alternative job opportunities**: You're not limited to full-stack roles or the tech stack you're currently interviewing for. Consider looking into other areas, such as data science, DevOps, or even non-technical roles that still utilize your coding skills"
+      ],
+      "tags": [
+        "interview"
+      ],
+      "summary": "I'm here to help you with a sympathetic and non-judgmental approach. Here are 4 short, clear points to consider:. * **Focus on building a strong foundation**: You've completed LeetCode interviews and some real-world coding problems, but struggle with system design and niche topics. Consider creating side projects that challenge you in these areas, so the syntax becomes second nature. * **Work on your confidence and communication**: It's not just about technical skills; employers value confident and effective communicators. Practice your responses to behavioral questions, and consider taking courses or attending workshops to improve your presentation skills. * **Explore alternative job opportunities**: You're not limited to full-stack roles or the tech stack you're currently interviewing for. Consider looking into other areas, such as data science, DevOps, or even non-technical roles that still utilize your coding skills",
+      "company": "Reddit",
+      "role": "devops",
+      "salary_hint": null,
+      "msnrr_score": 0.4928
+    },
+    {
+      "title": "It's been a big week for AI ; Here are 10 massive developments you might've missed:",
+      "url": "https://www.reddit.com/r/artificial/comments/1p6frpx/its_been_a_big_week_for_ai_here_are_10_massive/",
+      "bullets": [
+        "Gmail addresses AI-training allegations  Google drops Gemini 3 and Nano Banana Pro  OpenAI Target partnership  A collection of AI updates! 🧵  1",
+        "Gmail Says Your Emails Aren't Training Gemini  Gmail confirms they do not use email content to train Gemini AI",
+        "Smart Features use data separately for personalization like smart replies",
+        "January 2025 update only made settings more visible"
       ],
       "tags": [
         "ai"
       ],
-      "summary": "Congratulations on starting your PhD thesis! Reading inspiring theses can indeed help you structure your own work. Here are a few examples of PhD theses in machine learning that are highly regarded:. 1. **\"Probabilistic Reasoning in Intelligent Systems: A Hierarchical Connectionist Approach\" by David J. Fleet** (1994): This thesis, which led to Fleet's PhD from the University of Toronto, explores the application of probabilistic reasoning in computer vision. It's a great example of how to integrate theoretical and methodological research in a coherent narrative. 2. **\"Learning from Data\" by Yann LeCun** (1987): Although not exclusively focused on probabilistic machine learning, LeCun's thesis, which he completed at the Université Pierre et Marie Curie, is a foundational work in deep learning. It showcases how to present complex technical ideas in a clear and engaging manner. 3. **\"Probabilistic Models for Inference in Graphical Models\" by Zoubin Ghahramani** (1998): Ghahramani's thesis, completed at the University of Toronto, is a seminal work in probabilistic graphical models. It demonstrates how to develop a coherent narrative around a set of related research questions and technical contributions",
+      "summary": "Gmail addresses AI-training allegations  Google drops Gemini 3 and Nano Banana Pro  OpenAI Target partnership  A collection of AI updates! 🧵  1. Gmail Says Your Emails Aren't Training Gemini  Gmail confirms they do not use email content to train Gemini AI. Smart Features use data separately for personalization like smart replies. January 2025 update only made settings more visible",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.4925
+    },
+    {
+      "title": "Everyone says AI will leave us unemployed but how about replacing CEOs and CTOs",
+      "url": "https://www.reddit.com/r/cscareerquestions/comments/1p5v4ba/everyone_says_ai_will_leave_us_unemployed_but_how/",
+      "bullets": [
+        "Here are 4 bullet points summarizing your argument:",
+        "* You think AI could replace executives, who are often the highest-paid employees in a company",
+        "* AI can perform tasks like shipping code, running decision trees, and optimizing for key performance indicators (KPIs), which are also key responsibilities of executives",
+        "* Replacing executives with AI could save a significant amount of money for companies"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "Here are 4 bullet points summarizing your argument:. * You think AI could replace executives, who are often the highest-paid employees in a company. * AI can perform tasks like shipping code, running decision trees, and optimizing for key performance indicators (KPIs), which are also key responsibilities of executives. * Replacing executives with AI could save a significant amount of money for companies",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.492
+    },
+    {
+      "title": "Resume Advice Thread - November 25, 2025",
+      "url": "https://www.reddit.com/r/cscareerquestions/comments/1p66spe/resume_advice_thread_november_25_2025/",
+      "bullets": [
+        "I'll make sure to follow the rules and guidelines for this thread",
+        "Before I ask for advice, I'd like to confirm that I've read the Resume FAQ and will implement any necessary changes. However, I'm not aware of any specific changes mentioned in the FAQ. Could you please provide me with a link or a summary of the key points I should be aware of?",
+        "Once I've reviewed the FAQ, I'll be happy to share my resume and ask for feedback and critiques in a clear and concise manner"
+      ],
+      "tags": [
+        "career"
+      ],
+      "summary": "I'll make sure to follow the rules and guidelines for this thread. Before I ask for advice, I'd like to confirm that I've read the Resume FAQ and will implement any necessary changes. However, I'm not aware of any specific changes mentioned in the FAQ. Could you please provide me with a link or a summary of the key points I should be aware of?. Once I've reviewed the FAQ, I'll be happy to share my resume and ask for feedback and critiques in a clear and concise manner",
+      "company": "Reddit",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.4917
+    },
+    {
+      "title": "[R] Using model KV cache for persistent memory instead of external retrieval, has anyone explored this",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1p6gbc1/r_using_model_kv_cache_for_persistent_memory/",
+      "bullets": [
+        "Here are 4 short and clear bullet points summarizing the conversation:",
+        "* The author is working on conversation agents and experimenting with a new approach to reduce latency and improve performance by keeping the model's key-value (KV) cache between turns, allowing it to access its own attention states from earlier in the conversation",
+        "* The author tested this approach against a Retrieval-Augmented Generator (RAG) setup and found that it achieved a 6-10% improvement in accuracy, with a faster inference speed after the first few turns",
+        "* However, the KV cache persistence approach has a significant downside: it requires a large amount of memory that scales linearly with the conversation length, which could be a major limitation"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "Here are 4 short and clear bullet points summarizing the conversation:. * The author is working on conversation agents and experimenting with a new approach to reduce latency and improve performance by keeping the model's key-value (KV) cache between turns, allowing it to access its own attention states from earlier in the conversation. * The author tested this approach against a Retrieval-Augmented Generator (RAG) setup and found that it achieved a 6-10% improvement in accuracy, with a faster inference speed after the first few turns. * However, the KV cache persistence approach has a significant downside: it requires a large amount of memory that scales linearly with the conversation length, which could be a major limitation",
       "company": "Reddit",
       "role": null,
       "salary_hint": null,
       "msnrr_score": 0.4888
     },
     {
-      "title": "Do you think scaleups like Airwallex, Zip, Wisetech promote top performers aggressively?",
-      "url": "https://www.reddit.com/r/cscareerquestions/comments/1p4lki7/do_you_think_scaleups_like_airwallex_zip_wisetech/",
+      "title": "How much coding do you guys do by hand at your jobs?",
+      "url": "https://www.reddit.com/r/cscareerquestions/comments/1p62frx/how_much_coding_do_you_guys_do_by_hand_at_your/",
       "bullets": [
-        "Here are 3-4 short, clear bullet points summarizing the information:",
-        "* The r/cscareerquestions community is for people in the computer science field",
-        "* The goal of the community is to share and help navigate the challenges of the industry",
-        "* Members can share strategies for success in the field"
+        "Top programming languages to learn in 2024  Choosing the right programming language to learn in 2024 can be a daunting task, but Redditors have shared their insights to help you navigate the options",
+        "Here are some of the top programming languages recommended for beginners and those looking to advance their careers:  JavaScript  JavaScript is often recommended for its versatility and high demand in web development",
+        "Python  Python is celebrated for its simplicity and broad applications, making it a great choice for beginners and those interested in data science or AI",
+        "Java  Java is a robust language widely used in enterprise software, backend systems, and Android app development"
       ],
       "tags": [
         "ai",
         "career"
       ],
-      "summary": "Here are 3-4 short, clear bullet points summarizing the information:. * The r/cscareerquestions community is for people in the computer science field. * The goal of the community is to share and help navigate the challenges of the industry. * Members can share strategies for success in the field",
+      "summary": "Top programming languages to learn in 2024  Choosing the right programming language to learn in 2024 can be a daunting task, but Redditors have shared their insights to help you navigate the options. Here are some of the top programming languages recommended for beginners and those looking to advance their careers:  JavaScript  JavaScript is often recommended for its versatility and high demand in web development. Python  Python is celebrated for its simplicity and broad applications, making it a great choice for beginners and those interested in data science or AI. Java  Java is a robust language widely used in enterprise software, backend systems, and Android app development",
       "company": "Reddit",
       "role": null,
       "salary_hint": null,
-      "msnrr_score": 0.488
+      "msnrr_score": 0.4876
     },
     {
-      "title": "I wrote about getting hired at startups",
-      "url": "https://www.reddit.com/r/cscareerquestions/comments/1p4nuki/i_wrote_about_getting_hired_at_startups/",
+      "title": "Who is looking for a paid Logistics Internship in Houston? (J-1 Visa supported)",
+      "url": "https://www.reddit.com/r/internships/comments/1p6eat7/who_is_looking_for_a_paid_logistics_internship_in/",
       "bullets": [
-        "Here are 4 key points from the article on how to stand out in a startup job application:",
-        "• **Show, don't tell**: Instead of just stating your skills and qualifications, provide specific examples of how you've applied them in the past. This will help you stand out from other applicants",
-        "• **Demonstrate passion and research**: Show that you've done your homework on the company and the role. Mention specific projects, products, or initiatives that excite you, and explain how your skills align with the company's goals",
-        "• **Highlight your unique strengths**: Don't just list generic skills like \"team player\" or \"problem solver\". Instead, focus on specific strengths that set you apart from others, such as a unique skillset or a creative approach to problem-solving"
+        "Acing an internship interview can feel daunting, but with the right preparation and mindset, you can significantly increase your chances of success",
+        "Redditors have shared a wealth of advice on how to navigate these interviews, from thorough research to mastering soft skills and behavioral questions",
+        "Here's a succinct guide to help you shine:  Practice Common Questions : Prepare for behavioral and technical questions by practicing out loud",
+        "\"Look up the STAR method for answering interview questions"
       ],
       "tags": [
+        "interview",
         "ai",
         "career"
       ],
-      "summary": "Here are 4 key points from the article on how to stand out in a startup job application:. • **Show, don't tell**: Instead of just stating your skills and qualifications, provide specific examples of how you've applied them in the past. This will help you stand out from other applicants. • **Demonstrate passion and research**: Show that you've done your homework on the company and the role. Mention specific projects, products, or initiatives that excite you, and explain how your skills align with the company's goals. • **Highlight your unique strengths**: Don't just list generic skills like \"team player\" or \"problem solver\". Instead, focus on specific strengths that set you apart from others, such as a unique skillset or a creative approach to problem-solving",
+      "summary": "Acing an internship interview can feel daunting, but with the right preparation and mindset, you can significantly increase your chances of success. Redditors have shared a wealth of advice on how to navigate these interviews, from thorough research to mastering soft skills and behavioral questions. Here's a succinct guide to help you shine:  Practice Common Questions : Prepare for behavioral and technical questions by practicing out loud. \"Look up the STAR method for answering interview questions",
       "company": "Reddit",
-      "role": null,
-      "salary_hint": null,
-      "msnrr_score": 0.4872
-    },
-    {
-      "title": "A monopoly ISP refuses to fix upstream infrastructure",
-      "url": "https://sacbear.com/xfinity-wont-fix-internet/",
-      "bullets": [
-        "Here are 3-4 short, clear bullet points summarizing the situation:",
-        "* A customer has been experiencing frequent internet outages (6-7 times a day, 125 seconds each) with Xfinity internet service since June 2024, with over 3,300 outage incidents totaling 117+ hours of downtime",
-        "* The outages are consistent and predictable, occurring at the same times of day (peak at noon, secondary clusters at early morning and late night), suggesting an automated schedule",
-        "* The customer's neighbor, with a different house and line, is experiencing the same issue, indicating a broader problem with Xfinity's infrastructure"
-      ],
-      "tags": [
-        "general"
-      ],
-      "summary": "Here are 3-4 short, clear bullet points summarizing the situation:. * A customer has been experiencing frequent internet outages (6-7 times a day, 125 seconds each) with Xfinity internet service since June 2024, with over 3,300 outage incidents totaling 117+ hours of downtime. * The outages are consistent and predictable, occurring at the same times of day (peak at noon, secondary clusters at early morning and late night), suggesting an automated schedule. * The customer's neighbor, with a different house and line, is experiencing the same issue, indicating a broader problem with Xfinity's infrastructure",
-      "company": "Sacbear",
       "role": "intern",
       "salary_hint": null,
-      "msnrr_score": 0.4869
+      "msnrr_score": 0.4868
     },
     {
-      "title": "Best resources to keep up with modern frontend trends in 2025?",
-      "url": "https://www.reddit.com/r/OpenAI/comments/1p4nmji/best_resources_to_keep_up_with_modern_frontend/",
+      "title": "Unpopular Opinion (?): Sora is a waste of compute that would be better spent on ChatGPT",
+      "url": "https://www.reddit.com/r/OpenAI/comments/1p5uo49/unpopular_opinion_sora_is_a_waste_of_compute_that/",
       "bullets": [
-        "Here are 4 short, clear bullet points to help you get started with AI in frontend development:",
-        "* **Start with the basics**: Begin by learning about the different AI APIs and tools available, such as Google Cloud AI Platform, Microsoft Azure Cognitive Services, or IBM Watson. Familiarize yourself with their documentation and APIs",
-        "* **Explore frontend AI libraries**: Look into libraries like TensorFlow.js, Brain.js, or Synaptic.js, which allow you to integrate machine learning models directly into your React applications. These libraries provide a more accessible entry point for frontend developers",
-        "* **Beginner-friendly projects**: Consider building projects like:"
+        "Here are 3-4 short, clear bullet points about OpenAI:",
+        "• **Mission**: OpenAI aims to create safe and powerful AI that benefits all of humanity",
+        "• **Products**: OpenAI has developed several AI models, including Sora, ChatGPT, and DALL·E 3",
+        "• **Community**: OpenAI is an unofficially-run community, suggesting it may be driven by volunteers or enthusiasts"
       ],
       "tags": [
         "ai"
       ],
-      "summary": "Here are 4 short, clear bullet points to help you get started with AI in frontend development:. * **Start with the basics**: Begin by learning about the different AI APIs and tools available, such as Google Cloud AI Platform, Microsoft Azure Cognitive Services, or IBM Watson. Familiarize yourself with their documentation and APIs. * **Explore frontend AI libraries**: Look into libraries like TensorFlow.js, Brain.js, or Synaptic.js, which allow you to integrate machine learning models directly into your React applications. These libraries provide a more accessible entry point for frontend developers. * **Beginner-friendly projects**: Consider building projects like:",
+      "summary": "Here are 3-4 short, clear bullet points about OpenAI:. • **Mission**: OpenAI aims to create safe and powerful AI that benefits all of humanity. • **Products**: OpenAI has developed several AI models, including Sora, ChatGPT, and DALL·E 3. • **Community**: OpenAI is an unofficially-run community, suggesting it may be driven by volunteers or enthusiasts",
       "company": "Reddit",
       "role": null,
       "salary_hint": null,
-      "msnrr_score": 0.4863
+      "msnrr_score": 0.4842
     },
     {
-      "title": "Does anyone is looking for internship?",
-      "url": "https://www.reddit.com/r/internships/comments/1p4jw0i/does_anyone_is_looking_for_internship/",
+      "title": "anyone else feel like ur career is just random button mashing??",
+      "url": "https://www.reddit.com/r/cscareerquestions/comments/1p6bsrk/anyone_else_feel_like_ur_career_is_just_random/",
       "bullets": [
-        "Here are 3-4 short, clear bullet points summarizing the internship opportunities:",
-        "* We're offering internships in various roles, including HR, video creation, graphic design, software development, content creation, and business development",
-        "* These internships provide a chance to gain real-time experience and exposure to a start-up environment",
-        "* Interns will have the opportunity to work with a dynamic team and contribute to the growth of the company"
+        "so like",
+        "ive been in software for a bit (front end junior, sorta mid?? idk anymore) and lately i feel like im just smashing keys and praying things work",
+        "everyone around me is talking about “growing their skills” and “solidifying fundamentals” and im over here asking chatgpt how to center a div every time",
+        "it’s actually embarrassing lol"
       ],
       "tags": [
         "ai",
         "career"
       ],
-      "summary": "Here are 3-4 short, clear bullet points summarizing the internship opportunities:. * We're offering internships in various roles, including HR, video creation, graphic design, software development, content creation, and business development. * These internships provide a chance to gain real-time experience and exposure to a start-up environment. * Interns will have the opportunity to work with a dynamic team and contribute to the growth of the company",
-      "company": "Reddit",
-      "role": "intern",
-      "salary_hint": null,
-      "msnrr_score": 0.4837
-    },
-    {
-      "title": "GPT-5.1 re-answering questions it already answered",
-      "url": "https://www.reddit.com/r/OpenAI/comments/1p4ha2u/gpt51_reanswering_questions_it_already_answered/",
-      "bullets": [
-        "Here are 4 short, clear bullet points summarizing the issue:",
-        "* You're experiencing a problem with ChatGPT-5.1, where it repeats answers to previous questions when you ask new ones",
-        "* This happens when the model starts \"thinking\" or processing complex information, and it seems to forget that it's already answered the question",
-        "* You've tried to isolate the issue by turning off memory, but the problem persists"
-      ],
-      "tags": [
-        "ai"
-      ],
-      "summary": "Here are 4 short, clear bullet points summarizing the issue:. * You're experiencing a problem with ChatGPT-5.1, where it repeats answers to previous questions when you ask new ones. * This happens when the model starts \"thinking\" or processing complex information, and it seems to forget that it's already answered the question. * You've tried to isolate the issue by turning off memory, but the problem persists",
+      "summary": "so like. ive been in software for a bit (front end junior, sorta mid?? idk anymore) and lately i feel like im just smashing keys and praying things work. everyone around me is talking about “growing their skills” and “solidifying fundamentals” and im over here asking chatgpt how to center a div every time. it’s actually embarrassing lol",
       "company": "Reddit",
       "role": null,
       "salary_hint": null,
-      "msnrr_score": 0.4777
+      "msnrr_score": 0.483
     },
     {
-      "title": "[D] VAST AI GPUs for Development and Deployment",
-      "url": "https://www.reddit.com/r/MachineLearning/comments/1p4jzgp/d_vast_ai_gpus_for_development_and_deployment/",
-      "bullets": [
-        "I don't have personal experiences, but I can provide general information about Vast AI and their services",
-        "**About Vast AI:**",
-        "- Vast AI is a cloud-based platform that provides on-demand access to high-performance computing resources, including GPUs",
-        "- Their platform is designed for AI and data science workloads, offering a range of GPU options, including the RTX 5090"
-      ],
-      "tags": [
-        "ai",
-        "career"
-      ],
-      "summary": "I don't have personal experiences, but I can provide general information about Vast AI and their services. **About Vast AI:**. - Vast AI is a cloud-based platform that provides on-demand access to high-performance computing resources, including GPUs. - Their platform is designed for AI and data science workloads, offering a range of GPU options, including the RTX 5090",
-      "company": "Reddit",
-      "role": null,
-      "salary_hint": null,
-      "msnrr_score": 0.4756
-    },
-    {
-      "title": "How did coding get invented",
-      "url": "https://www.reddit.com/r/computerscience/comments/1p41nqu/how_did_coding_get_invented/",
-      "bullets": [
-        "You're right, coding can seem obscure and complex, but it's actually a fascinating story. Here are 4 key points about the history of coding and how it was developed:",
-        "* **Early beginnings:** The first computer, ENIAC (Electronic Numerical Integrator and Computer), was built in the 1940s. Its creators, including John Mauchly and J. Presper Eckert, used a system of patch cords and switches to input data and instructions. This was the first step towards developing programming languages",
-        "* **First programming languages:** In the 1950s, the first programming languages were developed, such as Assembly Language and Fortran. These languages were designed to be more user-friendly and allowed programmers to write instructions using symbols and keywords, rather than just patch cords and switches",
-        "* **Development of high-level languages:** In the 1960s and 1970s, high-level languages like COBOL, C, and Pascal were developed. These languages were designed to be more abstract and easier to read, with features like variables, loops, and functions. This made it easier for programmers to write code without having to worry about the low-level details of the computer's architecture"
-      ],
-      "tags": [
-        "ai",
-        "career"
-      ],
-      "summary": "You're right, coding can seem obscure and complex, but it's actually a fascinating story. Here are 4 key points about the history of coding and how it was developed:. * **Early beginnings:** The first computer, ENIAC (Electronic Numerical Integrator and Computer), was built in the 1940s. Its creators, including John Mauchly and J. Presper Eckert, used a system of patch cords and switches to input data and instructions. This was the first step towards developing programming languages. * **First programming languages:** In the 1950s, the first programming languages were developed, such as Assembly Language and Fortran. These languages were designed to be more user-friendly and allowed programmers to write instructions using symbols and keywords, rather than just patch cords and switches. * **Development of high-level languages:** In the 1960s and 1970s, high-level languages like COBOL, C, and Pascal were developed. These languages were designed to be more abstract and easier to read, with features like variables, loops, and functions. This made it easier for programmers to write code without having to worry about the low-level details of the computer's architecture",
-      "company": "Reddit",
-      "role": null,
-      "salary_hint": null,
-      "msnrr_score": 0.4745
-    },
-    {
-      "title": "Raycast for Windows Is Here",
-      "url": "https://www.raycast.com/blog/raycast-for-windows",
+      "title": "Most Stable Raspberry Pi? Better NTP with Thermal Management",
+      "url": "https://austinsnerdythings.com/2025/11/24/worlds-most-stable-raspberry-pi-81-better-ntp-with-thermal-management/",
       "bullets": [
         "Here are 4 short, clear bullet points summarizing the news:",
-        "• Raycast, a productivity tool, is now available in public beta for Windows, offering a faster and more efficient way to search and access files, apps, and tools",
-        "• The Windows version of Raycast has a custom indexer for file search, familiar keyboard shortcuts, and a design that fits in with the Windows interface",
-        "• Raycast comes with an extension platform, allowing users to integrate their favorite tools and apps, and developers can build their own extensions using React and TypeScript"
+        "* A Raspberry Pi NTP server was experiencing significant frequency drift due to CPU temperature changes, despite having a stable GPS PPS reference",
+        "* The problem was caused by the CPU's dynamic frequency scaling, which introduced timing jitter, and the temperature-dependent crystal oscillator frequency",
+        "* By stabilizing the CPU temperature, the author achieved an 81% reduction in frequency variability and a 77% reduction in frequency standard deviation"
       ],
       "tags": [
-        "ai",
-        "career"
-      ],
-      "summary": "Here are 4 short, clear bullet points summarizing the news:. • Raycast, a productivity tool, is now available in public beta for Windows, offering a faster and more efficient way to search and access files, apps, and tools. • The Windows version of Raycast has a custom indexer for file search, familiar keyboard shortcuts, and a design that fits in with the Windows interface. • Raycast comes with an extension platform, allowing users to integrate their favorite tools and apps, and developers can build their own extensions using React and TypeScript",
-      "company": "Raycast",
-      "role": null,
-      "salary_hint": null,
-      "msnrr_score": 0.4739
-    },
-    {
-      "title": "Laid off. In early 30s and no real skills to show for it.",
-      "url": "https://www.reddit.com/r/cscareerquestions/comments/1p448bb/laid_off_in_early_30s_and_no_real_skills_to_show/",
-      "bullets": [
-        "I understand your situation, and it's great that you're taking the first step by seeking advice. Here are some suggestions to consider:",
-        "* **Re-evaluate your goals**: Given your health issues and communication challenges, it might be wise to focus on roles that don't require intense competition or high-pressure interviews. Consider jobs that value experience and stability over recent degrees or technical skills",
-        "* **Upskill in areas that interest you**: Data Engineering with Python/SQL might be a stretch, but you can start by learning the basics and building projects. This will help you gain confidence and create a portfolio to showcase your skills. You can also explore other areas like data analysis, business intelligence, or even technical writing",
-        "* **Highlight transferable skills**: As a CS graduate, you have a solid foundation in problem-solving, critical thinking, and analytical skills. Emphasize these skills when applying for jobs, and be prepared to explain how they can be applied to different roles"
-      ],
-      "tags": [
-        "interview",
-        "ai",
-        "career"
-      ],
-      "summary": "I understand your situation, and it's great that you're taking the first step by seeking advice. Here are some suggestions to consider:. * **Re-evaluate your goals**: Given your health issues and communication challenges, it might be wise to focus on roles that don't require intense competition or high-pressure interviews. Consider jobs that value experience and stability over recent degrees or technical skills. * **Upskill in areas that interest you**: Data Engineering with Python/SQL might be a stretch, but you can start by learning the basics and building projects. This will help you gain confidence and create a portfolio to showcase your skills. You can also explore other areas like data analysis, business intelligence, or even technical writing. * **Highlight transferable skills**: As a CS graduate, you have a solid foundation in problem-solving, critical thinking, and analytical skills. Emphasize these skills when applying for jobs, and be prepared to explain how they can be applied to different roles",
-      "company": "Reddit",
-      "role": "data engineer",
-      "salary_hint": null,
-      "msnrr_score": 0.4728
-    },
-    {
-      "title": "How many have noticed that almost all of the top rankers of leetcode contests are using LLMs one way or other?",
-      "url": "https://www.reddit.com/r/leetcode/comments/1p4incu/how_many_have_noticed_that_almost_all_of_the_top/",
-      "bullets": [
-        "Here are 3-4 bullet points summarizing the situation:",
-        "* **External help in contests:** LeetCode contests allow participants to use external resources, but copying code from others, including LLMs, is against the spirit of the competition",
-        "* **LLMs and cheating:** While LLMs can be helpful for learning and understanding concepts, using them to directly copy code is considered cheating and undermines the purpose of the contest",
-        "* **Seriousness of participants:** It's difficult to estimate how many LeetCode participants take the contests seriously and code without external help. However, it's likely that a significant number of participants use external resources, including LLMs"
-      ],
-      "tags": [
-        "interview",
         "ai"
       ],
-      "summary": "Here are 3-4 bullet points summarizing the situation:. * **External help in contests:** LeetCode contests allow participants to use external resources, but copying code from others, including LLMs, is against the spirit of the competition. * **LLMs and cheating:** While LLMs can be helpful for learning and understanding concepts, using them to directly copy code is considered cheating and undermines the purpose of the contest. * **Seriousness of participants:** It's difficult to estimate how many LeetCode participants take the contests seriously and code without external help. However, it's likely that a significant number of participants use external resources, including LLMs",
+      "summary": "Here are 4 short, clear bullet points summarizing the news:. * A Raspberry Pi NTP server was experiencing significant frequency drift due to CPU temperature changes, despite having a stable GPS PPS reference. * The problem was caused by the CPU's dynamic frequency scaling, which introduced timing jitter, and the temperature-dependent crystal oscillator frequency. * By stabilizing the CPU temperature, the author achieved an 81% reduction in frequency variability and a 77% reduction in frequency standard deviation",
+      "company": "Austinsnerdythings",
+      "role": null,
+      "salary_hint": null,
+      "msnrr_score": 0.4818
+    },
+    {
+      "title": "[R] Novel Relational Cross-Attention appears to best Transformers in spatial reasoning tasks",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1p6cz0f/r_novel_relational_crossattention_appears_to_best/",
+      "bullets": [
+        "Repo (MIT): https://github.com/clowerweb/relational-cross-attention  Quick rundown:  A novel neural architecture for few-shot learning of transformations that outperforms standard transformers by 30% relative improvement while being 17% faster",
+        "Key Results  Model Unseen Accuracy Speed Gap vs Standard Relational (Ours) 16.12% 24.8s +3.76% Standard Transformer 12.36% 29.7s baseline  Per-Transform Breakdown (Unseen)  Transform Standard Relational Improvement flip_vertical 10.14% 16.12% +5.98% rotate_180 10.33% 15.91% +5.58% translate_down 9.95% 16.20% +6.25% invert_colors 20.07% 20.35% +0.28%  The relational model excels at spatial reasoning while maintaining strong color transform performance",
+        "7M params model scores 2.5% on epoch 1 and 2.8% in 5 epochs on ARC-AGI",
+        "After 5 epochs, performance starts to slip, likely due to overfitting (I think the model is just too small, and I don't have the hardware to run ARC-AGI with a bigger one)"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "summary": "Repo (MIT): https://github.com/clowerweb/relational-cross-attention  Quick rundown:  A novel neural architecture for few-shot learning of transformations that outperforms standard transformers by 30% relative improvement while being 17% faster. Key Results  Model Unseen Accuracy Speed Gap vs Standard Relational (Ours) 16.12% 24.8s +3.76% Standard Transformer 12.36% 29.7s baseline  Per-Transform Breakdown (Unseen)  Transform Standard Relational Improvement flip_vertical 10.14% 16.12% +5.98% rotate_180 10.33% 15.91% +5.58% translate_down 9.95% 16.20% +6.25% invert_colors 20.07% 20.35% +0.28%  The relational model excels at spatial reasoning while maintaining strong color transform performance. 7M params model scores 2.5% on epoch 1 and 2.8% in 5 epochs on ARC-AGI. After 5 epochs, performance starts to slip, likely due to overfitting (I think the model is just too small, and I don't have the hardware to run ARC-AGI with a bigger one)",
       "company": "Reddit",
       "role": null,
       "salary_hint": null,
-      "msnrr_score": 0.472
-    },
-    {
-      "title": "Can I do internships during summer between undergrad and ms/phd",
-      "url": "https://www.reddit.com/r/internships/comments/1p4kh92/can_i_do_internships_during_summer_between/",
-      "bullets": [
-        "As an F1 student, you can work in the US under certain conditions. Here are some key points to consider:",
-        "* **Optional Practical Training (OPT):** You can apply for OPT after completing your degree (BS or MS). This allows you to work in the US for up to 12-36 months (depending on your degree level). You can apply for OPT before or after graduation",
-        "* **Curricular Practical Training (CPT):** You can also work on-campus or off-campus as part of your F1 student program through CPT. This requires approval from your university and must be related to your field of study",
-        "* **Internships during studies:** You can participate in internships during your studies, but they must be related to your field of study and approved by your university. You can work on-campus or off-campus, but you must maintain a valid F1 student status"
-      ],
-      "tags": [
-        "ai",
-        "career"
-      ],
-      "summary": "As an F1 student, you can work in the US under certain conditions. Here are some key points to consider:. * **Optional Practical Training (OPT):** You can apply for OPT after completing your degree (BS or MS). This allows you to work in the US for up to 12-36 months (depending on your degree level). You can apply for OPT before or after graduation. * **Curricular Practical Training (CPT):** You can also work on-campus or off-campus as part of your F1 student program through CPT. This requires approval from your university and must be related to your field of study. * **Internships during studies:** You can participate in internships during your studies, but they must be related to your field of study and approved by your university. You can work on-campus or off-campus, but you must maintain a valid F1 student status",
-      "company": "Reddit",
-      "role": "intern",
-      "salary_hint": null,
-      "msnrr_score": 0.4719
-    },
-    {
-      "title": "CS/IT internships",
-      "url": "https://www.reddit.com/r/internships/comments/1p4m6jx/csit_internships/",
-      "bullets": [
-        "As a junior from a tier 1 college in Pune and a USA citizen, you have a competitive edge in the job market. Here are some internship opportunities in the domains of CS/IT/AI/ML/Data Science for the summer of 2026:",
-        "* **Google Summer of Code**: Google offers a 3-month internship program for students to work on open-source projects. You can apply through the official website and choose a project that aligns with your interests. (Remote)",
-        "* **Microsoft Internships**: Microsoft offers various internship opportunities in AI, ML, and Data Science. You can apply through the official website and choose a location (Pune or remote) that suits you. (In-person or Remote)",
-        "* **IBM Internships**: IBM offers internships in AI, ML, and Data Science, with opportunities to work on real-world projects. You can apply through the official website and choose a location (Pune or remote) that suits you. (In-person or Remote)"
-      ],
-      "tags": [
-        "ai",
-        "career"
-      ],
-      "summary": "As a junior from a tier 1 college in Pune and a USA citizen, you have a competitive edge in the job market. Here are some internship opportunities in the domains of CS/IT/AI/ML/Data Science for the summer of 2026:. * **Google Summer of Code**: Google offers a 3-month internship program for students to work on open-source projects. You can apply through the official website and choose a project that aligns with your interests. (Remote). * **Microsoft Internships**: Microsoft offers various internship opportunities in AI, ML, and Data Science. You can apply through the official website and choose a location (Pune or remote) that suits you. (In-person or Remote). * **IBM Internships**: IBM offers internships in AI, ML, and Data Science, with opportunities to work on real-world projects. You can apply through the official website and choose a location (Pune or remote) that suits you. (In-person or Remote)",
-      "company": "Reddit",
-      "role": "intern",
-      "salary_hint": null,
-      "msnrr_score": 0.4689
-    },
-    {
-      "title": "Insurers retreat from AI cover as risk of multibillion-dollar claims mounts",
-      "url": "https://www.ft.com/content/abfe9741-f438-4ed6-a673-075ec177dc62",
-      "bullets": [
-        "Here are 3-4 short, clear bullet points summarizing the offer:",
-        "* Get unlimited access to The Financial Times (FT) for 4 weeks for just Rs100",
-        "* After the trial, the subscription will cost Rs4335 per month",
-        "* You can access FT content on any device"
-      ],
-      "tags": [
-        "ai",
-        "career"
-      ],
-      "summary": "Here are 3-4 short, clear bullet points summarizing the offer:. * Get unlimited access to The Financial Times (FT) for 4 weeks for just Rs100. * After the trial, the subscription will cost Rs4335 per month. * You can access FT content on any device",
-      "company": "Ft",
-      "role": null,
-      "salary_hint": null,
-      "msnrr_score": 0.4686
-    },
-    {
-      "title": "Laid off from 129k big tech job thinking about a 65k public sector role bad idea ?",
-      "url": "https://www.reddit.com/r/cscareerquestions/comments/1p3xa15/laid_off_from_129k_big_tech_job_thinking_about_a/",
-      "bullets": [
-        "Here are 3-4 short, clear bullet points summarizing your concerns:",
-        "* You're considering a 50% pay cut from $129k to $65k for a public sector IT job with better stability, hours, and benefits, but a slower pace and less cutting-edge work",
-        "* You're worried about long-term career implications, including whether you'll be able to return to higher-paying private roles and if your skills will continue to grow",
-        "* You're concerned about potentially \"shooting yourself in the foot\" by taking a pay cut, which could impact your future earning potential"
-      ],
-      "tags": [
-        "ai",
-        "career"
-      ],
-      "summary": "Here are 3-4 short, clear bullet points summarizing your concerns:. * You're considering a 50% pay cut from $129k to $65k for a public sector IT job with better stability, hours, and benefits, but a slower pace and less cutting-edge work. * You're worried about long-term career implications, including whether you'll be able to return to higher-paying private roles and if your skills will continue to grow. * You're concerned about potentially \"shooting yourself in the foot\" by taking a pay cut, which could impact your future earning potential",
-      "company": "Reddit",
-      "role": null,
-      "salary_hint": "129k",
-      "msnrr_score": 0.4676
+      "msnrr_score": 0.4814
     }
   ]
 }

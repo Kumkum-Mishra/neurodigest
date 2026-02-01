@@ -78,7 +78,7 @@ def signup(request: SignupRequest, session: Session = Depends(get_session)):
         raise HTTPException(status_code=400, detail="Email must be unique")
     except Exception as e:
         session.rollback()
-        print("❌ Signup failed:", str(e))
+        print("Signup failed:", str(e))
         raise HTTPException(status_code=500, detail="Internal error during signup")
 
 

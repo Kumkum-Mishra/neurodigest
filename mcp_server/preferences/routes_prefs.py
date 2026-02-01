@@ -4,7 +4,6 @@ from storage.db import get_session
 from storage.models import UserPreference, User
 from mcp_server.auth.routes_auth import get_current_user
 
-# ✅ Router has NO prefix here
 router = APIRouter(tags=["Preferences"])
 
 

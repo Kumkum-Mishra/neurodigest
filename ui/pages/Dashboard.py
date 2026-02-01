@@ -5,9 +5,59 @@ import hashlib
 import re
 
 
-st.set_page_config(page_title="Dashboard • Campus Placement Digest", layout="wide")
+st.set_page_config(page_title="Dashboard • NeuroDigest — Personalized Content Digest & Learning Assistant", layout="wide")
+
+# Robust import pattern: try absolute import, otherwise add package root to sys.path
+import os
+import sys
+try:
+    from ui.ui_helpers import inject_css, render_card, render_article_card, render_metric
+except Exception:
+    pkg_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    if pkg_root not in sys.path:
+        sys.path.insert(0, pkg_root)
+    from ui.ui_helpers import inject_css, render_card, render_article_card, render_metric
+inject_css()
+import time
+import streamlit.components.v1 as components
 
 API_BASE = "http://localhost:8000"
+
+# If the page was loaded with ?refresh=1, perform a server-side refresh once
+# Use `st.query_params` (stable API) instead of deprecated experimental_get_query_params
+qp = {}
+try:
+    qp = dict(st.query_params or {})
+except Exception:
+    qp = {}
+if qp.get("refresh"):
+    try:
+        with st.spinner("Refreshing digest... this may take up to 60s"):
+            resp = requests.get(f"{API_BASE}/api/digest?refresh=1", timeout=120)
+            if resp.status_code == 200:
+                payload = resp.json()
+                if isinstance(payload, dict) and "digest" in payload and isinstance(payload["digest"], dict):
+                    st.session_state["_dashboard_digest"] = payload["digest"]
+                else:
+                    st.session_state["_dashboard_digest"] = payload
+                st.session_state["_dashboard_digest_ts"] = int(time.time())
+                # clear the refresh query param and reload without it
+                try:
+                    st.experimental_set_query_params()
+                except Exception:
+                    pass
+                st.experimental_rerun()
+            else:
+                st.error(f"Failed to refresh digest: {resp.status_code} {resp.text}")
+    except Exception as e:
+        st.error("Failed to refresh: " + str(e))
+
+# Floating refresh button (upper-right corner)
+components.html('''
+<div style="position:fixed; right:18px; top:88px; z-index:9999;">
+  <a href="?refresh=1" style="display:inline-block; background:linear-gradient(90deg,#7c5cff,#ff6b6b); color:#fff; padding:10px 14px; border-radius:10px; font-weight:700; box-shadow:0 8px 24px rgba(0,0,0,0.3); text-decoration:none;">🔄 Refresh</a>
+</div>
+''', height=0)
 
 if "token" not in st.session_state:
     st.session_state.token = None
@@ -15,6 +65,7 @@ if "user" not in st.session_state:
     st.session_state.user = None
 
 st.title("Dashboard")
+render_card("NeuroDigest — Personalized Content Digest & Learning Assistant", "Personalized Digest & Learning", "Quickly browse curated articles, save bookmarks, and generate role-specific learning roadmaps.")
 if not st.session_state.token:
     st.info("You are not logged in. Please go to Login page.")
 
@@ -72,28 +123,7 @@ def _cached_get_digest(token: str | None, state_key: str = "_dashboard_digest", 
         # fall back to cached value if available
         return st.session_state.get(state_key, {"generated_at": None, "items": [], "_error": str(e)})
 
-col_main, col_actions = st.columns([3, 1])
 
-with col_actions:
-    if st.button("🔄 Refresh now", key="refresh_btn"):
-        # Perform a synchronous refresh but store in the cache so subsequent
-        # navigations read the cached value instead of re-fetching.
-        try:
-            with st.spinner("Refreshing digest... this may take up to 60s"):
-                resp = requests.get(f"{API_BASE}/api/digest?refresh=1", timeout=120)
-                if resp.status_code == 200:
-                    payload = resp.json()
-                    if isinstance(payload, dict) and "digest" in payload and isinstance(payload["digest"], dict):
-                        st.session_state["_dashboard_digest"] = payload["digest"]
-                    else:
-                        st.session_state["_dashboard_digest"] = payload
-                    st.session_state["_dashboard_digest_ts"] = int(time.time())
-                    st.success("Digest refreshed")
-                    st.experimental_rerun()
-                else:
-                    st.error(f"Failed to refresh digest: {resp.status_code} {resp.text}")
-        except Exception as e:
-            st.error("Failed to refresh: " + str(e))
 
 with st.spinner("Fetching digest..."):
     # prefer any manual-refresh result placed in session_state, otherwise use cached getter
@@ -207,6 +237,28 @@ def strip_ai_intro(text: str) -> str:
         return s[120:].lstrip() if len(s) > 120 else ""
 
     return text
+
+# Small dashboard metrics (count of items, saved bookmarks, sections)
+try:
+    sections_count = len({ _categorize(it) for it in items })
+except Exception:
+    sections_count = 0
+m1, m2, m3 = st.columns([1,1,1])
+with m1:
+    try:
+        render_metric("Digest items", len(items))
+    except Exception:
+        st.metric("Digest items", len(items))
+with m2:
+    try:
+        render_metric("Saved", len(saved_url_to_id))
+    except Exception:
+        st.metric("Saved", len(saved_url_to_id))
+with m3:
+    try:
+        render_metric("Sections", sections_count)
+    except Exception:
+        st.metric("Sections", sections_count)
 
 # Sidebar filters
 domains = sorted({_domain_from_url(it.get("url", "")) for it in items if it.get("url")})

@@ -3,8 +3,20 @@ import requests
 import json
 import time
 
-st.set_page_config(page_title="AI Tutor • NeuroDigest", layout="wide")
 
+st.set_page_config(page_title="AI Tutor • NeuroDigest — Personalized Content Digest & Learning Assistant", layout="wide")
+
+# Robust import pattern so Tutor page works when run directly or as package
+import os
+import sys
+try:
+    from ui.ui_helpers import inject_css, render_card
+except Exception:
+    pkg_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    if pkg_root not in sys.path:
+        sys.path.insert(0, pkg_root)
+    from ui.ui_helpers import inject_css, render_card
+inject_css()
 
 # Cross-version safe rerun helper: some Streamlit versions use
 # `experimental_rerun`, others provide `rerun`. Fall back to a
@@ -105,6 +117,8 @@ if "user" not in st.session_state:
 st.title("🤖 AI Tutor - NDLRM")
 st.markdown("**Personalized Learning Recommendation Module**")
 
+render_card("AI Tutor", "Generate learning roadmaps & practice questions", "Generate role-based roadmaps, view your knowledge profile, and get AI feedback on answers. Click a section from the sidebar to begin.")
+
 if not st.session_state.token:
     st.warning("Please log in to access the AI Tutor.")
     st.stop()
@@ -170,7 +184,7 @@ if page == "Learning Roadmap":
             with st.expander(f"{idx}. Role: {role} — generated: {gen_str}", expanded=(idx==1)):
                 roadmap_body = r.get("roadmap") or r
                 # Week Plan
-                st.subheader("📅 Week Plan")
+                st.subheader("Week Plan")
                 week_plan = roadmap_body.get("week_plan", []) if isinstance(roadmap_body, dict) else []
                 for i, topic_item in enumerate(week_plan, 1):
                     with st.expander(f"Topic {i}: {topic_item.get('topic', 'N/A')}"):
@@ -179,19 +193,19 @@ if page == "Learning Roadmap":
                             st.markdown(f"{j}. {resource}")
 
                 # Skills to Learn
-                st.subheader("🎯 Skills to Learn")
+                st.subheader("Skills to Learn")
                 skills = roadmap_body.get("skills_to_learn", []) if isinstance(roadmap_body, dict) else []
                 for skill in skills:
                     st.markdown(f"- {skill}")
 
                 # Practice Questions
-                st.subheader("❓ Practice Questions")
+                st.subheader("Practice Questions")
                 questions = roadmap_body.get("practice_questions", []) if isinstance(roadmap_body, dict) else []
                 for i, q in enumerate(questions, 1):
                     st.markdown(f"**{i}.** {q}")
 
                 # Recommended Projects
-                st.subheader("🚀 Recommended Projects")
+                st.subheader("Recommended Projects")
                 projects = roadmap_body.get("recommended_projects", []) if isinstance(roadmap_body, dict) else []
                 for i, project in enumerate(projects, 1):
                     st.markdown(f"{i}. {project}")
@@ -199,7 +213,7 @@ if page == "Learning Roadmap":
         st.info("No roadmap found. Click 'Generate Roadmap' to create one.")
 
 elif page == "Knowledge Profile":
-    st.header("🧠 Your Knowledge Profile")
+    st.header("Your Knowledge Profile")
     st.markdown("Based on your article engagement and interests")
     # Prefer recently-generated profile stored in session state
     profile = st.session_state.get("latest_ukp")
@@ -245,7 +259,7 @@ elif page == "Knowledge Profile":
             st.progress(score)
 
 elif page == "Ask Tutor":
-    st.header("💬 Ask the AI Tutor")
+    st.header("Ask the AI Tutor")
     st.markdown("Get personalized explanations and learning guidance")
     
     question = st.text_area("Your Question", height=100, placeholder="e.g., What is reinforcement learning?")
@@ -274,7 +288,7 @@ elif page == "Ask Tutor":
             st.warning("Please enter a question.")
 
 elif page == "Practice Questions":
-    st.header("📝 Practice Questions")
+    st.header("Practice Questions")
     st.markdown("Interview-style questions based on your learning roadmap")
 
     # fetch all roadmaps and collect practice questions grouped by role

@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+neurodigest.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Archive
+storage/archive/
+
+# Documentation (optional - remove if you want to include)
+# *.md
+# !README.md
+# !DEPLOY.md
+
+# Test files
+scripts/test_*.py
+
+# Streamlit (not needed for Vercel deployment)
+ui/app_disabled.py

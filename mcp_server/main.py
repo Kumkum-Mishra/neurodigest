@@ -1,6 +1,7 @@
 from fastapi import FastAPI, BackgroundTasks, Depends
-from apscheduler.schedulers.background import BackgroundScheduler
+from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
+import os
 
 from services.digest_service import run_full_pipeline, load_latest_digest, load_personalized_digest
 from mcp_server.auth.routes_auth import router as auth_router
@@ -11,29 +12,31 @@ from storage.db import init_db
 from mcp_server.auth.auth_utils import get_current_user
 from storage.models import User
 import time
-import os
 
 app = FastAPI(title="AI Digest API", version="1.0.0")
+
+# Add CORS middleware for frontend access
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, replace with your frontend domain
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router(auth_router, prefix="/auth", tags=["Auth"])
 app.include_router(prefs_router, prefix="/prefs", tags=["Preferences"])
 app.include_router(user_router, prefix="/user", tags=["User"])
 app.include_router(tutor_router, prefix="/api", tags=["Tutor"])
 
-scheduler = BackgroundScheduler()
-
+# Initialize DB on startup (works for both serverless and regular deployment)
 @app.on_event("startup")
 def on_startup():
     init_db()
-    scheduler.add_job(run_full_pipeline, "cron", hour=9, minute=0)
-    scheduler.start()
-    print("Scheduler started: daily run at 9:00 AM")
+    print("Database initialized")
 
-
-@app.on_event("shutdown")
-def on_shutdown():
-    scheduler.shutdown(wait=False)
-    print("Scheduler stopped")
+# Note: Scheduler removed for serverless compatibility
+# Use Vercel Cron Jobs or external scheduler for scheduled tasks
 
 @app.get("/api/digest", tags=["Digest"])
 def get_digest(background_tasks: BackgroundTasks, refresh: bool = False):
