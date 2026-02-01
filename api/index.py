@@ -10,8 +10,6 @@ project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
-from mangum import Mangum
-
 # Import app - this will trigger DB initialization attempt
 try:
     from mcp_server.main import app
@@ -24,6 +22,12 @@ except Exception as e:
     def error():
         return {"error": f"App initialization failed: {str(e)}"}
 
-# Wrap FastAPI app with Mangum for AWS Lambda/Vercel compatibility
-# lifespan="off" because serverless functions don't support startup/shutdown events properly
-handler = Mangum(app, lifespan="off")
+# Vercel Python runtime automatically detects 'app' variable
+# For serverless compatibility, we also create a handler using Mangum
+# But Vercel will use 'app' directly for FastAPI
+try:
+    from mangum import Mangum
+    handler = Mangum(app, lifespan="off")
+except ImportError:
+    # Mangum not available - Vercel will use app directly
+    handler = app
