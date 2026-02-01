@@ -41,9 +41,11 @@ except Exception as e:
 # Note: Scheduler removed for serverless compatibility
 # Use Vercel Cron Jobs or external scheduler for scheduled tasks
 
-@app.get("/", tags=["Root"])
-def root():
-    """Root endpoint - redirects to API docs or returns API info."""
+# Root endpoint removed - frontend is served by Vercel static files
+# If someone hits /api/root, they can get API info
+@app.get("/api/root", tags=["Root"])
+def api_root():
+    """API root endpoint - returns API info."""
     return {
         "message": "NeuroDigest API",
         "version": "1.0.0",

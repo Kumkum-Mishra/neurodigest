@@ -15,13 +15,59 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 20px;
             color: #333;
         }
         
-        .container {
-            max-width: 1200px;
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 20px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-content {
+            max-width: 1400px;
             margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
         }
         
         .header {
@@ -35,11 +81,6 @@
             font-size: 3rem;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
         }
         
         .card {
@@ -80,16 +121,17 @@
             color: #555;
         }
         
-        .form-group input {
+        .form-group input, .form-group textarea, .form-group select {
             width: 100%;
             padding: 12px;
             border: 2px solid #e0e0e0;
             border-radius: 8px;
             font-size: 1rem;
             transition: border-color 0.3s;
+            font-family: inherit;
         }
         
-        .form-group input:focus {
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
             outline: none;
             border-color: #667eea;
         }
@@ -104,7 +146,6 @@
             font-weight: 600;
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
-            width: 100%;
         }
         
         .btn:hover {
@@ -118,6 +159,11 @@
         
         .btn-secondary {
             background: #6c757d;
+        }
+        
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 0.9rem;
         }
         
         .message {
@@ -138,8 +184,10 @@
             border: 1px solid #f5c6cb;
         }
         
-        .digest-section {
-            margin-top: 30px;
+        .message.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
         }
         
         .article-card {
@@ -148,11 +196,18 @@
             padding: 20px;
             margin-bottom: 15px;
             border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
         .article-card h3 {
             color: #333;
             margin-bottom: 10px;
+            font-size: 1.2rem;
         }
         
         .article-card a {
@@ -165,127 +220,355 @@
             text-decoration: underline;
         }
         
+        .article-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
         .loading {
             text-align: center;
-            padding: 20px;
+            padding: 40px;
             color: #667eea;
-        }
-        
-        .user-info {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .feature-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-        }
-        
-        .feature-card h3 {
-            margin-bottom: 10px;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
         }
         
         .hidden {
             display: none;
         }
+        
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        .sidebar {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .sidebar h3 {
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        
+        .filter-group {
+            margin-bottom: 15px;
+        }
+        
+        .filter-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+            font-size: 0.9rem;
+        }
+        
+        .filter-group input, .filter-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-weight: 600;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .tab:hover {
+            color: #667eea;
+        }
+        
+        .tab.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .roadmap-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .roadmap-item h4 {
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+        
+        .practice-question {
+            background: #fff;
+            border: 2px solid #667eea;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+        }
+        
+        .practice-question h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .knowledge-profile {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+        }
+        
+        @media (max-width: 968px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-brand">🧠 NeuroDigest</div>
+            <div class="nav-links">
+                <div class="nav-link" onclick="showPage('dashboard')">📰 Dashboard</div>
+                <div class="nav-link" onclick="showPage('tutor')">🤖 AI Tutor</div>
+                <div id="userNav" class="hidden">
+                    <span id="navUserEmail" style="margin-right: 15px; color: #667eea;"></span>
+                    <button class="btn btn-secondary btn-small" onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
-        <div class="header">
-            <h1>🧠 NeuroDigest</h1>
-            <p>Personalized Content Digest & Learning Assistant</p>
-        </div>
-        
-        <div id="userInfo" class="user-info hidden">
-            <div>
-                <strong>Logged in as:</strong> <span id="userEmail"></span>
+        <!-- Login/Signup Page -->
+        <div id="loginPage" class="page active">
+            <div class="header">
+                <h1>🧠 NeuroDigest</h1>
+                <p>Personalized Content Digest & Learning Assistant</p>
             </div>
-            <button class="btn btn-secondary" onclick="logout()" style="width: auto; padding: 8px 16px;">Logout</button>
+            
+            <div class="card">
+                <h2>Get Started</h2>
+                <div class="auth-section">
+                    <div>
+                        <h3>Login</h3>
+                        <form id="loginForm" onsubmit="handleLogin(event)">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" id="loginEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" id="loginPassword" required>
+                            </div>
+                            <button type="submit" class="btn">Login</button>
+                        </form>
+                    </div>
+                    <div>
+                        <h3>Sign Up</h3>
+                        <form id="signupForm" onsubmit="handleSignup(event)">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" id="signupName" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" id="signupEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" id="signupPassword" required>
+                            </div>
+                            <button type="submit" class="btn">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="message"></div>
+            </div>
+            
+            <div class="card">
+                <h2>✨ Features</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 12px; text-align: center;">
+                        <h3>📚 Curated Articles</h3>
+                        <p>Get personalized content from HN, Reddit, RSS feeds, and job boards</p>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 12px; text-align: center;">
+                        <h3>🎯 Learning Roadmaps</h3>
+                        <p>AI-powered learning paths tailored to your career goals</p>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 12px; text-align: center;">
+                        <h3>💡 Practice Questions</h3>
+                        <p>Get AI feedback on your answers to improve your skills</p>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 12px; text-align: center;">
+                        <h3>📊 Knowledge Profile</h3>
+                        <p>Track your learning progress and engagement</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div id="authSection" class="card">
-            <h2>Get Started</h2>
-            <div class="auth-section">
+
+        <!-- Dashboard Page -->
+        <div id="dashboardPage" class="page">
+            <div class="card">
+                <h2>📰 Dashboard</h2>
+                <p style="color: #666; margin-bottom: 20px;">Personalized Digest & Learning - Browse curated articles, save bookmarks, and track your learning</p>
+            </div>
+            
+            <div class="two-column">
+                <div class="sidebar">
+                    <h3>Filters</h3>
+                    <div class="filter-group">
+                        <label>Search</label>
+                        <input type="text" id="searchFilter" placeholder="Search articles..." oninput="filterArticles()">
+                    </div>
+                    <div class="filter-group">
+                        <label>Show only bookmarked</label>
+                        <input type="checkbox" id="bookmarkedOnly" onchange="filterArticles()">
+                    </div>
+                    <div class="filter-group">
+                        <label>Domain</label>
+                        <select id="domainFilter" onchange="filterArticles()">
+                            <option value="">All domains</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="refreshDigest()" style="width: 100%; margin-top: 10px;">🔄 Refresh Digest</button>
+                </div>
+                
                 <div>
-                    <h3>Login</h3>
-                    <form id="loginForm" onsubmit="handleLogin(event)">
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" id="loginEmail" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Password</label>
-                            <input type="password" id="loginPassword" required>
-                        </div>
-                        <button type="submit" class="btn">Login</button>
-                    </form>
-                </div>
-                <div>
-                    <h3>Sign Up</h3>
-                    <form id="signupForm" onsubmit="handleSignup(event)">
-                        <div class="form-group">
-                            <label>Full Name</label>
-                            <input type="text" id="signupName" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" id="signupEmail" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Password</label>
-                            <input type="password" id="signupPassword" required>
-                        </div>
-                        <button type="submit" class="btn">Sign Up</button>
-                    </form>
+                    <div class="metrics" id="metrics"></div>
+                    <div class="tabs">
+                        <button class="tab active" onclick="showTab('all')">All News</button>
+                        <button class="tab" onclick="showTab('foryou')">For You</button>
+                        <button class="tab" onclick="showTab('bookmarked')">Bookmarked</button>
+                    </div>
+                    <div id="digestContent"></div>
                 </div>
             </div>
-            <div id="message"></div>
         </div>
-        
-        <div id="digestSection" class="card digest-section hidden">
-            <h2>📰 Latest Digest</h2>
-            <button class="btn" onclick="loadDigest()" style="margin-bottom: 20px;">Refresh Digest</button>
-            <div id="digestContent">
-                <div class="loading">Loading digest...</div>
+
+        <!-- AI Tutor Page -->
+        <div id="tutorPage" class="page">
+            <div class="card">
+                <h2>🤖 AI Tutor - NDLRM</h2>
+                <p style="color: #666; margin-bottom: 20px;">Personalized Learning Recommendation Module - Generate roadmaps, view knowledge profile, and practice</p>
             </div>
-        </div>
-        
-        <div class="card">
-            <h2>✨ Features</h2>
-            <div class="features">
-                <div class="feature-card">
-                    <h3>📚 Curated Articles</h3>
-                    <p>Get personalized content from HN, Reddit, RSS feeds, and job boards</p>
+            
+            <div class="tabs">
+                <button class="tab active" onclick="showTutorTab('roadmap')">📚 Learning Roadmap</button>
+                <button class="tab" onclick="showTutorTab('profile')">📊 Knowledge Profile</button>
+                <button class="tab" onclick="showTutorTab('practice')">💡 Practice Questions</button>
+                <button class="tab" onclick="showTutorTab('ask')">❓ Ask Tutor</button>
+            </div>
+            
+            <!-- Roadmap Tab -->
+            <div id="roadmapTab" class="tab-content active">
+                <div class="card">
+                    <h3>Generate Learning Roadmap</h3>
+                    <div class="form-group">
+                        <label>Target Career/Role</label>
+                        <input type="text" id="targetCareer" placeholder="e.g., Software Engineer, Data Scientist, ML Engineer">
+                    </div>
+                    <button class="btn" onclick="generateRoadmap()">Generate Roadmap</button>
                 </div>
-                <div class="feature-card">
-                    <h3>🎯 Learning Roadmaps</h3>
-                    <p>AI-powered learning paths tailored to your career goals</p>
-                </div>
-                <div class="feature-card">
-                    <h3>💡 Practice Questions</h3>
-                    <p>Get AI feedback on your answers to improve your skills</p>
-                </div>
-                <div class="feature-card">
-                    <h3>📊 Knowledge Profile</h3>
-                    <p>Track your learning progress and engagement</p>
+                <div id="roadmapContent"></div>
+            </div>
+            
+            <!-- Knowledge Profile Tab -->
+            <div id="profileTab" class="tab-content">
+                <div id="profileContent"></div>
+            </div>
+            
+            <!-- Practice Questions Tab -->
+            <div id="practiceTab" class="tab-content">
+                <div id="practiceContent"></div>
+            </div>
+            
+            <!-- Ask Tutor Tab -->
+            <div id="askTab" class="tab-content">
+                <div class="card">
+                    <h3>Ask AI Tutor</h3>
+                    <div class="form-group">
+                        <label>Your Question</label>
+                        <textarea id="tutorQuestion" rows="4" placeholder="Ask any question related to your learning..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Context (Optional)</label>
+                        <textarea id="tutorContext" rows="3" placeholder="Provide additional context if needed..."></textarea>
+                    </div>
+                    <button class="btn" onclick="askTutor()">Ask Tutor</button>
+                    <div id="tutorResponse" style="margin-top: 20px;"></div>
                 </div>
             </div>
         </div>
@@ -295,10 +578,39 @@
         const API_BASE = window.location.origin;
         let authToken = localStorage.getItem('authToken');
         let currentUser = null;
+        let digestData = null;
+        let bookmarks = [];
+        let currentPage = 'login';
+        let currentTab = 'all';
+        let currentTutorTab = 'roadmap';
         
         // Check if user is already logged in
         if (authToken) {
             checkAuth();
+        }
+        
+        function showPage(page) {
+            if (!authToken && page !== 'login') {
+                showMessage('Please login first', 'error');
+                return;
+            }
+            
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            
+            if (page === 'login') {
+                document.getElementById('loginPage').classList.add('active');
+            } else if (page === 'dashboard') {
+                document.getElementById('dashboardPage').classList.add('active');
+                document.querySelectorAll('.nav-link')[0].classList.add('active');
+                loadDashboard();
+            } else if (page === 'tutor') {
+                document.getElementById('tutorPage').classList.add('active');
+                document.querySelectorAll('.nav-link')[1].classList.add('active');
+                loadTutorData();
+            }
+            
+            currentPage = page;
         }
         
         async function checkAuth() {
@@ -312,7 +624,7 @@
                 if (response.ok) {
                     currentUser = await response.json();
                     showLoggedInState();
-                    loadDigest();
+                    showPage('dashboard');
                 } else {
                     localStorage.removeItem('authToken');
                     authToken = null;
@@ -323,16 +635,13 @@
         }
         
         function showLoggedInState() {
-            document.getElementById('authSection').classList.add('hidden');
-            document.getElementById('userInfo').classList.remove('hidden');
-            document.getElementById('digestSection').classList.remove('hidden');
-            document.getElementById('userEmail').textContent = currentUser?.email || 'User';
+            document.getElementById('userNav').classList.remove('hidden');
+            document.getElementById('navUserEmail').textContent = currentUser?.email || 'User';
         }
         
         function showLoggedOutState() {
-            document.getElementById('authSection').classList.remove('hidden');
-            document.getElementById('userInfo').classList.add('hidden');
-            document.getElementById('digestSection').classList.add('hidden');
+            document.getElementById('userNav').classList.add('hidden');
+            showPage('login');
         }
         
         async function handleLogin(event) {
@@ -360,7 +669,7 @@
                     currentUser = { email };
                     showMessage('Login successful!', 'success');
                     showLoggedInState();
-                    loadDigest();
+                    showPage('dashboard');
                 } else {
                     const error = await response.json();
                     showMessage(error.detail || 'Login failed', 'error');
@@ -401,15 +710,26 @@
             }
         }
         
+        async function loadDashboard() {
+            await loadDigest();
+            await loadBookmarks();
+        }
+        
         async function loadDigest() {
             const digestContent = document.getElementById('digestContent');
             digestContent.innerHTML = '<div class="loading">Loading digest...</div>';
             
             try {
-                const response = await fetch(`${API_BASE}/api/digest`);
+                const url = authToken ? `${API_BASE}/api/digest/me` : `${API_BASE}/api/digest`;
+                const headers = authToken ? {
+                    'Authorization': `Bearer ${authToken}`
+                } : {};
+                
+                const response = await fetch(url, { headers });
                 if (response.ok) {
                     const data = await response.json();
-                    displayDigest(data);
+                    digestData = data.digest || data;
+                    displayDigest();
                 } else {
                     digestContent.innerHTML = '<div class="message error">Failed to load digest</div>';
                 }
@@ -418,27 +738,485 @@
             }
         }
         
-        function displayDigest(data) {
-            const digestContent = document.getElementById('digestContent');
-            const digest = data.digest || data;
+        async function loadBookmarks() {
+            if (!authToken) return;
             
-            if (!digest || !digest.articles || digest.articles.length === 0) {
-                digestContent.innerHTML = '<div class="message">No articles available. Try refreshing later.</div>';
+            try {
+                const response = await fetch(`${API_BASE}/user/bookmarks`, {
+                    headers: {
+                        'Authorization': `Bearer ${authToken}`
+                    }
+                });
+                
+                if (response.ok) {
+                    bookmarks = await response.json();
+                    updateBookmarkFilters();
+                }
+            } catch (error) {
+                console.error('Failed to load bookmarks:', error);
+            }
+        }
+        
+        function displayDigest() {
+            if (!digestData) {
+                document.getElementById('digestContent').innerHTML = '<div class="message">No articles available. Try refreshing later.</div>';
+                return;
+            }
+            
+            const items = digestData.items || digestData.articles || [];
+            
+            // Update metrics
+            const metricsHtml = `
+                <div class="metric-card">
+                    <div class="metric-value">${items.length}</div>
+                    <div class="metric-label">Articles</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">${bookmarks.length}</div>
+                    <div class="metric-label">Bookmarked</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">${new Set(items.map(i => getDomain(i.url))).size}</div>
+                    <div class="metric-label">Sources</div>
+                </div>
+            `;
+            document.getElementById('metrics').innerHTML = metricsHtml;
+            
+            // Update domain filter
+            const domains = [...new Set(items.map(i => getDomain(i.url)).filter(d => d))];
+            const domainSelect = document.getElementById('domainFilter');
+            domainSelect.innerHTML = '<option value="">All domains</option>' + 
+                domains.map(d => `<option value="${d}">${d}</option>`).join('');
+            
+            // Store items globally for filtering
+            window.allItems = items;
+            filterArticles();
+        }
+        
+        function getDomain(url) {
+            if (!url) return '';
+            try {
+                return new URL(url).hostname.replace('www.', '');
+            } catch {
+                return '';
+            }
+        }
+        
+        function filterArticles() {
+            if (!window.allItems) return;
+            
+            const search = document.getElementById('searchFilter').value.toLowerCase();
+            const domain = document.getElementById('domainFilter').value;
+            const bookmarkedOnly = document.getElementById('bookmarkedOnly').checked;
+            const bookmarkUrls = new Set(bookmarks.map(b => b.article_url));
+            
+            let filtered = window.allItems.filter(item => {
+                const text = ((item.title || '') + ' ' + (item.summary || '') + ' ' + (item.bullets || []).join(' ')).toLowerCase();
+                if (search && !text.includes(search)) return false;
+                if (domain && getDomain(item.url) !== domain) return false;
+                if (bookmarkedOnly && !bookmarkUrls.has(item.url)) return false;
+                return true;
+            });
+            
+            displayArticles(filtered);
+        }
+        
+        function showTab(tab) {
+            currentTab = tab;
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+            filterArticles();
+        }
+        
+        function displayArticles(items) {
+            const digestContent = document.getElementById('digestContent');
+            
+            // Filter by tab
+            let displayItems = items;
+            if (currentTab === 'bookmarked') {
+                const bookmarkUrls = new Set(bookmarks.map(b => b.article_url));
+                displayItems = items.filter(item => bookmarkUrls.has(item.url));
+            } else if (currentTab === 'foryou') {
+                // For You - could implement preference matching here
+                displayItems = items;
+            }
+            
+            if (displayItems.length === 0) {
+                digestContent.innerHTML = '<div class="message">No articles found.</div>';
                 return;
             }
             
             let html = '';
-            digest.articles.forEach(article => {
+            displayItems.forEach((item, idx) => {
+                const isBookmarked = bookmarks.some(b => b.article_url === item.url);
                 html += `
                     <div class="article-card">
-                        <h3>${article.title || 'Untitled'}</h3>
-                        <p><a href="${article.url || '#'}" target="_blank">Read Article →</a></p>
-                        ${article.summary ? `<p style="margin-top: 10px; color: #666;">${article.summary.substring(0, 200)}...</p>` : ''}
+                        <h3>${item.title || 'Untitled'}</h3>
+                        <p style="color: #666; margin: 10px 0;">${(item.summary || item.bullets?.join(' ') || '').substring(0, 200)}...</p>
+                        <div class="article-actions">
+                            <a href="${item.url || '#'}" target="_blank" class="btn btn-small">Read Article →</a>
+                            ${authToken ? `
+                                <button class="btn btn-small ${isBookmarked ? 'btn-secondary' : ''}" onclick="toggleBookmark('${item.url}', ${idx})">
+                                    ${isBookmarked ? '✓ Bookmarked' : '🔖 Bookmark'}
+                                </button>
+                                <button class="btn btn-small" onclick="trackClick('${item.url}', '${(item.title || '').replace(/'/g, "\\'")}')">📊 Track</button>
+                            ` : ''}
+                        </div>
                     </div>
                 `;
             });
             
             digestContent.innerHTML = html;
+        }
+        
+        async function toggleBookmark(url, idx) {
+            if (!authToken) return;
+            
+            const isBookmarked = bookmarks.some(b => b.article_url === url);
+            
+            try {
+                if (isBookmarked) {
+                    const bookmark = bookmarks.find(b => b.article_url === url);
+                    const response = await fetch(`${API_BASE}/user/bookmarks/${bookmark.id}`, {
+                        method: 'DELETE',
+                        headers: {
+                            'Authorization': `Bearer ${authToken}`
+                        }
+                    });
+                    if (response.ok) {
+                        bookmarks = bookmarks.filter(b => b.article_url !== url);
+                        showMessage('Bookmark removed', 'success');
+                    }
+                } else {
+                    const response = await fetch(`${API_BASE}/user/bookmarks`, {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': `Bearer ${authToken}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ article_url: url })
+                    });
+                    if (response.ok) {
+                        const newBookmark = await response.json();
+                        bookmarks.push(newBookmark);
+                        showMessage('Bookmarked!', 'success');
+                    }
+                }
+                filterArticles();
+            } catch (error) {
+                showMessage('Error: ' + error.message, 'error');
+            }
+        }
+        
+        async function trackClick(url, title) {
+            if (!authToken) return;
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/tutor/track-click?article_url=${encodeURIComponent(url)}&article_title=${encodeURIComponent(title)}`, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${authToken}`
+                    }
+                });
+                if (response.ok) {
+                    showMessage('Article tracked!', 'success');
+                }
+            } catch (error) {
+                showMessage('Error: ' + error.message, 'error');
+            }
+        }
+        
+        async function refreshDigest() {
+            try {
+                const response = await fetch(`${API_BASE}/api/digest?refresh=1`, {
+                    headers: authToken ? {
+                        'Authorization': `Bearer ${authToken}`
+                    } : {}
+                });
+                if (response.ok) {
+                    showMessage('Digest refresh started!', 'success');
+                    setTimeout(() => loadDigest(), 2000);
+                }
+            } catch (error) {
+                showMessage('Error: ' + error.message, 'error');
+            }
+        }
+        
+        function updateBookmarkFilters() {
+            // Bookmarks loaded, filters will update on next display
+        }
+        
+        // Tutor Functions
+        function showTutorTab(tab) {
+            currentTutorTab = tab;
+            document.querySelectorAll('#tutorPage .tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('#tutorPage .tab-content').forEach(c => c.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById(tab + 'Tab').classList.add('active');
+            
+            if (tab === 'profile') {
+                loadKnowledgeProfile();
+            } else if (tab === 'practice') {
+                loadPracticeQuestions();
+            }
+        }
+        
+        async function generateRoadmap() {
+            if (!authToken) {
+                showMessage('Please login first', 'error');
+                return;
+            }
+            
+            const targetCareer = document.getElementById('targetCareer').value;
+            if (!targetCareer) {
+                showMessage('Please enter a target career', 'error');
+                return;
+            }
+            
+            const roadmapContent = document.getElementById('roadmapContent');
+            roadmapContent.innerHTML = '<div class="loading">Generating roadmap... This may take a minute.</div>';
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/tutor/roadmap`, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${authToken}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ target_career: targetCareer })
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    displayRoadmap(data);
+                } else {
+                    const error = await response.json();
+                    roadmapContent.innerHTML = `<div class="message error">${error.detail || 'Failed to generate roadmap'}</div>`;
+                }
+            } catch (error) {
+                roadmapContent.innerHTML = `<div class="message error">Error: ${error.message}</div>`;
+            }
+        }
+        
+        function displayRoadmap(data) {
+            const roadmapContent = document.getElementById('roadmapContent');
+            const roadmap = data.roadmap || data;
+            
+            if (!roadmap || !roadmap.weeks) {
+                roadmapContent.innerHTML = '<div class="message">No roadmap data available.</div>';
+                return;
+            }
+            
+            let html = '<div class="card"><h3>Your Learning Roadmap</h3>';
+            
+            if (Array.isArray(roadmap.weeks)) {
+                roadmap.weeks.forEach((week, idx) => {
+                    html += `
+                        <div class="roadmap-item">
+                            <h4>Week ${idx + 1}: ${week.week_title || 'Learning Week'}</h4>
+                            <p><strong>Focus:</strong> ${week.focus || 'N/A'}</p>
+                            <p><strong>Topics:</strong> ${(week.topics || []).join(', ') || 'N/A'}</p>
+                            <p><strong>Resources:</strong> ${(week.resources || []).join(', ') || 'N/A'}</p>
+                        </div>
+                    `;
+                });
+            }
+            
+            html += '</div>';
+            roadmapContent.innerHTML = html;
+        }
+        
+        async function loadKnowledgeProfile() {
+            if (!authToken) return;
+            
+            const profileContent = document.getElementById('profileContent');
+            profileContent.innerHTML = '<div class="loading">Loading knowledge profile...</div>';
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/tutor/knowledge-profile`, {
+                    headers: {
+                        'Authorization': `Bearer ${authToken}`
+                    }
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    displayKnowledgeProfile(data);
+                } else {
+                    profileContent.innerHTML = '<div class="message">No knowledge profile yet. Start bookmarking and tracking articles!</div>';
+                }
+            } catch (error) {
+                profileContent.innerHTML = `<div class="message error">Error: ${error.message}</div>`;
+            }
+        }
+        
+        function displayKnowledgeProfile(data) {
+            const profileContent = document.getElementById('profileContent');
+            const profile = data.knowledge_profile || data;
+            
+            let html = `
+                <div class="knowledge-profile">
+                    <h3>Your Knowledge Profile</h3>
+                    <p style="margin: 15px 0;"><strong>Topics:</strong></p>
+                    <div>
+                        ${(profile.topics || []).map(t => `<span class="tag">${t}</span>`).join('') || '<p>No topics yet</p>'}
+                    </div>
+                </div>
+            `;
+            
+            profileContent.innerHTML = html;
+        }
+        
+        async function loadPracticeQuestions() {
+            if (!authToken) return;
+            
+            const practiceContent = document.getElementById('practiceContent');
+            practiceContent.innerHTML = '<div class="loading">Loading practice questions...</div>';
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/tutor/roadmap`, {
+                    headers: {
+                        'Authorization': `Bearer ${authToken}`
+                    }
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    displayPracticeQuestions(data);
+                } else {
+                    practiceContent.innerHTML = '<div class="message">Generate a roadmap first to see practice questions.</div>';
+                }
+            } catch (error) {
+                practiceContent.innerHTML = `<div class="message error">Error: ${error.message}</div>`;
+            }
+        }
+        
+        function displayPracticeQuestions(data) {
+            const practiceContent = document.getElementById('practiceContent');
+            const roadmap = data.roadmap || data;
+            
+            if (!roadmap || !roadmap.practice_questions) {
+                practiceContent.innerHTML = '<div class="message">No practice questions available. Generate a roadmap first.</div>';
+                return;
+            }
+            
+            const questions = Array.isArray(roadmap.practice_questions) ? roadmap.practice_questions : [];
+            
+            if (questions.length === 0) {
+                practiceContent.innerHTML = '<div class="message">No practice questions in this roadmap.</div>';
+                return;
+            }
+            
+            let html = '';
+            questions.forEach((q, idx) => {
+                html += `
+                    <div class="practice-question">
+                        <h4>Question ${idx + 1}</h4>
+                        <p>${q.question || q}</p>
+                        <div class="form-group" style="margin-top: 15px;">
+                            <label>Your Answer</label>
+                            <textarea id="answer_${idx}" rows="4" placeholder="Write your answer here..."></textarea>
+                        </div>
+                        <button class="btn btn-small" onclick="submitAnswer(${idx}, '${(q.question || q).replace(/'/g, "\\'")}')">Get Feedback</button>
+                        <div id="feedback_${idx}" style="margin-top: 10px;"></div>
+                    </div>
+                `;
+            });
+            
+            practiceContent.innerHTML = html;
+        }
+        
+        async function submitAnswer(qIdx, question) {
+            if (!authToken) return;
+            
+            const answer = document.getElementById(`answer_${qIdx}`).value;
+            if (!answer.trim()) {
+                showMessage('Please write an answer first', 'error');
+                return;
+            }
+            
+            const feedbackDiv = document.getElementById(`feedback_${qIdx}`);
+            feedbackDiv.innerHTML = '<div class="loading">Getting AI feedback...</div>';
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/tutor/ask`, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${authToken}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        question: question,
+                        context: answer
+                    })
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    feedbackDiv.innerHTML = `<div class="message success"><strong>AI Feedback:</strong><br>${data.feedback || data.response || data}</div>`;
+                } else {
+                    const error = await response.json();
+                    feedbackDiv.innerHTML = `<div class="message error">${error.detail || 'Failed to get feedback'}</div>`;
+                }
+            } catch (error) {
+                feedbackDiv.innerHTML = `<div class="message error">Error: ${error.message}</div>`;
+            }
+        }
+        
+        async function askTutor() {
+            if (!authToken) return;
+            
+            const question = document.getElementById('tutorQuestion').value;
+            if (!question.trim()) {
+                showMessage('Please enter a question', 'error');
+                return;
+            }
+            
+            const context = document.getElementById('tutorContext').value;
+            const tutorResponse = document.getElementById('tutorResponse');
+            tutorResponse.innerHTML = '<div class="loading">AI Tutor is thinking...</div>';
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/tutor/ask`, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${authToken}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        question: question,
+                        context: context
+                    })
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    tutorResponse.innerHTML = `<div class="message success"><strong>AI Tutor Response:</strong><br><br>${data.feedback || data.response || data}</div>`;
+                } else {
+                    const error = await response.json();
+                    tutorResponse.innerHTML = `<div class="message error">${error.detail || 'Failed to get response'}</div>`;
+                }
+            } catch (error) {
+                tutorResponse.innerHTML = `<div class="message error">Error: ${error.message}</div>`;
+            }
+        }
+        
+        async function loadTutorData() {
+            if (!authToken) return;
+            // Load roadmap if exists
+            try {
+                const response = await fetch(`${API_BASE}/api/tutor/roadmap`, {
+                    headers: {
+                        'Authorization': `Bearer ${authToken}`
+                    }
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    displayRoadmap(data);
+                }
+            } catch (error) {
+                console.error('Failed to load roadmap:', error);
+            }
         }
         
         function logout() {
@@ -451,6 +1229,8 @@
         
         function showMessage(text, type) {
             const messageDiv = document.getElementById('message');
+            if (!messageDiv) return;
+            
             messageDiv.className = `message ${type}`;
             messageDiv.textContent = text;
             messageDiv.style.display = 'block';
