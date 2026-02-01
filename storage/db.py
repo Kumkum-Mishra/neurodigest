@@ -24,8 +24,15 @@ engine = create_engine(DATABASE_URL, echo=False, connect_args=connect_args)
 
 
 def init_db():
-    import storage.models  # noqa: F401
-    SQLModel.metadata.create_all(engine)
+    """Initialize database tables. Handles errors gracefully for serverless."""
+    try:
+        import storage.models  # noqa: F401
+        SQLModel.metadata.create_all(engine)
+        print("Database tables created/verified")
+    except Exception as e:
+        print(f"Database initialization warning: {e}")
+        # Don't raise - allow app to continue (tables might already exist)
+        pass
 
 
 # FastAPI dependency (use as Depends(get_session) in routes)

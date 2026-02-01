@@ -29,11 +29,28 @@ app.include_router(prefs_router, prefix="/prefs", tags=["Preferences"])
 app.include_router(user_router, prefix="/user", tags=["User"])
 app.include_router(tutor_router, prefix="/api", tags=["Tutor"])
 
-# Initialize DB on startup (works for both serverless and regular deployment)
-@app.on_event("startup")
-def on_startup():
-    init_db()
-    print("Database initialized")
+# Initialize DB lazily (works for both serverless and regular deployment)
+# For serverless, we initialize on first request instead of startup event
+_db_initialized = False
+
+def ensure_db_initialized():
+    """Lazy database initialization for serverless compatibility."""
+    global _db_initialized
+    if not _db_initialized:
+        try:
+            init_db()
+            print("Database initialized")
+            _db_initialized = True
+        except Exception as e:
+            print(f"Database initialization error: {e}")
+            # Don't fail completely, but log the error
+            pass
+
+# Initialize on first request (middleware approach)
+@app.middleware("http")
+async def init_db_middleware(request, call_next):
+    ensure_db_initialized()
+    return await call_next(request)
 
 # Note: Scheduler removed for serverless compatibility
 # Use Vercel Cron Jobs or external scheduler for scheduled tasks
