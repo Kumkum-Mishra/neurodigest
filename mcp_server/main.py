@@ -41,6 +41,26 @@ except Exception as e:
 # Note: Scheduler removed for serverless compatibility
 # Use Vercel Cron Jobs or external scheduler for scheduled tasks
 
+@app.get("/", tags=["Root"])
+def root():
+    """Root endpoint - redirects to API docs or returns API info."""
+    return {
+        "message": "NeuroDigest API",
+        "version": "1.0.0",
+        "docs": "/docs",
+        "openapi": "/openapi.json",
+        "endpoints": {
+            "digest": "/api/digest",
+            "auth": "/auth/login",
+            "user": "/user/bookmarks"
+        }
+    }
+
+@app.get("/health", tags=["Health"])
+def health():
+    """Health check endpoint."""
+    return {"status": "ok", "service": "NeuroDigest API"}
+
 @app.get("/api/digest", tags=["Digest"])
 def get_digest(background_tasks: BackgroundTasks, refresh: bool = False):
     """Return the latest saved digest. If the saved digest is older than
