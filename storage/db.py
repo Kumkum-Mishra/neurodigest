@@ -3,24 +3,80 @@ import os
 from sqlmodel import SQLModel, create_engine, Session
 from dotenv import load_dotenv
 from contextlib import contextmanager
+from urllib.parse import urlparse, quote_plus
 
 load_dotenv()
 
+# Get DATABASE_URL with validation
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./neurodigest.db")
+
+# Validate and normalize DATABASE_URL
+def normalize_database_url(url: str) -> str:
+    """Normalize and validate database URL."""
+    if not url or not url.strip():
+        raise ValueError("DATABASE_URL is empty or not set")
+    
+    url = url.strip()
+    
+    # Handle postgresql:// URLs
+    if url.startswith("postgresql://") or url.startswith("postgres://"):
+        # Parse the URL to validate it
+        try:
+            parsed = urlparse(url)
+            if not parsed.hostname:
+                raise ValueError("Invalid database URL: missing hostname")
+            
+            # Reconstruct URL with proper encoding
+            # Handle password encoding (special characters)
+            if parsed.password:
+                # URL encode password if it contains special characters
+                encoded_password = quote_plus(parsed.password)
+                # Reconstruct URL with encoded password
+                if "@" in url:
+                    # Replace password part
+                    parts = url.split("@")
+                    if len(parts) == 2:
+                        auth_part = parts[0]
+                        if ":" in auth_part:
+                            user_part = auth_part.split(":")[0]
+                            url = f"{parsed.scheme}://{user_part}:{encoded_password}@{parsed.netloc.split('@')[-1]}{parsed.path}"
+                            if parsed.query:
+                                url += f"?{parsed.query}"
+            
+            # Ensure sslmode is set for Postgres
+            if "sslmode" not in url and "?" not in url:
+                url = f"{url}?sslmode=require"
+            elif "sslmode" not in url and "?" in url:
+                url = f"{url}&sslmode=require"
+                
+        except Exception as e:
+            raise ValueError(f"Invalid database URL format: {e}")
+    
+    return url
+
+# Normalize DATABASE_URL
+try:
+    DATABASE_URL = normalize_database_url(DATABASE_URL)
+except Exception as e:
+    print(f"Warning: Database URL normalization failed: {e}")
+    print(f"Using DATABASE_URL as-is (may cause errors)")
+    # Continue with original URL - might work if it's already correct
 
 # Connection arguments setup
 if DATABASE_URL.startswith("sqlite"):
     connect_args = {"check_same_thread": False}
-elif DATABASE_URL.startswith("postgresql"):
-    # For Neon/Postgres: ensure SSL is handled properly
-    # If connection string doesn't have sslmode, add it
-    if "sslmode" not in DATABASE_URL and "?" not in DATABASE_URL:
-        DATABASE_URL = f"{DATABASE_URL}?sslmode=require"
+elif DATABASE_URL.startswith("postgresql") or DATABASE_URL.startswith("postgres"):
     connect_args = {}
 else:
     connect_args = {}
 
-engine = create_engine(DATABASE_URL, echo=False, connect_args=connect_args)
+# Create engine with error handling
+try:
+    engine = create_engine(DATABASE_URL, echo=False, connect_args=connect_args)
+except Exception as e:
+    print(f"Error creating database engine: {e}")
+    print(f"DATABASE_URL format: {DATABASE_URL[:50]}...")  # Print first 50 chars for debugging
+    raise ValueError(f"Could not create database engine: {e}. Check DATABASE_URL format.")
 
 
 def init_db():
