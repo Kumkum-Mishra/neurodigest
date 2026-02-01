@@ -57,7 +57,22 @@ STORAGE_DIR = Path("storage")
 ARCHIVE_DIR = STORAGE_DIR / "archive"
 LATEST_FILE = STORAGE_DIR / "latest_digest.json"
 
-os.makedirs(ARCHIVE_DIR, exist_ok=True)
+# Try to create archive directory, but don't fail if file system is read-only (serverless)
+# Vercel serverless functions have read-only file system
+FILE_STORAGE_AVAILABLE = False
+try:
+    os.makedirs(ARCHIVE_DIR, exist_ok=True)
+    # Test write access
+    test_file = ARCHIVE_DIR / ".test_write"
+    try:
+        test_file.write_text("test")
+        test_file.unlink()
+        FILE_STORAGE_AVAILABLE = True
+    except Exception:
+        FILE_STORAGE_AVAILABLE = False
+except Exception as e:
+    print(f"File storage not available (read-only filesystem): {e}")
+    FILE_STORAGE_AVAILABLE = False
 
 # ============================================================
 # MSNRR: Multi-Signal News Ranking & Relevance Algorithm
@@ -546,14 +561,24 @@ def build_digest_items(limit_per_source=8, max_articles=25, user_id: int = None)
 
 
 def save_digest(items):
-    """Save latest digest + archive snapshot."""
+    """Save latest digest + archive snapshot. File storage is optional for serverless."""
     payload = {"generated_at": int(time.time()), "items": items}
-    with open(LATEST_FILE, "w", encoding="utf8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
-
-    fname = ARCHIVE_DIR / f"digest_{int(time.time())}.json"
-    with open(fname, "w", encoding="utf8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
+    
+    # Try to save to file, but don't fail if file system is read-only
+    if FILE_STORAGE_AVAILABLE:
+        try:
+            with open(LATEST_FILE, "w", encoding="utf8") as f:
+                json.dump(payload, f, ensure_ascii=False, indent=2)
+            
+            fname = ARCHIVE_DIR / f"digest_{int(time.time())}.json"
+            with open(fname, "w", encoding="utf8") as f:
+                json.dump(payload, f, ensure_ascii=False, indent=2)
+        except Exception as e:
+            print(f"Warning: Could not save digest to file (read-only filesystem): {e}")
+            # Continue - payload will still be returned and can be stored in database
+    else:
+        print("File storage not available - digest will only be stored in database")
+    
     return payload
 
 
