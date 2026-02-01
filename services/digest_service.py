@@ -590,9 +590,15 @@ def run_full_pipeline(user_id: int = None):
     return payload
 
 def load_latest_digest():
-    if LATEST_FILE.exists():
-        with open(LATEST_FILE, "r", encoding="utf8") as f:
-            return json.load(f)
+    """Load latest digest from file if available, otherwise return empty."""
+    if FILE_STORAGE_AVAILABLE and LATEST_FILE.exists():
+        try:
+            with open(LATEST_FILE, "r", encoding="utf8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"Warning: Could not read digest file: {e}")
+            # Fall through to return empty digest
+    # Return empty digest if file storage not available or file doesn't exist
     return {"generated_at": None, "items": []}
 
 

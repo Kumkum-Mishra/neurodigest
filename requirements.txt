@@ -11,6 +11,7 @@ python-dotenv
 # Database & Auth
 sqlalchemy
 sqlmodel
+psycopg2-binary
 passlib[bcrypt]
 python-jose[cryptography]
 
@@ -20,7 +21,8 @@ aiohttp
 # Utilities
 beautifulsoup4
 lxml[html_clean]
-pydantic
+pydantic[email]
+email-validator
 
 # Note: torch, transformers, sentence-transformers, streamlit excluded for Vercel
 # These are too large for serverless functions (torch alone is 2GB+)

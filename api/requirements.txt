@@ -9,9 +9,11 @@ feedparser
 python-dotenv
 sqlalchemy
 sqlmodel
+psycopg2-binary
 passlib[bcrypt]
 python-jose[cryptography]
 aiohttp
 beautifulsoup4
 lxml[html_clean]
-pydantic
+pydantic[email]
+email-validator

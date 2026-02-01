@@ -106,8 +106,9 @@ def get_engine():
 def init_db():
     """Initialize database tables. Handles errors gracefully for serverless."""
     try:
+        db_engine = get_engine()  # Get engine (lazy creation)
         import storage.models  # noqa: F401
-        SQLModel.metadata.create_all(engine)
+        SQLModel.metadata.create_all(db_engine)
         print("Database tables created/verified")
     except Exception as e:
         print(f"Database initialization warning: {e}")
