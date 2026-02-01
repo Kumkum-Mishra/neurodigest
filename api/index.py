@@ -33,14 +33,8 @@ except Exception as e:
     
     app = FastAPI(title="NeuroDigest API - Error Mode")
     
-    @app.get("/")
-    def root():
-        return {
-            "status": "error",
-            "message": "App initialization failed",
-            "error": import_error,
-            "note": "Check Vercel function logs for full traceback"
-        }
+    # Root route removed - static files are served by Vercel
+    # Use /api/root or /health for API info
     
     @app.get("/health")
     def health():
@@ -64,8 +58,9 @@ except Exception as e:
 # CRITICAL: Ensure app is defined for Vercel detection
 if app is None:
     app = FastAPI()
-    @app.get("/")
-    def fallback():
+    # Root route removed - static files are served by Vercel
+    @app.get("/health")
+    def fallback_health():
         return {"error": "App not initialized"}
 
 # Export for Vercel (explicit)

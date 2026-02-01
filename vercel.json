@@ -29,19 +29,5 @@
       "source": "/health",
       "destination": "/api/index.py"
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*\\.(html|css|js|png|jpg|jpeg|gif|svg|ico|json|woff|woff2|ttf|eot))",
-      "dest": "/public/$1"
-    },
-    {
-      "src": "/",
-      "dest": "/public/index.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/public/index.html"
-    }
   ]
 }
