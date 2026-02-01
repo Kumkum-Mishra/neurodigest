@@ -6,15 +6,24 @@ Uses sentence-transformers for semantic similarity.
 import os
 from typing import List, Optional
 import numpy as np
-from sentence_transformers import SentenceTransformer
+
+# Optional import for Vercel deployment (sentence-transformers is too large)
+try:
+    from sentence_transformers import SentenceTransformer
+    EMBEDDINGS_AVAILABLE = True
+except ImportError:
+    SentenceTransformer = None
+    EMBEDDINGS_AVAILABLE = False
 
 # Global model instance (lazy loaded)
-_embedding_model: Optional[SentenceTransformer] = None
+_embedding_model: Optional[object] = None
 
 
-def get_embedding_model() -> SentenceTransformer:
-    """Lazy load the embedding model."""
+def get_embedding_model():
+    """Lazy load the embedding model. Returns None if embeddings not available."""
     global _embedding_model
+    if not EMBEDDINGS_AVAILABLE:
+        return None
     if _embedding_model is None:
         # Use a lightweight, fast model for embeddings
         model_name = os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
@@ -33,10 +42,13 @@ def compute_cosine_similarity(vec1: np.ndarray, vec2: np.ndarray) -> float:
 
 
 def embed_text(text: str) -> np.ndarray:
-    """Get embedding vector for text."""
+    """Get embedding vector for text. Returns zero vector if embeddings not available."""
     if not text or not text.strip():
         return np.zeros(384)  # Default dimension for all-MiniLM-L6-v2
     model = get_embedding_model()
+    if model is None:
+        # Return zero vector if embeddings not available (Vercel deployment)
+        return np.zeros(384)
     return model.encode(text, convert_to_numpy=True)
 
 

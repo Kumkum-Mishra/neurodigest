@@ -1,0 +1,27 @@
+# Vercel-optimized requirements (excludes large ML dependencies)
+fastapi
+uvicorn
+mangum
+requests
+newspaper3k
+feedparser
+python-dotenv
+
+# Database & Auth
+sqlalchemy
+sqlmodel
+passlib[bcrypt]
+python-jose[cryptography]
+
+# Async & APIs
+aiohttp
+
+# Utilities
+beautifulsoup4
+lxml
+pydantic
+
+# Note: torch, transformers, sentence-transformers excluded for Vercel
+# These are too large for serverless functions
+# Embeddings functionality will be disabled on Vercel deployment
+# Use external API (Groq) for LLM features instead

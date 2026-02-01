@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "buildCommand": "pip install -r requirements-vercel.txt",
   "routes": [
     {
       "src": "/api/(.*)",

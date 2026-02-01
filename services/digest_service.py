@@ -3,6 +3,7 @@ import os
 import time
 import json
 from pathlib import Path
+from typing import List
 from dotenv import load_dotenv
 from sqlmodel import select, Session
 from storage.db import engine   # <- use engine directly for manual sessions
@@ -19,7 +20,34 @@ from fetchers.rss_fetch import fetch_rss_articles
 
 from extract_content import extract_article_text
 from summarizer import summarize_text  # summarizer package
-from services.embeddings import keyword_match_score, user_preference_match_score
+
+# Optional embeddings (may not be available on Vercel)
+try:
+    from services.embeddings import keyword_match_score, user_preference_match_score
+    EMBEDDINGS_AVAILABLE = True
+except ImportError:
+    EMBEDDINGS_AVAILABLE = False
+    # Fallback functions if embeddings not available
+    def keyword_match_score(article_text: str, user_keywords: List[str]) -> float:
+        """Fallback: simple keyword matching without embeddings."""
+        if not user_keywords:
+            return 0.5
+        article_lower = article_text.lower()
+        matches = sum(1 for kw in user_keywords if kw.lower() in article_lower)
+        return min(1.0, matches / len(user_keywords)) if user_keywords else 0.5
+    
+    def user_preference_match_score(article_text: str, article_url: str, 
+                                    user_keywords: List[str], user_sources: List[str]) -> float:
+        """Fallback: simple matching without embeddings."""
+        scores = []
+        if user_keywords:
+            scores.append(keyword_match_score(article_text, user_keywords))
+        if user_sources:
+            url_lower = article_url.lower()
+            source_match = any(src.lower() in url_lower for src in user_sources)
+            scores.append(1.0 if source_match else 0.0)
+        return float(sum(scores) / len(scores)) if scores else 0.5
+
 from urllib.parse import urlparse
 import math
 import re
